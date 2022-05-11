@@ -15,6 +15,19 @@ namespace StandMinuman
         public FormLogin()
         {
             InitializeComponent();
+            //Koneksi.openConn();
+        }
+
+        private void buttonLogin_Click(object sender, EventArgs e)
+        {
+            if(textBoxUser.Text != "" && textBoxPass.Text != "")
+            {
+
+            }
+            else
+            {
+                MessageBox.Show("Isikan Username/Password");
+            }
         }
     }
 }
