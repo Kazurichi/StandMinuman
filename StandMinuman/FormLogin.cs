@@ -26,8 +26,8 @@ namespace StandMinuman
             {
                 string queryTest = "SELECT count(*) FROM users WHERE username = '" + textBoxUser.Text + "'  AND password = '" + textBoxPass.Text + "' AND status = 1";
                 string query = "SELECT * FROM users WHERE username = '" + textBoxUser.Text + "'  AND password = '" + textBoxPass.Text + "' AND status = 1";
-                try
-                {
+                //try
+                //{
                     MySqlCommand cmd = new MySqlCommand(queryTest, Koneksi.getConn());
 
                     int test = Convert.ToInt32(cmd.ExecuteScalar());
@@ -55,19 +55,19 @@ namespace StandMinuman
                         }
                         else
                         {
-
+                            //masuk ke menu admin
                         }
                     }
                     else
                     {
                         MessageBox.Show("Gagal Login! Akun tidak ditemukan!");
                     }
-                }
-                catch (Exception a)
-                {
-                    //MessageBox.Show(a.Message);
-                    MessageBox.Show("Gagal Login! Akun tidak ditemukan!");
-                }
+                //}
+                //catch (Exception a)
+                //{
+                //    MessageBox.Show(a.Message);
+                //    MessageBox.Show("Gagal Login! Akun tidak ditemukan!");
+                //}
             }
             else
             {
