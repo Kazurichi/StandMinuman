@@ -29,7 +29,7 @@ namespace StandMinuman
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItemHello = new System.Windows.Forms.ToolStripMenuItem();
             this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -186,8 +186,8 @@ namespace StandMinuman
             // Subtotal
             // 
             this.Subtotal.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.Subtotal.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.Subtotal.DefaultCellStyle = dataGridViewCellStyle4;
             this.Subtotal.HeaderText = "Subtotal";
             this.Subtotal.Name = "Subtotal";
             this.Subtotal.ReadOnly = true;
@@ -307,6 +307,7 @@ namespace StandMinuman
             // buttonUpdate
             // 
             this.buttonUpdate.AutoSize = true;
+            this.buttonUpdate.Enabled = false;
             this.buttonUpdate.Location = new System.Drawing.Point(659, 414);
             this.buttonUpdate.Name = "buttonUpdate";
             this.buttonUpdate.Size = new System.Drawing.Size(112, 28);
@@ -318,6 +319,7 @@ namespace StandMinuman
             // buttonHapus
             // 
             this.buttonHapus.AutoSize = true;
+            this.buttonHapus.Enabled = false;
             this.buttonHapus.Location = new System.Drawing.Point(659, 448);
             this.buttonHapus.Name = "buttonHapus";
             this.buttonHapus.Size = new System.Drawing.Size(112, 28);
@@ -329,6 +331,7 @@ namespace StandMinuman
             // buttonHapusSemua
             // 
             this.buttonHapusSemua.AutoSize = true;
+            this.buttonHapusSemua.Enabled = false;
             this.buttonHapusSemua.Location = new System.Drawing.Point(659, 482);
             this.buttonHapusSemua.Name = "buttonHapusSemua";
             this.buttonHapusSemua.Size = new System.Drawing.Size(112, 28);

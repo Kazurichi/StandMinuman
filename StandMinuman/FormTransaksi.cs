@@ -174,6 +174,7 @@ namespace StandMinuman
                             dataGridViewKeranjang.Rows[idxKeranjang].Cells[6].Value = subtotal;
                             hitungTotal();
                             clearSelection();
+                            buttonHapusSemua.Enabled = true;
                         }
                         else
                         {
@@ -186,6 +187,7 @@ namespace StandMinuman
                         dataGridViewKeranjang.Rows.Add(dataGridViewKeranjang.Rows.Count + 1, Convert.ToInt32(dataGridViewMinuman.Rows[idxMinuman].Cells[0].Value.ToString()), dataGridViewMinuman.Rows[idxMinuman].Cells[1].Value.ToString(), Convert.ToInt32(dataGridViewTopping.Rows[idxTopping].Cells[0].Value.ToString()), dataGridViewTopping.Rows[idxTopping].Cells[1].Value.ToString(), amount, subtotal);
                         hitungTotal();
                         clearSelection();
+                        buttonHapusSemua.Enabled = true;
                     }
                     else
                     {
@@ -216,6 +218,13 @@ namespace StandMinuman
             loadTopping();
             textBoxSearchMinuman.Text = "";
             loadMinuman();
+            buttonUpdate.Enabled = false;
+            buttonHapus.Enabled = false;
+            buttonTambah.Enabled = true;
+            if (dataGridViewKeranjang.Rows.Count == 0)
+            {
+                buttonHapusSemua.Enabled = false;
+            }
         }
 
         public void hitungTotal()
@@ -236,6 +245,9 @@ namespace StandMinuman
                 labelNamaMinuman.Text = "Nama Minuman: " + dataGridViewKeranjang.Rows[idxKeranjang].Cells[2].Value.ToString();
                 labelNamaTopping.Text = "Nama Topping: " + dataGridViewKeranjang.Rows[idxKeranjang].Cells[4].Value.ToString();
                 numericUpDownJumlah.Value = Convert.ToInt32(dataGridViewKeranjang.Rows[idxKeranjang].Cells[5].Value.ToString());
+                buttonUpdate.Enabled = true;
+                buttonHapus.Enabled = true;
+                buttonTambah.Enabled = false;
             }
         }
 
