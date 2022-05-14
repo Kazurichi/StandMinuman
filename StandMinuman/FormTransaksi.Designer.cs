@@ -29,6 +29,7 @@ namespace StandMinuman
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItemHello = new System.Windows.Forms.ToolStripMenuItem();
             this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -49,6 +50,10 @@ namespace StandMinuman
             this.buttonUpdate = new System.Windows.Forms.Button();
             this.buttonHapus = new System.Windows.Forms.Button();
             this.buttonHapusSemua = new System.Windows.Forms.Button();
+            this.labelNota = new System.Windows.Forms.Label();
+            this.labelTotal = new System.Windows.Forms.Label();
+            this.buttonBeli = new System.Windows.Forms.Button();
+            this.buttonClearSelection = new System.Windows.Forms.Button();
             this.No = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IdMinuman = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NamaMinuman = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -56,10 +61,6 @@ namespace StandMinuman
             this.NamaTopping = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Jumlah = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.labelNota = new System.Windows.Forms.Label();
-            this.labelTotal = new System.Windows.Forms.Label();
-            this.buttonBeli = new System.Windows.Forms.Button();
-            this.buttonClearSelection = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMinuman)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTopping)).BeginInit();
@@ -131,11 +132,11 @@ namespace StandMinuman
             this.NamaTopping,
             this.Jumlah,
             this.Subtotal});
-            this.dataGridViewKeranjang.Location = new System.Drawing.Point(12, 381);
+            this.dataGridViewKeranjang.Location = new System.Drawing.Point(12, 380);
             this.dataGridViewKeranjang.Name = "dataGridViewKeranjang";
             this.dataGridViewKeranjang.ReadOnly = true;
             this.dataGridViewKeranjang.RowHeadersVisible = false;
-            this.dataGridViewKeranjang.Size = new System.Drawing.Size(448, 230);
+            this.dataGridViewKeranjang.Size = new System.Drawing.Size(626, 230);
             this.dataGridViewKeranjang.TabIndex = 3;
             this.dataGridViewKeranjang.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewKeranjang_CellDoubleClick);
             // 
@@ -243,7 +244,7 @@ namespace StandMinuman
             // buttonTambah
             // 
             this.buttonTambah.AutoSize = true;
-            this.buttonTambah.Location = new System.Drawing.Point(466, 381);
+            this.buttonTambah.Location = new System.Drawing.Point(659, 380);
             this.buttonTambah.Name = "buttonTambah";
             this.buttonTambah.Size = new System.Drawing.Size(112, 28);
             this.buttonTambah.TabIndex = 14;
@@ -254,7 +255,7 @@ namespace StandMinuman
             // buttonUpdate
             // 
             this.buttonUpdate.AutoSize = true;
-            this.buttonUpdate.Location = new System.Drawing.Point(466, 415);
+            this.buttonUpdate.Location = new System.Drawing.Point(659, 414);
             this.buttonUpdate.Name = "buttonUpdate";
             this.buttonUpdate.Size = new System.Drawing.Size(112, 28);
             this.buttonUpdate.TabIndex = 15;
@@ -265,7 +266,7 @@ namespace StandMinuman
             // buttonHapus
             // 
             this.buttonHapus.AutoSize = true;
-            this.buttonHapus.Location = new System.Drawing.Point(466, 449);
+            this.buttonHapus.Location = new System.Drawing.Point(659, 448);
             this.buttonHapus.Name = "buttonHapus";
             this.buttonHapus.Size = new System.Drawing.Size(112, 28);
             this.buttonHapus.TabIndex = 16;
@@ -276,13 +277,57 @@ namespace StandMinuman
             // buttonHapusSemua
             // 
             this.buttonHapusSemua.AutoSize = true;
-            this.buttonHapusSemua.Location = new System.Drawing.Point(466, 483);
+            this.buttonHapusSemua.Location = new System.Drawing.Point(659, 482);
             this.buttonHapusSemua.Name = "buttonHapusSemua";
             this.buttonHapusSemua.Size = new System.Drawing.Size(112, 28);
             this.buttonHapusSemua.TabIndex = 18;
             this.buttonHapusSemua.Text = "Hapus Semua";
             this.buttonHapusSemua.UseVisualStyleBackColor = true;
             this.buttonHapusSemua.Click += new System.EventHandler(this.buttonHapusSemua_Click);
+            // 
+            // labelNota
+            // 
+            this.labelNota.AutoSize = true;
+            this.labelNota.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.labelNota.Location = new System.Drawing.Point(14, 358);
+            this.labelNota.Name = "labelNota";
+            this.labelNota.Size = new System.Drawing.Size(107, 20);
+            this.labelNota.TabIndex = 19;
+            this.labelNota.Text = "Nomer Nota: -";
+            // 
+            // labelTotal
+            // 
+            this.labelTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelTotal.AutoSize = true;
+            this.labelTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.labelTotal.Location = new System.Drawing.Point(453, 357);
+            this.labelTotal.Name = "labelTotal";
+            this.labelTotal.Size = new System.Drawing.Size(61, 20);
+            this.labelTotal.TabIndex = 20;
+            this.labelTotal.Text = "Total: 0";
+            this.labelTotal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // buttonBeli
+            // 
+            this.buttonBeli.AutoSize = true;
+            this.buttonBeli.Location = new System.Drawing.Point(659, 582);
+            this.buttonBeli.Name = "buttonBeli";
+            this.buttonBeli.Size = new System.Drawing.Size(112, 28);
+            this.buttonBeli.TabIndex = 21;
+            this.buttonBeli.Text = "Beli";
+            this.buttonBeli.UseVisualStyleBackColor = true;
+            this.buttonBeli.Click += new System.EventHandler(this.buttonBeli_Click);
+            // 
+            // buttonClearSelection
+            // 
+            this.buttonClearSelection.AutoSize = true;
+            this.buttonClearSelection.Location = new System.Drawing.Point(659, 516);
+            this.buttonClearSelection.Name = "buttonClearSelection";
+            this.buttonClearSelection.Size = new System.Drawing.Size(113, 28);
+            this.buttonClearSelection.TabIndex = 22;
+            this.buttonClearSelection.Text = "Hapus Seleksi";
+            this.buttonClearSelection.UseVisualStyleBackColor = true;
+            this.buttonClearSelection.Click += new System.EventHandler(this.buttonClearSelection_Click);
             // 
             // No
             // 
@@ -330,51 +375,11 @@ namespace StandMinuman
             // Subtotal
             // 
             this.Subtotal.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.Subtotal.DefaultCellStyle = dataGridViewCellStyle2;
             this.Subtotal.HeaderText = "Subtotal";
             this.Subtotal.Name = "Subtotal";
             this.Subtotal.ReadOnly = true;
-            // 
-            // labelNota
-            // 
-            this.labelNota.AutoSize = true;
-            this.labelNota.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.labelNota.Location = new System.Drawing.Point(14, 358);
-            this.labelNota.Name = "labelNota";
-            this.labelNota.Size = new System.Drawing.Size(107, 20);
-            this.labelNota.TabIndex = 19;
-            this.labelNota.Text = "Nomer Nota: -";
-            // 
-            // labelTotal
-            // 
-            this.labelTotal.AutoSize = true;
-            this.labelTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.labelTotal.Location = new System.Drawing.Point(250, 358);
-            this.labelTotal.Name = "labelTotal";
-            this.labelTotal.Size = new System.Drawing.Size(61, 20);
-            this.labelTotal.TabIndex = 20;
-            this.labelTotal.Text = "Total: 0";
-            // 
-            // buttonBeli
-            // 
-            this.buttonBeli.AutoSize = true;
-            this.buttonBeli.Location = new System.Drawing.Point(466, 583);
-            this.buttonBeli.Name = "buttonBeli";
-            this.buttonBeli.Size = new System.Drawing.Size(112, 28);
-            this.buttonBeli.TabIndex = 21;
-            this.buttonBeli.Text = "Beli";
-            this.buttonBeli.UseVisualStyleBackColor = true;
-            this.buttonBeli.Click += new System.EventHandler(this.buttonBeli_Click);
-            // 
-            // buttonClearSelection
-            // 
-            this.buttonClearSelection.AutoSize = true;
-            this.buttonClearSelection.Location = new System.Drawing.Point(466, 517);
-            this.buttonClearSelection.Name = "buttonClearSelection";
-            this.buttonClearSelection.Size = new System.Drawing.Size(113, 28);
-            this.buttonClearSelection.TabIndex = 22;
-            this.buttonClearSelection.Text = "Hapus Seleksi";
-            this.buttonClearSelection.UseVisualStyleBackColor = true;
-            this.buttonClearSelection.Click += new System.EventHandler(this.buttonClearSelection_Click);
             // 
             // FormTransaksi
             // 
@@ -441,13 +446,6 @@ namespace StandMinuman
         private System.Windows.Forms.NumericUpDown numericUpDownJumlah;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button buttonTambah;
-        private System.Windows.Forms.DataGridViewTextBoxColumn No;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IdMinuman;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NamaMinuman;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IdTopping;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NamaTopping;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Jumlah;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Subtotal;
         private System.Windows.Forms.Button buttonUpdate;
         private System.Windows.Forms.Button buttonHapus;
         private System.Windows.Forms.Button buttonHapusSemua;
@@ -455,5 +453,12 @@ namespace StandMinuman
         private System.Windows.Forms.Label labelTotal;
         private System.Windows.Forms.Button buttonBeli;
         private System.Windows.Forms.Button buttonClearSelection;
+        private System.Windows.Forms.DataGridViewTextBoxColumn No;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IdMinuman;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NamaMinuman;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IdTopping;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NamaTopping;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Jumlah;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Subtotal;
     }
 }

@@ -21,7 +21,7 @@ USE `stand_minuman`;
 DROP TABLE IF EXISTS `dtrans`;
 
 CREATE TABLE `dtrans` (
-  `no_nota` double NOT NULL,
+  `no_nota` varchar(50) NOT NULL,
   `id_minuman` double NOT NULL,
   `id_topping` double NOT NULL DEFAULT 1,
   `jumlah` double NOT NULL,
@@ -30,26 +30,24 @@ CREATE TABLE `dtrans` (
   PRIMARY KEY (`no_nota`,`id_minuman`,`id_topping`),
   KEY `id_minuman` (`id_minuman`),
   KEY `id_topping` (`id_topping`),
-  CONSTRAINT `dtrans_ibfk_1` FOREIGN KEY (`no_nota`) REFERENCES `htrans` (`no_nota`),
-  CONSTRAINT `dtrans_ibfk_2` FOREIGN KEY (`id_minuman`) REFERENCES `minuman` (`id_minuman`),
-  CONSTRAINT `dtrans_ibfk_3` FOREIGN KEY (`id_topping`) REFERENCES `topping` (`id_topping`)
+  CONSTRAINT `dtrans_ibfk_1` FOREIGN KEY (`no_nota`) REFERENCES `htrans` (`no_nota`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 /*Data for the table `dtrans` */
 
 insert  into `dtrans`(`no_nota`,`id_minuman`,`id_topping`,`jumlah`,`subtotal`,`status`) values 
-(2205120001,1,1,2,20000,1),
-(2205120002,2,2,1,14000,1),
-(2205120003,2,1,2,24000,1),
-(2205120003,2,2,1,14000,1),
-(2205120003,3,3,1,18000,1);
+('H2205120001',1,1,2,20000,1),
+('H2205120002',2,2,1,14000,1),
+('H2205120003',2,1,2,24000,1),
+('H2205120003',2,2,1,14000,1),
+('H2205120003',3,3,1,18000,1);
 
 /*Table structure for table `htrans` */
 
 DROP TABLE IF EXISTS `htrans`;
 
 CREATE TABLE `htrans` (
-  `no_nota` double NOT NULL,
+  `no_nota` varchar(50) NOT NULL,
   `tanggal` datetime NOT NULL DEFAULT current_timestamp(),
   `total` double NOT NULL,
   `id_users` double NOT NULL,
@@ -62,9 +60,9 @@ CREATE TABLE `htrans` (
 /*Data for the table `htrans` */
 
 insert  into `htrans`(`no_nota`,`tanggal`,`total`,`id_users`,`status`) values 
-(2205120001,'2022-05-12 14:01:58',20000,2,1),
-(2205120002,'2022-05-12 14:04:45',14000,3,1),
-(2205120003,'2022-05-12 14:07:27',56000,2,1);
+('H2205120001','2022-05-12 14:01:58',20000,2,1),
+('H2205120002','2022-05-12 14:04:45',14000,3,1),
+('H2205120003','2022-05-12 14:07:27',56000,2,1);
 
 /*Table structure for table `minuman` */
 
@@ -137,10 +135,10 @@ BEGIN
  DECLARE counted INT; 			
  
  SELECT IFNULL(COUNT(*),0) INTO counted FROM htrans
- WHERE no_nota LIKE CONCAT('%',DATE_FORMAT(NOW(), '%y%m%d'),'%');
+ WHERE no_nota LIKE CONCAT('%H',DATE_FORMAT(NOW(), '%y%m%d'),'%');
  SET counted = counted + 1;
  
- SET hasil = CONCAT(DATE_FORMAT(NOW(),'%y%m%d'),LPAD(counted,4,'0'));
+ SET hasil = CONCAT('H',DATE_FORMAT(NOW(),'%y%m%d'),LPAD(counted,4,'0'));
  RETURN hasil;
 END */$$
 DELIMITER ;
