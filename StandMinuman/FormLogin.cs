@@ -55,7 +55,11 @@ namespace StandMinuman
                         }
                         else
                         {
-                            //masuk ke menu admin
+                            FormAdminMenu frm = new FormAdminMenu();
+                            this.Hide();
+                            frm.ShowDialog();
+                            this.Show();
+                            Clear();
                         }
                     }
                     else
@@ -81,5 +85,10 @@ namespace StandMinuman
             textBoxUser.Text = "";
             user = null;
         }
-    }
+
+		private void FormLogin_Load(object sender, EventArgs e)
+		{
+
+		}
+	}
 }
