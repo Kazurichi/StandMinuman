@@ -225,7 +225,7 @@ namespace StandMinuman
             {
                 total += Convert.ToInt32(dataGridViewKeranjang.Rows[i].Cells[6].Value.ToString());
             }
-            labelTotal.Text = "Total : " + total;
+            labelTotal.Text = "Total : Rp. " + total;
         }
 
         private void dataGridViewKeranjang_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
