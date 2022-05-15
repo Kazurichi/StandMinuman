@@ -29,7 +29,7 @@ namespace StandMinuman
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItemHello = new System.Windows.Forms.ToolStripMenuItem();
             this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -70,6 +70,7 @@ namespace StandMinuman
             // 
             // menuStrip1
             // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItemHello,
             this.logoutToolStripMenuItem});
@@ -102,6 +103,7 @@ namespace StandMinuman
             this.dataGridViewMinuman.Name = "dataGridViewMinuman";
             this.dataGridViewMinuman.ReadOnly = true;
             this.dataGridViewMinuman.RowHeadersVisible = false;
+            this.dataGridViewMinuman.RowHeadersWidth = 62;
             this.dataGridViewMinuman.Size = new System.Drawing.Size(370, 194);
             this.dataGridViewMinuman.TabIndex = 1;
             this.dataGridViewMinuman.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewMinuman_CellDoubleClick);
@@ -115,6 +117,7 @@ namespace StandMinuman
             this.dataGridViewTopping.Name = "dataGridViewTopping";
             this.dataGridViewTopping.ReadOnly = true;
             this.dataGridViewTopping.RowHeadersVisible = false;
+            this.dataGridViewTopping.RowHeadersWidth = 62;
             this.dataGridViewTopping.Size = new System.Drawing.Size(370, 194);
             this.dataGridViewTopping.TabIndex = 2;
             this.dataGridViewTopping.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewTopping_CellDoubleClick);
@@ -136,7 +139,8 @@ namespace StandMinuman
             this.dataGridViewKeranjang.Name = "dataGridViewKeranjang";
             this.dataGridViewKeranjang.ReadOnly = true;
             this.dataGridViewKeranjang.RowHeadersVisible = false;
-            this.dataGridViewKeranjang.Size = new System.Drawing.Size(626, 230);
+            this.dataGridViewKeranjang.RowHeadersWidth = 62;
+            this.dataGridViewKeranjang.Size = new System.Drawing.Size(626, 259);
             this.dataGridViewKeranjang.TabIndex = 3;
             this.dataGridViewKeranjang.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewKeranjang_CellDoubleClick);
             // 
@@ -145,34 +149,41 @@ namespace StandMinuman
             this.No.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.No.FillWeight = 40F;
             this.No.HeaderText = "No";
+            this.No.MinimumWidth = 8;
             this.No.Name = "No";
             this.No.ReadOnly = true;
             // 
             // IdMinuman
             // 
             this.IdMinuman.HeaderText = "IdMinuman";
+            this.IdMinuman.MinimumWidth = 8;
             this.IdMinuman.Name = "IdMinuman";
             this.IdMinuman.ReadOnly = true;
             this.IdMinuman.Visible = false;
+            this.IdMinuman.Width = 150;
             // 
             // NamaMinuman
             // 
             this.NamaMinuman.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.NamaMinuman.HeaderText = "Nama Minuman";
+            this.NamaMinuman.MinimumWidth = 8;
             this.NamaMinuman.Name = "NamaMinuman";
             this.NamaMinuman.ReadOnly = true;
             // 
             // IdTopping
             // 
             this.IdTopping.HeaderText = "IdTopping";
+            this.IdTopping.MinimumWidth = 8;
             this.IdTopping.Name = "IdTopping";
             this.IdTopping.ReadOnly = true;
             this.IdTopping.Visible = false;
+            this.IdTopping.Width = 150;
             // 
             // NamaTopping
             // 
             this.NamaTopping.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.NamaTopping.HeaderText = "Nama Topping";
+            this.NamaTopping.MinimumWidth = 8;
             this.NamaTopping.Name = "NamaTopping";
             this.NamaTopping.ReadOnly = true;
             // 
@@ -180,15 +191,17 @@ namespace StandMinuman
             // 
             this.Jumlah.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Jumlah.HeaderText = "Jumlah";
+            this.Jumlah.MinimumWidth = 8;
             this.Jumlah.Name = "Jumlah";
             this.Jumlah.ReadOnly = true;
             // 
             // Subtotal
             // 
             this.Subtotal.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.Subtotal.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.Subtotal.DefaultCellStyle = dataGridViewCellStyle1;
             this.Subtotal.HeaderText = "Subtotal";
+            this.Subtotal.MinimumWidth = 8;
             this.Subtotal.Name = "Subtotal";
             this.Subtotal.ReadOnly = true;
             // 
@@ -298,7 +311,7 @@ namespace StandMinuman
             this.buttonTambah.AutoSize = true;
             this.buttonTambah.Location = new System.Drawing.Point(659, 380);
             this.buttonTambah.Name = "buttonTambah";
-            this.buttonTambah.Size = new System.Drawing.Size(112, 28);
+            this.buttonTambah.Size = new System.Drawing.Size(116, 36);
             this.buttonTambah.TabIndex = 14;
             this.buttonTambah.Text = "Add";
             this.buttonTambah.UseVisualStyleBackColor = true;
@@ -308,9 +321,9 @@ namespace StandMinuman
             // 
             this.buttonUpdate.AutoSize = true;
             this.buttonUpdate.Enabled = false;
-            this.buttonUpdate.Location = new System.Drawing.Point(659, 414);
+            this.buttonUpdate.Location = new System.Drawing.Point(659, 422);
             this.buttonUpdate.Name = "buttonUpdate";
-            this.buttonUpdate.Size = new System.Drawing.Size(112, 28);
+            this.buttonUpdate.Size = new System.Drawing.Size(116, 36);
             this.buttonUpdate.TabIndex = 15;
             this.buttonUpdate.Text = "Update";
             this.buttonUpdate.UseVisualStyleBackColor = true;
@@ -320,9 +333,9 @@ namespace StandMinuman
             // 
             this.buttonHapus.AutoSize = true;
             this.buttonHapus.Enabled = false;
-            this.buttonHapus.Location = new System.Drawing.Point(659, 448);
+            this.buttonHapus.Location = new System.Drawing.Point(659, 464);
             this.buttonHapus.Name = "buttonHapus";
-            this.buttonHapus.Size = new System.Drawing.Size(112, 28);
+            this.buttonHapus.Size = new System.Drawing.Size(116, 36);
             this.buttonHapus.TabIndex = 16;
             this.buttonHapus.Text = "Delete";
             this.buttonHapus.UseVisualStyleBackColor = true;
@@ -332,9 +345,9 @@ namespace StandMinuman
             // 
             this.buttonHapusSemua.AutoSize = true;
             this.buttonHapusSemua.Enabled = false;
-            this.buttonHapusSemua.Location = new System.Drawing.Point(659, 482);
+            this.buttonHapusSemua.Location = new System.Drawing.Point(659, 507);
             this.buttonHapusSemua.Name = "buttonHapusSemua";
-            this.buttonHapusSemua.Size = new System.Drawing.Size(112, 28);
+            this.buttonHapusSemua.Size = new System.Drawing.Size(116, 36);
             this.buttonHapusSemua.TabIndex = 18;
             this.buttonHapusSemua.Text = "Delete All";
             this.buttonHapusSemua.UseVisualStyleBackColor = true;
@@ -365,9 +378,9 @@ namespace StandMinuman
             // buttonBeli
             // 
             this.buttonBeli.AutoSize = true;
-            this.buttonBeli.Location = new System.Drawing.Point(659, 582);
+            this.buttonBeli.Location = new System.Drawing.Point(659, 603);
             this.buttonBeli.Name = "buttonBeli";
-            this.buttonBeli.Size = new System.Drawing.Size(112, 28);
+            this.buttonBeli.Size = new System.Drawing.Size(116, 36);
             this.buttonBeli.TabIndex = 21;
             this.buttonBeli.Text = "Beli";
             this.buttonBeli.UseVisualStyleBackColor = true;
@@ -376,9 +389,9 @@ namespace StandMinuman
             // buttonClearSelection
             // 
             this.buttonClearSelection.AutoSize = true;
-            this.buttonClearSelection.Location = new System.Drawing.Point(659, 516);
+            this.buttonClearSelection.Location = new System.Drawing.Point(659, 549);
             this.buttonClearSelection.Name = "buttonClearSelection";
-            this.buttonClearSelection.Size = new System.Drawing.Size(113, 28);
+            this.buttonClearSelection.Size = new System.Drawing.Size(116, 36);
             this.buttonClearSelection.TabIndex = 22;
             this.buttonClearSelection.Text = "Clear";
             this.buttonClearSelection.UseVisualStyleBackColor = true;
@@ -390,7 +403,7 @@ namespace StandMinuman
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(784, 623);
+            this.ClientSize = new System.Drawing.Size(784, 651);
             this.Controls.Add(this.buttonClearSelection);
             this.Controls.Add(this.buttonBeli);
             this.Controls.Add(this.labelTotal);

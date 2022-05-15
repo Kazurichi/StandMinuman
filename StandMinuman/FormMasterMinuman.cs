@@ -23,7 +23,7 @@ namespace StandMinuman
 			comboBoxAktif.SelectedIndex = 0;
 			try
 			{
-				MySqlCommand cmd = new MySqlCommand("Select * from minuman", Koneksi.getConn());
+				MySqlCommand cmd = new MySqlCommand("Select id_minuman as 'Id', nama as 'Nama', stok as 'Stok', harga as 'Harga', status as 'Status' from minuman", Koneksi.getConn());
 				MySqlDataAdapter da = new MySqlDataAdapter(cmd);
 				DataTable dt = new DataTable();
 				da.Fill(dt);
@@ -66,7 +66,7 @@ namespace StandMinuman
 			{
 				status = "where status = 0";
 			}
-			string query = "SELECT * from minuman " + status;
+			string query = "SELECT id_minuman as 'Id', nama as 'Nama', stok as 'Stok', harga as 'Harga', status as 'Status' from minuman " + status;
 			if (textBoxSearch.Text != "")
 			{
 				query += " and nama like '%" + textBoxSearch.Text + "%'";

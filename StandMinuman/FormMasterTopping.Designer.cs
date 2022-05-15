@@ -109,12 +109,14 @@ namespace StandMinuman
             this.dataGridViewTopping.Name = "dataGridViewTopping";
             this.dataGridViewTopping.ReadOnly = true;
             this.dataGridViewTopping.RowHeadersVisible = false;
+            this.dataGridViewTopping.RowHeadersWidth = 62;
             this.dataGridViewTopping.Size = new System.Drawing.Size(776, 226);
             this.dataGridViewTopping.TabIndex = 26;
             this.dataGridViewTopping.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewTopping_CellDoubleClick);
             // 
             // menuStrip1
             // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.kembaliKeMenuToolStripMenuItem,
             this.masterTransaksiToolStripMenuItem});
@@ -260,7 +262,7 @@ namespace StandMinuman
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 460);
+            this.ClientSize = new System.Drawing.Size(800, 456);
             this.Controls.Add(this.buttonClearSearch);
             this.Controls.Add(this.comboBoxAktif);
             this.Controls.Add(this.numericUpDownHarga);
