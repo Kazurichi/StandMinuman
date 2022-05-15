@@ -30,7 +30,9 @@ CREATE TABLE `dtrans` (
   PRIMARY KEY (`no_nota`,`id_minuman`,`id_topping`),
   KEY `id_minuman` (`id_minuman`),
   KEY `id_topping` (`id_topping`),
-  CONSTRAINT `dtrans_ibfk_1` FOREIGN KEY (`no_nota`) REFERENCES `htrans` (`no_nota`)
+  CONSTRAINT `dtrans_ibfk_1` FOREIGN KEY (`no_nota`) REFERENCES `htrans` (`no_nota`),
+  CONSTRAINT `dtrans_ibfk_2` FOREIGN KEY (`id_minuman`) REFERENCES `minuman` (`id_minuman`),
+  CONSTRAINT `dtrans_ibfk_3` FOREIGN KEY (`id_topping`) REFERENCES `topping` (`id_topping`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 /*Data for the table `dtrans` */
@@ -40,7 +42,14 @@ insert  into `dtrans`(`no_nota`,`id_minuman`,`id_topping`,`jumlah`,`subtotal`,`s
 ('H2205120002',2,2,1,14000,1),
 ('H2205120003',2,1,2,24000,1),
 ('H2205120003',2,2,1,14000,1),
-('H2205120003',3,3,1,18000,1);
+('H2205120003',3,3,1,18000,1),
+('H2205140001',1,1,2,20000,1),
+('H2205140001',2,2,1,14000,1),
+('H2205140001',3,1,1,15000,1),
+('H2205140002',2,2,1,14000,1),
+('H2205140003',3,1,1,15000,1),
+('H2205140003',3,3,1,18000,1),
+('H2205140004',1,1,1,10000,1);
 
 /*Table structure for table `htrans` */
 
@@ -62,7 +71,11 @@ CREATE TABLE `htrans` (
 insert  into `htrans`(`no_nota`,`tanggal`,`total`,`id_users`,`status`) values 
 ('H2205120001','2022-05-12 14:01:58',20000,2,1),
 ('H2205120002','2022-05-12 14:04:45',14000,3,1),
-('H2205120003','2022-05-12 14:07:27',56000,2,1);
+('H2205120003','2022-05-12 14:07:27',56000,2,1),
+('H2205140001','2022-05-14 09:01:40',49000,2,1),
+('H2205140002','2022-05-14 09:08:17',14000,2,1),
+('H2205140003','2022-05-14 09:08:53',33000,2,1),
+('H2205140004','2022-05-14 20:23:31',10000,3,1);
 
 /*Table structure for table `minuman` */
 
@@ -80,9 +93,9 @@ CREATE TABLE `minuman` (
 /*Data for the table `minuman` */
 
 insert  into `minuman`(`id_minuman`,`nama`,`stok`,`harga`,`status`) values 
-(1,'Es Teh Manis',200,10000,1),
-(2,'Jus Jeruk',500,12000,1),
-(3,'Milkshake',30,15000,1);
+(1,'Es Teh Manis',197,10000,1),
+(2,'Jus Jeruk',498,12000,1),
+(3,'Milkshake',27,15000,1);
 
 /*Table structure for table `topping` */
 
@@ -94,14 +107,15 @@ CREATE TABLE `topping` (
   `harga` double NOT NULL,
   `status` int(1) NOT NULL DEFAULT 1,
   PRIMARY KEY (`id_topping`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4;
 
 /*Data for the table `topping` */
 
 insert  into `topping`(`id_topping`,`nama`,`harga`,`status`) values 
 (1,'No Topping',0,1),
 (2,'Gula',2000,1),
-(3,'Chocolate Chip',3000,1);
+(3,'Chocolate Chip',3000,1),
+(4,'Jeruk Nipis',2500,1);
 
 /*Table structure for table `users` */
 
@@ -114,8 +128,9 @@ CREATE TABLE `users` (
   `nama` varchar(100) NOT NULL,
   `privilege` int(1) NOT NULL DEFAULT 1,
   `status` int(1) NOT NULL DEFAULT 1,
-  PRIMARY KEY (`id_users`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4;
+  PRIMARY KEY (`id_users`),
+  UNIQUE KEY `Username` (`username`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4;
 
 /*Data for the table `users` */
 

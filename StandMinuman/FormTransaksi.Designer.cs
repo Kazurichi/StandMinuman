@@ -61,6 +61,7 @@ namespace StandMinuman
             this.labelTotal = new System.Windows.Forms.Label();
             this.buttonBeli = new System.Windows.Forms.Button();
             this.buttonClearSelection = new System.Windows.Forms.Button();
+            this.buttonClearSearch = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMinuman)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTopping)).BeginInit();
@@ -397,6 +398,17 @@ namespace StandMinuman
             this.buttonClearSelection.UseVisualStyleBackColor = true;
             this.buttonClearSelection.Click += new System.EventHandler(this.buttonClearSelection_Click);
             // 
+            // buttonClearSearch
+            // 
+            this.buttonClearSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.buttonClearSearch.Location = new System.Drawing.Point(656, 256);
+            this.buttonClearSearch.Name = "buttonClearSearch";
+            this.buttonClearSearch.Size = new System.Drawing.Size(116, 36);
+            this.buttonClearSearch.TabIndex = 53;
+            this.buttonClearSearch.Text = "Clear Search";
+            this.buttonClearSearch.UseVisualStyleBackColor = true;
+            this.buttonClearSearch.Click += new System.EventHandler(this.buttonClearSearch_Click);
+            // 
             // FormTransaksi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -404,6 +416,7 @@ namespace StandMinuman
             this.AutoScroll = true;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(784, 651);
+            this.Controls.Add(this.buttonClearSearch);
             this.Controls.Add(this.buttonClearSelection);
             this.Controls.Add(this.buttonBeli);
             this.Controls.Add(this.labelTotal);
@@ -476,5 +489,6 @@ namespace StandMinuman
         private System.Windows.Forms.DataGridViewTextBoxColumn NamaTopping;
         private System.Windows.Forms.DataGridViewTextBoxColumn Jumlah;
         private System.Windows.Forms.DataGridViewTextBoxColumn Subtotal;
+        private System.Windows.Forms.Button buttonClearSearch;
     }
 }

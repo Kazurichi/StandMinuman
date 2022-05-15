@@ -44,6 +44,7 @@ namespace StandMinuman
 			{
 				query += " and nama like '%" + textBoxSearch.Text + "%'";
 			}
+			query += " and id_topping <> 1";
 			try
 			{
 				MySqlCommand cmd = new MySqlCommand(query, Koneksi.getConn());
@@ -89,7 +90,7 @@ namespace StandMinuman
 
         private void btnInsert_Click(object sender, EventArgs e)
         {
-            if (textBoxId.Text == "")
+            if (btnInsert.Enabled == true)
             {
                 if (textBoxNama.Text != "")
                 {
@@ -99,7 +100,8 @@ namespace StandMinuman
 
 						cmd.Connection = Koneksi.getConn();
 
-						cmd.CommandText = "INSERT INTO topping VALUES (0,@nama, @harga, 1)";
+						cmd.CommandText = "INSERT INTO topping VALUES (@id,@nama, @harga, 1)";
+						cmd.Parameters.Add(new MySqlParameter("@id", Convert.ToInt32(textBoxId.Text)));
 						cmd.Parameters.Add(new MySqlParameter("@nama", textBoxNama.Text));
 						cmd.Parameters.Add(new MySqlParameter("@harga", Convert.ToInt32(numericUpDownHarga.Value.ToString())));
 					
@@ -133,6 +135,9 @@ namespace StandMinuman
             {
                 if (dataGridViewTopping.Rows[e.RowIndex].Cells[0].Value.ToString() != "1")
                 {
+					buttonDelete.Enabled = true;
+					buttonUpdate.Enabled = true;
+					btnInsert.Enabled = false;
 					textBoxId.Text = dataGridViewTopping.Rows[e.RowIndex].Cells[0].Value.ToString();
 					textBoxNama.Text = dataGridViewTopping.Rows[e.RowIndex].Cells[1].Value.ToString();
 					numericUpDownHarga.Value = Convert.ToInt32(dataGridViewTopping.Rows[e.RowIndex].Cells[2].Value.ToString());
@@ -145,9 +150,7 @@ namespace StandMinuman
 					{
 						buttonDelete.Text = "Delete";
 					}
-					buttonDelete.Enabled = true;
-					buttonUpdate.Enabled = true;
-					btnInsert.Enabled = false;
+					
 				}
                 else
                 {
@@ -159,7 +162,7 @@ namespace StandMinuman
 
         private void buttonUpdate_Click(object sender, EventArgs e)
         {
-            if (textBoxId.Text != "")
+            if (buttonUpdate.Enabled == true)
             {
 				if (textBoxNama.Text != "")
 				{
@@ -275,5 +278,25 @@ namespace StandMinuman
 			loadTopping();
         }
 
+        private void textBoxNama_TextChanged(object sender, EventArgs e)
+        {
+			AutogenID();
+        }
+
+		void AutogenID()
+		{
+			if (btnInsert.Enabled)
+			{
+				MySqlCommand cmd = new MySqlCommand("select count(*) from topping;", Koneksi.getConn());
+				string count_data = cmd.ExecuteScalar().ToString();
+				string newID = (int.Parse(count_data) + 1).ToString();
+				textBoxId.Text = newID;
+			}
+		}
+
+        private void numericUpDownHarga_ValueChanged(object sender, EventArgs e)
+        {
+			AutogenID();
+        }
     }
 }

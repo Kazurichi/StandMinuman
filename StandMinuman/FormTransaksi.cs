@@ -431,6 +431,14 @@ namespace StandMinuman
             }
         }
 
+        private void buttonClearSearch_Click(object sender, EventArgs e)
+        {
+            textBoxSearchMinuman.Text = "";
+            textBoxSearchTopping.Text = "";
+            loadMinuman();
+            loadTopping();
+        }
+
         private void textBoxSearchTopping_TextChanged(object sender, EventArgs e)
         {
             if (idxTopping <= -1)

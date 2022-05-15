@@ -146,6 +146,7 @@ namespace StandMinuman
             this.textBoxNama.Name = "textBoxNama";
             this.textBoxNama.Size = new System.Drawing.Size(179, 26);
             this.textBoxNama.TabIndex = 40;
+            this.textBoxNama.TextChanged += new System.EventHandler(this.textBoxNama_TextChanged);
             // 
             // textBoxId
             // 
@@ -232,6 +233,7 @@ namespace StandMinuman
             this.numericUpDownHarga.Name = "numericUpDownHarga";
             this.numericUpDownHarga.Size = new System.Drawing.Size(148, 26);
             this.numericUpDownHarga.TabIndex = 46;
+            this.numericUpDownHarga.ValueChanged += new System.EventHandler(this.numericUpDownHarga_ValueChanged);
             // 
             // comboBoxAktif
             // 
