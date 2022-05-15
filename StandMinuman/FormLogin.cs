@@ -88,7 +88,8 @@ namespace StandMinuman
 
 		private void FormLogin_Load(object sender, EventArgs e)
 		{
-
+            textBoxPass.Text = "admin";
+            textBoxUser.Text = "admin";
 		}
 	}
 }

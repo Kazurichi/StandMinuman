@@ -29,63 +29,67 @@ namespace StandMinuman
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.button3 = new System.Windows.Forms.Button();
-			this.button1 = new System.Windows.Forms.Button();
-			this.button2 = new System.Windows.Forms.Button();
+			this.btnClear = new System.Windows.Forms.Button();
+			this.btnDelete = new System.Windows.Forms.Button();
+			this.btnUpdate = new System.Windows.Forms.Button();
 			this.btnInsert = new System.Windows.Forms.Button();
 			this.dataGridViewMinuman = new System.Windows.Forms.DataGridView();
 			this.menuStrip1 = new System.Windows.Forms.MenuStrip();
 			this.kembaliKeMenuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.masterTransaksiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.textBox4 = new System.Windows.Forms.TextBox();
-			this.textBox2 = new System.Windows.Forms.TextBox();
-			this.textBox1 = new System.Windows.Forms.TextBox();
+			this.tbnama = new System.Windows.Forms.TextBox();
+			this.tbidminuman = new System.Windows.Forms.TextBox();
 			this.label4 = new System.Windows.Forms.Label();
 			this.label3 = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
 			this.label1 = new System.Windows.Forms.Label();
-			this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+			this.nUDStok = new System.Windows.Forms.NumericUpDown();
 			this.label5 = new System.Windows.Forms.Label();
 			this.buttonClearSearch = new System.Windows.Forms.Button();
 			this.comboBoxAktif = new System.Windows.Forms.ComboBox();
 			this.textBoxSearch = new System.Windows.Forms.TextBox();
 			this.label6 = new System.Windows.Forms.Label();
+			this.nUPHarga = new System.Windows.Forms.NumericUpDown();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridViewMinuman)).BeginInit();
 			this.menuStrip1.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.nUDStok)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.nUPHarga)).BeginInit();
 			this.SuspendLayout();
 			// 
-			// button3
+			// btnClear
 			// 
-			this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button3.Location = new System.Drawing.Point(680, 415);
-			this.button3.Name = "button3";
-			this.button3.Size = new System.Drawing.Size(109, 41);
-			this.button3.TabIndex = 24;
-			this.button3.Text = "Clear";
-			this.button3.UseVisualStyleBackColor = true;
+			this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnClear.Location = new System.Drawing.Point(680, 415);
+			this.btnClear.Name = "btnClear";
+			this.btnClear.Size = new System.Drawing.Size(109, 41);
+			this.btnClear.TabIndex = 24;
+			this.btnClear.Text = "Clear";
+			this.btnClear.UseVisualStyleBackColor = true;
+			this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
 			// 
-			// button1
+			// btnDelete
 			// 
-			this.button1.Enabled = false;
-			this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button1.Location = new System.Drawing.Point(679, 368);
-			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(109, 41);
-			this.button1.TabIndex = 23;
-			this.button1.Text = "Delete";
-			this.button1.UseVisualStyleBackColor = true;
+			this.btnDelete.Enabled = false;
+			this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnDelete.Location = new System.Drawing.Point(679, 368);
+			this.btnDelete.Name = "btnDelete";
+			this.btnDelete.Size = new System.Drawing.Size(109, 41);
+			this.btnDelete.TabIndex = 23;
+			this.btnDelete.Text = "Delete";
+			this.btnDelete.UseVisualStyleBackColor = true;
+			this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
 			// 
-			// button2
+			// btnUpdate
 			// 
-			this.button2.Enabled = false;
-			this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button2.Location = new System.Drawing.Point(679, 321);
-			this.button2.Name = "button2";
-			this.button2.Size = new System.Drawing.Size(109, 41);
-			this.button2.TabIndex = 22;
-			this.button2.Text = "Update";
-			this.button2.UseVisualStyleBackColor = true;
+			this.btnUpdate.Enabled = false;
+			this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnUpdate.Location = new System.Drawing.Point(679, 321);
+			this.btnUpdate.Name = "btnUpdate";
+			this.btnUpdate.Size = new System.Drawing.Size(109, 41);
+			this.btnUpdate.TabIndex = 22;
+			this.btnUpdate.Text = "Update";
+			this.btnUpdate.UseVisualStyleBackColor = true;
+			this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
 			// 
 			// btnInsert
 			// 
@@ -96,6 +100,7 @@ namespace StandMinuman
 			this.btnInsert.TabIndex = 21;
 			this.btnInsert.Text = "Insert";
 			this.btnInsert.UseVisualStyleBackColor = true;
+			this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
 			// 
 			// dataGridViewMinuman
 			// 
@@ -109,6 +114,7 @@ namespace StandMinuman
 			this.dataGridViewMinuman.RowHeadersVisible = false;
 			this.dataGridViewMinuman.Size = new System.Drawing.Size(776, 226);
 			this.dataGridViewMinuman.TabIndex = 20;
+			this.dataGridViewMinuman.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridViewMinuman_CellMouseDoubleClick);
 			// 
 			// menuStrip1
 			// 
@@ -134,36 +140,29 @@ namespace StandMinuman
 			this.masterTransaksiToolStripMenuItem.Name = "masterTransaksiToolStripMenuItem";
 			this.masterTransaksiToolStripMenuItem.Size = new System.Drawing.Size(12, 20);
 			// 
-			// textBox4
+			// tbnama
 			// 
-			this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.textBox4.Location = new System.Drawing.Point(157, 389);
-			this.textBox4.Name = "textBox4";
-			this.textBox4.Size = new System.Drawing.Size(148, 26);
-			this.textBox4.TabIndex = 32;
+			this.tbnama.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.tbnama.Location = new System.Drawing.Point(126, 334);
+			this.tbnama.Name = "tbnama";
+			this.tbnama.Size = new System.Drawing.Size(179, 26);
+			this.tbnama.TabIndex = 30;
+			this.tbnama.TextChanged += new System.EventHandler(this.tbnama_TextChanged);
 			// 
-			// textBox2
+			// tbidminuman
 			// 
-			this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.textBox2.Location = new System.Drawing.Point(126, 325);
-			this.textBox2.Name = "textBox2";
-			this.textBox2.Size = new System.Drawing.Size(179, 26);
-			this.textBox2.TabIndex = 30;
-			// 
-			// textBox1
-			// 
-			this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.textBox1.Location = new System.Drawing.Point(126, 292);
-			this.textBox1.Name = "textBox1";
-			this.textBox1.ReadOnly = true;
-			this.textBox1.Size = new System.Drawing.Size(75, 26);
-			this.textBox1.TabIndex = 29;
+			this.tbidminuman.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.tbidminuman.Location = new System.Drawing.Point(126, 301);
+			this.tbidminuman.Name = "tbidminuman";
+			this.tbidminuman.ReadOnly = true;
+			this.tbidminuman.Size = new System.Drawing.Size(75, 26);
+			this.tbidminuman.TabIndex = 29;
 			// 
 			// label4
 			// 
 			this.label4.AutoSize = true;
 			this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label4.Location = new System.Drawing.Point(56, 390);
+			this.label4.Location = new System.Drawing.Point(56, 399);
 			this.label4.Name = "label4";
 			this.label4.Size = new System.Drawing.Size(65, 20);
 			this.label4.TabIndex = 28;
@@ -174,7 +173,7 @@ namespace StandMinuman
 			// 
 			this.label3.AutoSize = true;
 			this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label3.Location = new System.Drawing.Point(69, 360);
+			this.label3.Location = new System.Drawing.Point(69, 369);
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(50, 20);
 			this.label3.TabIndex = 27;
@@ -185,7 +184,7 @@ namespace StandMinuman
 			// 
 			this.label2.AutoSize = true;
 			this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label2.Location = new System.Drawing.Point(56, 328);
+			this.label2.Location = new System.Drawing.Point(56, 337);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(63, 20);
 			this.label2.TabIndex = 26;
@@ -196,26 +195,32 @@ namespace StandMinuman
 			// 
 			this.label1.AutoSize = true;
 			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label1.Location = new System.Drawing.Point(12, 295);
+			this.label1.Location = new System.Drawing.Point(12, 304);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(107, 20);
 			this.label1.TabIndex = 25;
 			this.label1.Text = "ID Minuman  :";
 			this.label1.TextAlign = System.Drawing.ContentAlignment.TopRight;
 			// 
-			// numericUpDown1
+			// nUDStok
 			// 
-			this.numericUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.numericUpDown1.Location = new System.Drawing.Point(126, 357);
-			this.numericUpDown1.Name = "numericUpDown1";
-			this.numericUpDown1.Size = new System.Drawing.Size(180, 26);
-			this.numericUpDown1.TabIndex = 33;
+			this.nUDStok.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.nUDStok.Location = new System.Drawing.Point(126, 366);
+			this.nUDStok.Maximum = new decimal(new int[] {
+            1410065407,
+            2,
+            0,
+            0});
+			this.nUDStok.Name = "nUDStok";
+			this.nUDStok.Size = new System.Drawing.Size(180, 26);
+			this.nUDStok.TabIndex = 33;
+			this.nUDStok.ValueChanged += new System.EventHandler(this.nUDStok_ValueChanged);
 			// 
 			// label5
 			// 
 			this.label5.AutoSize = true;
 			this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label5.Location = new System.Drawing.Point(127, 392);
+			this.label5.Location = new System.Drawing.Point(127, 401);
 			this.label5.Name = "label5";
 			this.label5.Size = new System.Drawing.Size(30, 20);
 			this.label5.TabIndex = 34;
@@ -231,6 +236,7 @@ namespace StandMinuman
 			this.buttonClearSearch.TabIndex = 52;
 			this.buttonClearSearch.Text = "Clear Search";
 			this.buttonClearSearch.UseVisualStyleBackColor = true;
+			this.buttonClearSearch.Click += new System.EventHandler(this.buttonClearSearch_Click);
 			// 
 			// comboBoxAktif
 			// 
@@ -244,6 +250,7 @@ namespace StandMinuman
 			this.comboBoxAktif.Name = "comboBoxAktif";
 			this.comboBoxAktif.Size = new System.Drawing.Size(121, 28);
 			this.comboBoxAktif.TabIndex = 51;
+			this.comboBoxAktif.SelectedIndexChanged += new System.EventHandler(this.comboBoxAktif_SelectedIndexChanged);
 			// 
 			// textBoxSearch
 			// 
@@ -252,6 +259,7 @@ namespace StandMinuman
 			this.textBoxSearch.Name = "textBoxSearch";
 			this.textBoxSearch.Size = new System.Drawing.Size(179, 26);
 			this.textBoxSearch.TabIndex = 50;
+			this.textBoxSearch.TextChanged += new System.EventHandler(this.textBoxSearch_TextChanged);
 			// 
 			// label6
 			// 
@@ -264,27 +272,41 @@ namespace StandMinuman
 			this.label6.Text = "Search  :";
 			this.label6.TextAlign = System.Drawing.ContentAlignment.TopRight;
 			// 
+			// nUPHarga
+			// 
+			this.nUPHarga.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.nUPHarga.Location = new System.Drawing.Point(163, 399);
+			this.nUPHarga.Maximum = new decimal(new int[] {
+            1215752191,
+            23,
+            0,
+            0});
+			this.nUPHarga.Name = "nUPHarga";
+			this.nUPHarga.Size = new System.Drawing.Size(142, 26);
+			this.nUPHarga.TabIndex = 53;
+			this.nUPHarga.ValueChanged += new System.EventHandler(this.nUPHarga_ValueChanged);
+			// 
 			// FormMasterMinuman
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(800, 462);
+			this.Controls.Add(this.nUPHarga);
 			this.Controls.Add(this.buttonClearSearch);
 			this.Controls.Add(this.comboBoxAktif);
 			this.Controls.Add(this.textBoxSearch);
 			this.Controls.Add(this.label6);
 			this.Controls.Add(this.label5);
-			this.Controls.Add(this.numericUpDown1);
-			this.Controls.Add(this.textBox4);
-			this.Controls.Add(this.textBox2);
-			this.Controls.Add(this.textBox1);
+			this.Controls.Add(this.nUDStok);
+			this.Controls.Add(this.tbnama);
+			this.Controls.Add(this.tbidminuman);
 			this.Controls.Add(this.label4);
 			this.Controls.Add(this.label3);
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.label1);
-			this.Controls.Add(this.button3);
-			this.Controls.Add(this.button1);
-			this.Controls.Add(this.button2);
+			this.Controls.Add(this.btnClear);
+			this.Controls.Add(this.btnDelete);
+			this.Controls.Add(this.btnUpdate);
 			this.Controls.Add(this.btnInsert);
 			this.Controls.Add(this.dataGridViewMinuman);
 			this.Controls.Add(this.menuStrip1);
@@ -295,7 +317,8 @@ namespace StandMinuman
 			((System.ComponentModel.ISupportInitialize)(this.dataGridViewMinuman)).EndInit();
 			this.menuStrip1.ResumeLayout(false);
 			this.menuStrip1.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.nUDStok)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.nUPHarga)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -303,26 +326,26 @@ namespace StandMinuman
 
 		#endregion
 
-		private System.Windows.Forms.Button button3;
-		private System.Windows.Forms.Button button1;
-		private System.Windows.Forms.Button button2;
+		private System.Windows.Forms.Button btnClear;
+		private System.Windows.Forms.Button btnDelete;
+		private System.Windows.Forms.Button btnUpdate;
 		private System.Windows.Forms.Button btnInsert;
 		private System.Windows.Forms.DataGridView dataGridViewMinuman;
 		private System.Windows.Forms.MenuStrip menuStrip1;
 		private System.Windows.Forms.ToolStripMenuItem kembaliKeMenuToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem masterTransaksiToolStripMenuItem;
-		private System.Windows.Forms.TextBox textBox4;
-		private System.Windows.Forms.TextBox textBox2;
-		private System.Windows.Forms.TextBox textBox1;
+		private System.Windows.Forms.TextBox tbnama;
+		private System.Windows.Forms.TextBox tbidminuman;
 		private System.Windows.Forms.Label label4;
 		private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.Label label1;
-		private System.Windows.Forms.NumericUpDown numericUpDown1;
+		private System.Windows.Forms.NumericUpDown nUDStok;
 		private System.Windows.Forms.Label label5;
 		private System.Windows.Forms.Button buttonClearSearch;
 		private System.Windows.Forms.ComboBox comboBoxAktif;
 		private System.Windows.Forms.TextBox textBoxSearch;
 		private System.Windows.Forms.Label label6;
+		private System.Windows.Forms.NumericUpDown nUPHarga;
 	}
 }
