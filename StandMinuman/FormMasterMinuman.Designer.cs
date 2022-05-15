@@ -46,10 +46,6 @@ namespace StandMinuman
 			this.label1 = new System.Windows.Forms.Label();
 			this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
 			this.label5 = new System.Windows.Forms.Label();
-			this.buttonClearSearch = new System.Windows.Forms.Button();
-			this.comboBoxAktif = new System.Windows.Forms.ComboBox();
-			this.textBoxSearch = new System.Windows.Forms.TextBox();
-			this.label6 = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridViewMinuman)).BeginInit();
 			this.menuStrip1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
@@ -137,7 +133,7 @@ namespace StandMinuman
 			// textBox4
 			// 
 			this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.textBox4.Location = new System.Drawing.Point(157, 399);
+			this.textBox4.Location = new System.Drawing.Point(157, 368);
 			this.textBox4.Name = "textBox4";
 			this.textBox4.Size = new System.Drawing.Size(148, 26);
 			this.textBox4.TabIndex = 32;
@@ -145,7 +141,7 @@ namespace StandMinuman
 			// textBox2
 			// 
 			this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.textBox2.Location = new System.Drawing.Point(126, 335);
+			this.textBox2.Location = new System.Drawing.Point(126, 304);
 			this.textBox2.Name = "textBox2";
 			this.textBox2.Size = new System.Drawing.Size(179, 26);
 			this.textBox2.TabIndex = 30;
@@ -153,7 +149,7 @@ namespace StandMinuman
 			// textBox1
 			// 
 			this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.textBox1.Location = new System.Drawing.Point(126, 302);
+			this.textBox1.Location = new System.Drawing.Point(126, 271);
 			this.textBox1.Name = "textBox1";
 			this.textBox1.ReadOnly = true;
 			this.textBox1.Size = new System.Drawing.Size(75, 26);
@@ -163,7 +159,7 @@ namespace StandMinuman
 			// 
 			this.label4.AutoSize = true;
 			this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label4.Location = new System.Drawing.Point(56, 400);
+			this.label4.Location = new System.Drawing.Point(56, 369);
 			this.label4.Name = "label4";
 			this.label4.Size = new System.Drawing.Size(65, 20);
 			this.label4.TabIndex = 28;
@@ -174,7 +170,7 @@ namespace StandMinuman
 			// 
 			this.label3.AutoSize = true;
 			this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label3.Location = new System.Drawing.Point(69, 370);
+			this.label3.Location = new System.Drawing.Point(69, 339);
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(50, 20);
 			this.label3.TabIndex = 27;
@@ -185,7 +181,7 @@ namespace StandMinuman
 			// 
 			this.label2.AutoSize = true;
 			this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label2.Location = new System.Drawing.Point(56, 338);
+			this.label2.Location = new System.Drawing.Point(56, 307);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(63, 20);
 			this.label2.TabIndex = 26;
@@ -196,7 +192,7 @@ namespace StandMinuman
 			// 
 			this.label1.AutoSize = true;
 			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label1.Location = new System.Drawing.Point(12, 305);
+			this.label1.Location = new System.Drawing.Point(12, 274);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(107, 20);
 			this.label1.TabIndex = 25;
@@ -206,7 +202,7 @@ namespace StandMinuman
 			// numericUpDown1
 			// 
 			this.numericUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.numericUpDown1.Location = new System.Drawing.Point(126, 367);
+			this.numericUpDown1.Location = new System.Drawing.Point(126, 336);
 			this.numericUpDown1.Name = "numericUpDown1";
 			this.numericUpDown1.Size = new System.Drawing.Size(180, 26);
 			this.numericUpDown1.TabIndex = 33;
@@ -215,64 +211,18 @@ namespace StandMinuman
 			// 
 			this.label5.AutoSize = true;
 			this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label5.Location = new System.Drawing.Point(127, 402);
+			this.label5.Location = new System.Drawing.Point(127, 371);
 			this.label5.Name = "label5";
 			this.label5.Size = new System.Drawing.Size(30, 20);
 			this.label5.TabIndex = 34;
 			this.label5.Text = "Rp";
 			this.label5.TextAlign = System.Drawing.ContentAlignment.TopRight;
 			// 
-			// buttonClearSearch
-			// 
-			this.buttonClearSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.buttonClearSearch.Location = new System.Drawing.Point(399, 265);
-			this.buttonClearSearch.Name = "buttonClearSearch";
-			this.buttonClearSearch.Size = new System.Drawing.Size(109, 28);
-			this.buttonClearSearch.TabIndex = 52;
-			this.buttonClearSearch.Text = "Clear Search";
-			this.buttonClearSearch.UseVisualStyleBackColor = true;
-			// 
-			// comboBoxAktif
-			// 
-			this.comboBoxAktif.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-			this.comboBoxAktif.FormattingEnabled = true;
-			this.comboBoxAktif.Items.AddRange(new object[] {
-            "Semua",
-            "Aktif",
-            "Tidak Aktif"});
-			this.comboBoxAktif.Location = new System.Drawing.Point(272, 265);
-			this.comboBoxAktif.Name = "comboBoxAktif";
-			this.comboBoxAktif.Size = new System.Drawing.Size(121, 28);
-			this.comboBoxAktif.TabIndex = 51;
-			// 
-			// textBoxSearch
-			// 
-			this.textBoxSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.textBoxSearch.Location = new System.Drawing.Point(87, 266);
-			this.textBoxSearch.Name = "textBoxSearch";
-			this.textBoxSearch.Size = new System.Drawing.Size(179, 26);
-			this.textBoxSearch.TabIndex = 50;
-			// 
-			// label6
-			// 
-			this.label6.AutoSize = true;
-			this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label6.Location = new System.Drawing.Point(9, 269);
-			this.label6.Name = "label6";
-			this.label6.Size = new System.Drawing.Size(72, 20);
-			this.label6.TabIndex = 49;
-			this.label6.Text = "Search  :";
-			this.label6.TextAlign = System.Drawing.ContentAlignment.TopRight;
-			// 
 			// FormMasterMinuman
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(800, 462);
-			this.Controls.Add(this.buttonClearSearch);
-			this.Controls.Add(this.comboBoxAktif);
-			this.Controls.Add(this.textBoxSearch);
-			this.Controls.Add(this.label6);
 			this.Controls.Add(this.label5);
 			this.Controls.Add(this.numericUpDown1);
 			this.Controls.Add(this.textBox4);
@@ -320,9 +270,5 @@ namespace StandMinuman
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.NumericUpDown numericUpDown1;
 		private System.Windows.Forms.Label label5;
-		private System.Windows.Forms.Button buttonClearSearch;
-		private System.Windows.Forms.ComboBox comboBoxAktif;
-		private System.Windows.Forms.TextBox textBoxSearch;
-		private System.Windows.Forms.Label label6;
 	}
 }
