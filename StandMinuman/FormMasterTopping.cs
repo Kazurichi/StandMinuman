@@ -79,13 +79,13 @@ namespace StandMinuman
 		public void Clear()
         {
 			numericUpDownHarga.Value = 0;
-			textBoxId.Text = "";
 			textBoxNama.Text = "";
 			textBoxSearch.Text = "";
 			buttonDelete.Text = "Delete";
 			buttonDelete.Enabled = false;
 			buttonUpdate.Enabled = false;
 			btnInsert.Enabled = true;
+			textBoxId.Text = "";
 		}
 
         private void btnInsert_Click(object sender, EventArgs e)

@@ -130,7 +130,6 @@ namespace StandMinuman
 
 		public void Clear()
 		{
-			textBoxId.Text = "";
 			textBoxNama.Text = "";
 			textBoxSearch.Text = "";
 			buttonDelete.Text = "Delete";
@@ -139,6 +138,7 @@ namespace StandMinuman
 			buttonDelete.Enabled = false;
 			buttonUpdate.Enabled = false;
 			btnInsert.Enabled = true;
+			textBoxId.Text = "";
 		}
 
 		public void clearSearch()
