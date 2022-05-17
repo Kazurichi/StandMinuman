@@ -172,6 +172,7 @@ namespace StandMinuman
                             int subtotal = (Convert.ToInt32(dataGridViewMinuman.Rows[idxMinuman].Cells[3].Value.ToString()) + Convert.ToInt32(dataGridViewTopping.Rows[idxTopping].Cells[2].Value.ToString())) * amount;
                             dataGridViewKeranjang.Rows[idxKeranjang].Cells[5].Value = amount;
                             dataGridViewKeranjang.Rows[idxKeranjang].Cells[6].Value = subtotal;
+                            getNota();
                             hitungTotal();
                             clearSelection();
                             buttonHapusSemua.Enabled = true;
@@ -185,6 +186,7 @@ namespace StandMinuman
                     {
                         int subtotal = (Convert.ToInt32(dataGridViewMinuman.Rows[idxMinuman].Cells[3].Value.ToString()) + Convert.ToInt32(dataGridViewTopping.Rows[idxTopping].Cells[2].Value.ToString())) * amount;
                         dataGridViewKeranjang.Rows.Add(dataGridViewKeranjang.Rows.Count + 1, Convert.ToInt32(dataGridViewMinuman.Rows[idxMinuman].Cells[0].Value.ToString()), dataGridViewMinuman.Rows[idxMinuman].Cells[1].Value.ToString(), Convert.ToInt32(dataGridViewTopping.Rows[idxTopping].Cells[0].Value.ToString()), dataGridViewTopping.Rows[idxTopping].Cells[1].Value.ToString(), amount, subtotal);
+                        getNota();
                         hitungTotal();
                         clearSelection();
                         buttonHapusSemua.Enabled = true;
@@ -224,6 +226,7 @@ namespace StandMinuman
             if (dataGridViewKeranjang.Rows.Count == 0)
             {
                 buttonHapusSemua.Enabled = false;
+                labelNota.Text = "No Nota: -";
             }
         }
 
@@ -344,7 +347,6 @@ namespace StandMinuman
             toolStripMenuItemHello.Text = "Hello, " + FormLogin.user.ItemArray[3].ToString() + "!";
             loadMinuman();
             loadTopping();
-            getNota();
         }
 
         private void buttonBeli_Click(object sender, EventArgs e)
@@ -403,7 +405,6 @@ namespace StandMinuman
                                 obTrans.Commit();
                                 MessageBox.Show("TRANSAKSI SUKSES!");
                                 dataGridViewKeranjang.Rows.Clear();
-                                getNota();
                                 hitungTotal();
                                 clearSelection();
                             }
