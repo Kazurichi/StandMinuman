@@ -63,6 +63,12 @@
       <DependentUpon>CrystalReportBanyakTopping.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="CrystalReportSellerTinggi.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportSellerTinggi.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="FormAdminMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +117,10 @@
     <EmbeddedResource Include="CrystalReportBanyakTopping.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CrystalReportBanyakTopping.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReportSellerTinggi.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportSellerTinggi.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="FormAdminMenu.resx">
       <DependentUpon>FormAdminMenu.cs</DependentUpon>
