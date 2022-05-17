@@ -23,37 +23,6 @@ namespace StandMinuman
 			this.Close();
 		}
 
-        private void buttonTampil_Click(object sender, EventArgs e)
-        {
-            if (report != -1)
-            {
-                if(report == 1)
-                {
-                    //report seller tertinggi
-                }
-                else if(report == 2)
-                {
-                    //report seller terendah
-                }
-                else if(report == 3)
-                {
-                    //report minuman
-                }
-                else if(report == 4)
-                {
-                    //report stok minuman
-                }
-                else
-                {
-                    reportTopping();
-                }
-            }
-            else
-            {
-                MessageBox.Show("Test");
-            }
-        }
-
         public void reportTopping()
         {
             if (dateTimePickerAwal.Value < dateTimePickerAkhir.Value)
@@ -72,7 +41,7 @@ namespace StandMinuman
         private void toppingToolStripMenuItem_Click(object sender, EventArgs e)
         {
             report = 5;
-            buttonTampil.Enabled = true;
+            tampilToolStripMenuItem.Enabled = true;
             resetBold();
             toppingToolStripMenuItem.Font = new Font(toppingToolStripMenuItem.Font, FontStyle.Bold);
         }
@@ -85,6 +54,37 @@ namespace StandMinuman
             stokMinumanToolStripMenuItem.Font = new Font(stokMinumanToolStripMenuItem.Font, FontStyle.Regular);
             toppingToolStripMenuItem.Font = new Font(toppingToolStripMenuItem.Font, FontStyle.Regular);
             
+        }
+
+        private void tampilToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (report != -1)
+            {
+                if (report == 1)
+                {
+                    //report seller tertinggi
+                }
+                else if (report == 2)
+                {
+                    //report seller terendah
+                }
+                else if (report == 3)
+                {
+                    //report minuman
+                }
+                else if (report == 4)
+                {
+                    //report stok minuman
+                }
+                else
+                {
+                    reportTopping();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Test");
+            }
         }
     }
 }

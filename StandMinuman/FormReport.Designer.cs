@@ -41,7 +41,8 @@ namespace StandMinuman
             this.label1 = new System.Windows.Forms.Label();
             this.dateTimePickerAkhir = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
-            this.buttonTampil = new System.Windows.Forms.Button();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.tampilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,10 +56,12 @@ namespace StandMinuman
             this.minumanToolStripMenuItem,
             this.stokMinumanToolStripMenuItem,
             this.toppingToolStripMenuItem,
-            this.kembaliKeMenuToolStripMenuItem});
+            this.kembaliKeMenuToolStripMenuItem,
+            this.toolStripMenuItem1,
+            this.tampilToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1516, 35);
+            this.menuStrip1.Size = new System.Drawing.Size(1516, 33);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -121,7 +124,7 @@ namespace StandMinuman
             this.dateTimePickerAwal.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.dateTimePickerAwal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.dateTimePickerAwal.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePickerAwal.Location = new System.Drawing.Point(157, 48);
+            this.dateTimePickerAwal.Location = new System.Drawing.Point(168, 48);
             this.dateTimePickerAwal.Name = "dateTimePickerAwal";
             this.dateTimePickerAwal.Size = new System.Drawing.Size(200, 30);
             this.dateTimePickerAwal.TabIndex = 2;
@@ -130,7 +133,7 @@ namespace StandMinuman
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label1.Location = new System.Drawing.Point(8, 48);
+            this.label1.Location = new System.Drawing.Point(12, 48);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(143, 25);
             this.label1.TabIndex = 3;
@@ -141,7 +144,7 @@ namespace StandMinuman
             this.dateTimePickerAkhir.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.dateTimePickerAkhir.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.dateTimePickerAkhir.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePickerAkhir.Location = new System.Drawing.Point(524, 48);
+            this.dateTimePickerAkhir.Location = new System.Drawing.Point(556, 48);
             this.dateTimePickerAkhir.Name = "dateTimePickerAkhir";
             this.dateTimePickerAkhir.Size = new System.Drawing.Size(200, 30);
             this.dateTimePickerAkhir.TabIndex = 4;
@@ -150,31 +153,32 @@ namespace StandMinuman
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label2.Location = new System.Drawing.Point(373, 48);
+            this.label2.Location = new System.Drawing.Point(391, 48);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(145, 25);
             this.label2.TabIndex = 5;
             this.label2.Text = "Tanggal Akhir :";
             // 
-            // buttonTampil
+            // toolStripMenuItem1
             // 
-            this.buttonTampil.AutoSize = true;
-            this.buttonTampil.Enabled = false;
-            this.buttonTampil.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.buttonTampil.Location = new System.Drawing.Point(1410, 42);
-            this.buttonTampil.Name = "buttonTampil";
-            this.buttonTampil.Size = new System.Drawing.Size(94, 36);
-            this.buttonTampil.TabIndex = 6;
-            this.buttonTampil.Text = "Tampil";
-            this.buttonTampil.UseVisualStyleBackColor = true;
-            this.buttonTampil.Click += new System.EventHandler(this.buttonTampil_Click);
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(32, 29);
+            this.toolStripMenuItem1.Text = "|";
+            // 
+            // tampilToolStripMenuItem
+            // 
+            this.tampilToolStripMenuItem.Enabled = false;
+            this.tampilToolStripMenuItem.Name = "tampilToolStripMenuItem";
+            this.tampilToolStripMenuItem.Size = new System.Drawing.Size(79, 29);
+            this.tampilToolStripMenuItem.Text = "Tampil";
+            this.tampilToolStripMenuItem.Click += new System.EventHandler(this.tampilToolStripMenuItem_Click);
             // 
             // FormReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1516, 906);
-            this.Controls.Add(this.buttonTampil);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dateTimePickerAkhir);
             this.Controls.Add(this.label1);
@@ -207,6 +211,7 @@ namespace StandMinuman
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker dateTimePickerAkhir;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button buttonTampil;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem tampilToolStripMenuItem;
     }
 }
