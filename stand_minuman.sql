@@ -16,6 +16,25 @@ CREATE DATABASE /*!32312 IF NOT EXISTS*/`stand_minuman` /*!40100 DEFAULT CHARACT
 
 USE `stand_minuman`;
 
+/*Table structure for table `category_minuman` */
+
+DROP TABLE IF EXISTS `category_minuman`;
+
+CREATE TABLE `category_minuman` (
+  `id_category_minuman` int(11) NOT NULL AUTO_INCREMENT,
+  `nama` varchar(30) NOT NULL,
+  `status` int(1) NOT NULL DEFAULT 1,
+  PRIMARY KEY (`id_category_minuman`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4;
+
+/*Data for the table `category_minuman` */
+
+insert  into `category_minuman`(`id_category_minuman`,`nama`,`status`) values 
+(1,'No Category',1),
+(2,'Teh',1),
+(3,'Jus',1),
+(4,'Milkshake',1);
+
 /*Table structure for table `dtrans` */
 
 DROP TABLE IF EXISTS `dtrans`;
@@ -86,16 +105,19 @@ CREATE TABLE `minuman` (
   `nama` varchar(100) NOT NULL,
   `stok` double NOT NULL,
   `harga` double NOT NULL,
+  `id_category_minuman` int(11) NOT NULL,
   `status` int(1) NOT NULL DEFAULT 1,
-  PRIMARY KEY (`id_minuman`)
+  PRIMARY KEY (`id_minuman`),
+  KEY `id_category_minuman` (`id_category_minuman`),
+  CONSTRAINT `minuman_ibfk_1` FOREIGN KEY (`id_category_minuman`) REFERENCES `category_minuman` (`id_category_minuman`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4;
 
 /*Data for the table `minuman` */
 
-insert  into `minuman`(`id_minuman`,`nama`,`stok`,`harga`,`status`) values 
-(1,'Es Teh Manis',197,10000,1),
-(2,'Jus Jeruk',498,12000,1),
-(3,'Milkshake',27,15000,1);
+insert  into `minuman`(`id_minuman`,`nama`,`stok`,`harga`,`id_category_minuman`,`status`) values 
+(1,'Es Teh Manis',197,10000,2,1),
+(2,'Jus Jeruk',498,12000,3,1),
+(3,'Milkshake',27,15000,4,1);
 
 /*Table structure for table `topping` */
 
