@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -38,9 +39,11 @@ namespace StandMinuman
             }
         }
 
+        
+
         public void loadMinuman()
         {
-            string query = "SELECT id_minuman AS 'Id', nama AS 'Nama Minuman', stok AS 'Stok', harga AS 'Harga' FROM minuman where status = 1";
+            string query = "SELECT id_minuman AS 'Id', nama AS 'Nama Minuman', stok AS 'Stok', FORMAT(harga,0,'id_ID') AS 'Harga' FROM minuman where status = 1";
             if (textBoxSearchMinuman.Text != "")
             {
                 query += $" AND nama LIKE '%{textBoxSearchMinuman.Text}%'";
@@ -68,7 +71,7 @@ namespace StandMinuman
 
         public void loadTopping()
         {
-            string query = "SELECT id_topping AS 'Id', nama AS 'Nama Topping', harga AS 'Harga' FROM topping where status = 1";
+            string query = "SELECT id_topping AS 'Id', nama AS 'Nama Topping', FORMAT(harga,0,'id_ID') AS 'Harga' FROM topping where status = 1";
             if (textBoxSearchTopping.Text != "")
             {
                 query += $" AND nama LIKE '%{textBoxSearchTopping.Text}%'";
@@ -166,12 +169,12 @@ namespace StandMinuman
                     idxKeranjang = getIdk();
                     if (idxKeranjang > -1)
                     {
-                        amount += Convert.ToInt32(dataGridViewKeranjang.Rows[idxKeranjang].Cells[5].Value.ToString());
-                        if (amount <= Convert.ToInt32(dataGridViewMinuman.Rows[idxMinuman].Cells[2].Value.ToString()))
+                        amount += FormLogin.removeThousandSep(dataGridViewKeranjang.Rows[idxKeranjang].Cells[5].Value.ToString());
+                        if (amount <= FormLogin.removeThousandSep(dataGridViewMinuman.Rows[idxMinuman].Cells[2].Value.ToString()))
                         {
-                            int subtotal = (Convert.ToInt32(dataGridViewMinuman.Rows[idxMinuman].Cells[3].Value.ToString()) + Convert.ToInt32(dataGridViewTopping.Rows[idxTopping].Cells[2].Value.ToString())) * amount;
+                            int subtotal = (FormLogin.removeThousandSep(dataGridViewMinuman.Rows[idxMinuman].Cells[3].Value.ToString()) + FormLogin.removeThousandSep(dataGridViewTopping.Rows[idxTopping].Cells[2].Value.ToString())) * amount;
                             dataGridViewKeranjang.Rows[idxKeranjang].Cells[5].Value = amount;
-                            dataGridViewKeranjang.Rows[idxKeranjang].Cells[6].Value = subtotal;
+                            dataGridViewKeranjang.Rows[idxKeranjang].Cells[6].Value = FormLogin.thousandSep(subtotal);
                             getNota();
                             hitungTotal();
                             clearSelection();
@@ -184,8 +187,8 @@ namespace StandMinuman
                     }
                     else if (amount <= Convert.ToInt32(dataGridViewMinuman.Rows[idxMinuman].Cells[2].Value.ToString()))
                     {
-                        int subtotal = (Convert.ToInt32(dataGridViewMinuman.Rows[idxMinuman].Cells[3].Value.ToString()) + Convert.ToInt32(dataGridViewTopping.Rows[idxTopping].Cells[2].Value.ToString())) * amount;
-                        dataGridViewKeranjang.Rows.Add(dataGridViewKeranjang.Rows.Count + 1, Convert.ToInt32(dataGridViewMinuman.Rows[idxMinuman].Cells[0].Value.ToString()), dataGridViewMinuman.Rows[idxMinuman].Cells[1].Value.ToString(), Convert.ToInt32(dataGridViewTopping.Rows[idxTopping].Cells[0].Value.ToString()), dataGridViewTopping.Rows[idxTopping].Cells[1].Value.ToString(), amount, subtotal);
+                        int subtotal = (FormLogin.removeThousandSep(dataGridViewMinuman.Rows[idxMinuman].Cells[3].Value.ToString()) + FormLogin.removeThousandSep(dataGridViewTopping.Rows[idxTopping].Cells[2].Value.ToString())) * amount;
+                        dataGridViewKeranjang.Rows.Add(dataGridViewKeranjang.Rows.Count + 1, Convert.ToInt32(dataGridViewMinuman.Rows[idxMinuman].Cells[0].Value.ToString()), dataGridViewMinuman.Rows[idxMinuman].Cells[1].Value.ToString(), Convert.ToInt32(dataGridViewTopping.Rows[idxTopping].Cells[0].Value.ToString()), dataGridViewTopping.Rows[idxTopping].Cells[1].Value.ToString(), amount, FormLogin.thousandSep(subtotal));
                         getNota();
                         hitungTotal();
                         clearSelection();
@@ -235,9 +238,9 @@ namespace StandMinuman
             total = 0;
             for (int i = 0; i < dataGridViewKeranjang.Rows.Count; i++)
             {
-                total += Convert.ToInt32(dataGridViewKeranjang.Rows[i].Cells[6].Value.ToString());
+                total += FormLogin.removeThousandSep(dataGridViewKeranjang.Rows[i].Cells[6].Value.ToString());
             }
-            labelTotal.Text = "Total : Rp. " + total;
+            labelTotal.Text = "Total : Rp. " + FormLogin.thousandSep(total);
         }
 
         private void dataGridViewKeranjang_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -302,9 +305,9 @@ namespace StandMinuman
 
                 if (amount <= Convert.ToInt32(dataGridViewMinuman.Rows[idxMinuman].Cells[2].Value.ToString()))
                 {
-                    int subtotal = (Convert.ToInt32(dataGridViewMinuman.Rows[idxMinuman].Cells[3].Value.ToString()) + Convert.ToInt32(dataGridViewTopping.Rows[idxTopping].Cells[2].Value.ToString())) * amount;
+                    int subtotal = (FormLogin.removeThousandSep(dataGridViewMinuman.Rows[idxMinuman].Cells[3].Value.ToString()) + FormLogin.removeThousandSep(dataGridViewTopping.Rows[idxTopping].Cells[2].Value.ToString())) * amount;
                     dataGridViewKeranjang.Rows[idxKeranjang].Cells[5].Value = amount;
-                    dataGridViewKeranjang.Rows[idxKeranjang].Cells[6].Value = subtotal;
+                    dataGridViewKeranjang.Rows[idxKeranjang].Cells[6].Value = FormLogin.thousandSep(subtotal);
                     hitungTotal();
                     clearSelection();
                 }
@@ -389,7 +392,7 @@ namespace StandMinuman
                                     cmd.Parameters.Add(new MySqlParameter("@idm", Convert.ToInt32(dataGridViewKeranjang.Rows[i].Cells[1].Value.ToString())));
                                     cmd.Parameters.Add(new MySqlParameter("@idt", Convert.ToInt32(dataGridViewKeranjang.Rows[i].Cells[3].Value.ToString())));
                                     cmd.Parameters.Add(new MySqlParameter("@jumlah", Convert.ToInt32(dataGridViewKeranjang.Rows[i].Cells[5].Value.ToString())));
-                                    cmd.Parameters.Add(new MySqlParameter("@subtotal", Convert.ToInt32(dataGridViewKeranjang.Rows[i].Cells[6].Value.ToString())));
+                                    cmd.Parameters.Add(new MySqlParameter("@subtotal", FormLogin.removeThousandSep(dataGridViewKeranjang.Rows[i].Cells[6].Value.ToString())));
                                     cmd.ExecuteNonQuery();
                                 }
                                 else

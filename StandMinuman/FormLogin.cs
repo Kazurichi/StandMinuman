@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -91,5 +92,16 @@ namespace StandMinuman
             textBoxPass.Text = "admin";
             textBoxUser.Text = "admin";
 		}
-	}
+
+        public static string thousandSep(int num)
+        {
+            return num.ToString("N0", new CultureInfo("id-ID"));
+        }
+
+        public static int removeThousandSep(string str)
+        {
+            int num = Convert.ToInt32(str.Replace(".", ""));
+            return num;
+        }
+    }
 }

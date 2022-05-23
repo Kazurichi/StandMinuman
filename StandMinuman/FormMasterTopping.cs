@@ -39,7 +39,7 @@ namespace StandMinuman
             {
 				status = "where status = 0";
 			}
-			string query = "SELECT id_topping AS 'Id', nama AS 'Nama', harga AS 'Harga', STATUS AS 'Status' from topping "+status;
+			string query = "SELECT id_topping AS 'Id', nama AS 'Nama', FORMAT(harga,0,'id_ID') AS 'Harga', STATUS AS 'Status' from topping " + status;
 			if (textBoxSearch.Text != "")
 			{
 				query += " and nama like '%" + textBoxSearch.Text + "%'";
@@ -140,7 +140,7 @@ namespace StandMinuman
 					btnInsert.Enabled = false;
 					textBoxId.Text = dataGridViewTopping.Rows[e.RowIndex].Cells[0].Value.ToString();
 					textBoxNama.Text = dataGridViewTopping.Rows[e.RowIndex].Cells[1].Value.ToString();
-					numericUpDownHarga.Value = Convert.ToInt32(dataGridViewTopping.Rows[e.RowIndex].Cells[2].Value.ToString());
+					numericUpDownHarga.Value = FormLogin.removeThousandSep(dataGridViewTopping.Rows[e.RowIndex].Cells[2].Value.ToString());
 					int status = Convert.ToInt32(dataGridViewTopping.Rows[e.RowIndex].Cells[3].Value.ToString());
 					if (status == 0)
 					{
