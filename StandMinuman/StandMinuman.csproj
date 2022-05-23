@@ -69,6 +69,12 @@
       <DependentUpon>CrystalReportSellerTinggi.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="FormCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCategory.Designer.cs">
+      <DependentUpon>FormCategory.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormAdminMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,6 +127,9 @@
     <EmbeddedResource Include="CrystalReportSellerTinggi.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CrystalReportSellerTinggi.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCategory.resx">
+      <DependentUpon>FormCategory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormAdminMenu.resx">
       <DependentUpon>FormAdminMenu.cs</DependentUpon>
