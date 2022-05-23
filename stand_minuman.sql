@@ -21,7 +21,7 @@ USE `stand_minuman`;
 DROP TABLE IF EXISTS `category_minuman`;
 
 CREATE TABLE `category_minuman` (
-  `id_category_minuman` int(11) NOT NULL AUTO_INCREMENT,
+  `id_category_minuman` double NOT NULL AUTO_INCREMENT,
   `nama` varchar(30) NOT NULL,
   `status` int(1) NOT NULL DEFAULT 1,
   PRIMARY KEY (`id_category_minuman`)
@@ -44,6 +44,8 @@ CREATE TABLE `dtrans` (
   `id_minuman` double NOT NULL,
   `id_topping` double NOT NULL DEFAULT 1,
   `jumlah` double NOT NULL,
+  `subtotal_minuman` double DEFAULT NULL,
+  `subtotal_topping` double DEFAULT NULL,
   `subtotal` double NOT NULL,
   `status` int(1) NOT NULL DEFAULT 1,
   PRIMARY KEY (`no_nota`,`id_minuman`,`id_topping`),
@@ -56,19 +58,12 @@ CREATE TABLE `dtrans` (
 
 /*Data for the table `dtrans` */
 
-insert  into `dtrans`(`no_nota`,`id_minuman`,`id_topping`,`jumlah`,`subtotal`,`status`) values 
-('H2205120001',1,1,2,20000,1),
-('H2205120002',2,2,1,14000,1),
-('H2205120003',2,1,2,24000,1),
-('H2205120003',2,2,1,14000,1),
-('H2205120003',3,3,1,18000,1),
-('H2205140001',1,1,2,20000,1),
-('H2205140001',2,2,1,14000,1),
-('H2205140001',3,1,1,15000,1),
-('H2205140002',2,2,1,14000,1),
-('H2205140003',3,1,1,15000,1),
-('H2205140003',3,3,1,18000,1),
-('H2205140004',1,1,1,10000,1);
+insert  into `dtrans`(`no_nota`,`id_minuman`,`id_topping`,`jumlah`,`subtotal_minuman`,`subtotal_topping`,`subtotal`,`status`) values 
+('H2205120001',1,1,2,20000,0,20000,1),
+('H2205120002',2,2,1,12000,2000,14000,1),
+('H2205120003',2,1,2,12000,0,24000,1),
+('H2205120003',2,2,1,12000,2000,14000,1),
+('H2205120003',3,3,1,15000,3000,18000,1);
 
 /*Table structure for table `htrans` */
 
@@ -90,11 +85,7 @@ CREATE TABLE `htrans` (
 insert  into `htrans`(`no_nota`,`tanggal`,`total`,`id_users`,`status`) values 
 ('H2205120001','2022-05-12 14:01:58',20000,2,1),
 ('H2205120002','2022-05-12 14:04:45',14000,3,1),
-('H2205120003','2022-05-12 14:07:27',56000,2,1),
-('H2205140001','2022-05-14 09:01:40',49000,2,1),
-('H2205140002','2022-05-14 09:08:17',14000,2,1),
-('H2205140003','2022-05-14 09:08:53',33000,2,1),
-('H2205140004','2022-05-14 20:23:31',10000,3,1);
+('H2205120003','2022-05-12 14:07:27',56000,2,1);
 
 /*Table structure for table `minuman` */
 
@@ -105,7 +96,7 @@ CREATE TABLE `minuman` (
   `nama` varchar(100) NOT NULL,
   `stok` double NOT NULL,
   `harga` double NOT NULL,
-  `id_category_minuman` int(11) NOT NULL,
+  `id_category_minuman` double NOT NULL DEFAULT 1,
   `status` int(1) NOT NULL DEFAULT 1,
   PRIMARY KEY (`id_minuman`),
   KEY `id_category_minuman` (`id_category_minuman`),
@@ -115,9 +106,9 @@ CREATE TABLE `minuman` (
 /*Data for the table `minuman` */
 
 insert  into `minuman`(`id_minuman`,`nama`,`stok`,`harga`,`id_category_minuman`,`status`) values 
-(1,'Es Teh Manis',197,10000,2,1),
-(2,'Jus Jeruk',498,12000,3,1),
-(3,'Milkshake',27,15000,4,1);
+(1,'Es Teh Manis',196,10000,2,1),
+(2,'Jus Jeruk',4960,12000,3,1),
+(3,'Milkshake',30,15000,4,1);
 
 /*Table structure for table `topping` */
 
@@ -129,7 +120,7 @@ CREATE TABLE `topping` (
   `harga` double NOT NULL,
   `status` int(1) NOT NULL DEFAULT 1,
   PRIMARY KEY (`id_topping`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4;
 
 /*Data for the table `topping` */
 
