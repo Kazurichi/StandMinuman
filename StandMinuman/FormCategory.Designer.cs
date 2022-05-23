@@ -37,15 +37,15 @@ namespace StandMinuman
 			this.buttonDelete = new System.Windows.Forms.Button();
 			this.buttonUpdate = new System.Windows.Forms.Button();
 			this.btnInsert = new System.Windows.Forms.Button();
-			this.textBoxUsername = new System.Windows.Forms.TextBox();
+			this.tbnamaCategory = new System.Windows.Forms.TextBox();
 			this.textBoxId = new System.Windows.Forms.TextBox();
 			this.label2 = new System.Windows.Forms.Label();
 			this.label1 = new System.Windows.Forms.Label();
-			this.dataGridViewUser = new System.Windows.Forms.DataGridView();
+			this.dataGridViewCategory = new System.Windows.Forms.DataGridView();
 			this.menuStrip1 = new System.Windows.Forms.MenuStrip();
 			this.kembaliKeMenuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.masterTransaksiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			((System.ComponentModel.ISupportInitialize)(this.dataGridViewUser)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.dataGridViewCategory)).BeginInit();
 			this.menuStrip1.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -59,6 +59,7 @@ namespace StandMinuman
 			this.buttonClearSearch.TabIndex = 66;
 			this.buttonClearSearch.Text = "Clear Search";
 			this.buttonClearSearch.UseVisualStyleBackColor = true;
+			this.buttonClearSearch.Click += new System.EventHandler(this.buttonClearSearch_Click);
 			// 
 			// comboBoxAktif
 			// 
@@ -73,6 +74,7 @@ namespace StandMinuman
 			this.comboBoxAktif.Name = "comboBoxAktif";
 			this.comboBoxAktif.Size = new System.Drawing.Size(180, 26);
 			this.comboBoxAktif.TabIndex = 65;
+			this.comboBoxAktif.SelectedIndexChanged += new System.EventHandler(this.comboBoxAktif_SelectedIndexChanged);
 			// 
 			// textBoxSearch
 			// 
@@ -82,6 +84,7 @@ namespace StandMinuman
 			this.textBoxSearch.Name = "textBoxSearch";
 			this.textBoxSearch.Size = new System.Drawing.Size(266, 24);
 			this.textBoxSearch.TabIndex = 64;
+			this.textBoxSearch.TextChanged += new System.EventHandler(this.textBoxSearch_TextChanged);
 			// 
 			// label6
 			// 
@@ -105,6 +108,7 @@ namespace StandMinuman
 			this.buttonClear.TabIndex = 62;
 			this.buttonClear.Text = "Clear";
 			this.buttonClear.UseVisualStyleBackColor = true;
+			this.buttonClear.Click += new System.EventHandler(this.buttonClear_Click);
 			// 
 			// buttonDelete
 			// 
@@ -117,6 +121,7 @@ namespace StandMinuman
 			this.buttonDelete.TabIndex = 61;
 			this.buttonDelete.Text = "Delete";
 			this.buttonDelete.UseVisualStyleBackColor = true;
+			this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
 			// 
 			// buttonUpdate
 			// 
@@ -129,6 +134,7 @@ namespace StandMinuman
 			this.buttonUpdate.TabIndex = 60;
 			this.buttonUpdate.Text = "Update";
 			this.buttonUpdate.UseVisualStyleBackColor = true;
+			this.buttonUpdate.Click += new System.EventHandler(this.buttonUpdate_Click);
 			// 
 			// btnInsert
 			// 
@@ -140,15 +146,17 @@ namespace StandMinuman
 			this.btnInsert.TabIndex = 59;
 			this.btnInsert.Text = "Insert";
 			this.btnInsert.UseVisualStyleBackColor = true;
+			this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
 			// 
-			// textBoxUsername
+			// tbnamaCategory
 			// 
-			this.textBoxUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-			this.textBoxUsername.Location = new System.Drawing.Point(118, 556);
-			this.textBoxUsername.Margin = new System.Windows.Forms.Padding(4);
-			this.textBoxUsername.Name = "textBoxUsername";
-			this.textBoxUsername.Size = new System.Drawing.Size(266, 24);
-			this.textBoxUsername.TabIndex = 58;
+			this.tbnamaCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+			this.tbnamaCategory.Location = new System.Drawing.Point(118, 556);
+			this.tbnamaCategory.Margin = new System.Windows.Forms.Padding(4);
+			this.tbnamaCategory.Name = "tbnamaCategory";
+			this.tbnamaCategory.Size = new System.Drawing.Size(266, 24);
+			this.tbnamaCategory.TabIndex = 58;
+			this.tbnamaCategory.TextChanged += new System.EventHandler(this.textBoxUsername_TextChanged);
 			// 
 			// textBoxId
 			// 
@@ -164,12 +172,12 @@ namespace StandMinuman
 			// 
 			this.label2.AutoSize = true;
 			this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-			this.label2.Location = new System.Drawing.Point(21, 556);
+			this.label2.Location = new System.Drawing.Point(53, 556);
 			this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(89, 18);
+			this.label2.Size = new System.Drawing.Size(56, 18);
 			this.label2.TabIndex = 56;
-			this.label2.Text = "Username  :";
+			this.label2.Text = "Nama :";
 			this.label2.TextAlign = System.Drawing.ContentAlignment.TopRight;
 			// 
 			// label1
@@ -184,19 +192,20 @@ namespace StandMinuman
 			this.label1.Text = "ID Category :";
 			this.label1.TextAlign = System.Drawing.ContentAlignment.TopRight;
 			// 
-			// dataGridViewUser
+			// dataGridViewCategory
 			// 
-			this.dataGridViewUser.AllowUserToAddRows = false;
-			this.dataGridViewUser.AllowUserToDeleteRows = false;
-			this.dataGridViewUser.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-			this.dataGridViewUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.dataGridViewUser.Location = new System.Drawing.Point(18, 61);
-			this.dataGridViewUser.Margin = new System.Windows.Forms.Padding(4);
-			this.dataGridViewUser.Name = "dataGridViewUser";
-			this.dataGridViewUser.ReadOnly = true;
-			this.dataGridViewUser.RowHeadersVisible = false;
-			this.dataGridViewUser.Size = new System.Drawing.Size(1164, 403);
-			this.dataGridViewUser.TabIndex = 54;
+			this.dataGridViewCategory.AllowUserToAddRows = false;
+			this.dataGridViewCategory.AllowUserToDeleteRows = false;
+			this.dataGridViewCategory.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+			this.dataGridViewCategory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			this.dataGridViewCategory.Location = new System.Drawing.Point(18, 61);
+			this.dataGridViewCategory.Margin = new System.Windows.Forms.Padding(4);
+			this.dataGridViewCategory.Name = "dataGridViewCategory";
+			this.dataGridViewCategory.ReadOnly = true;
+			this.dataGridViewCategory.RowHeadersVisible = false;
+			this.dataGridViewCategory.Size = new System.Drawing.Size(1164, 403);
+			this.dataGridViewCategory.TabIndex = 54;
+			this.dataGridViewCategory.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewCategory_CellDoubleClick);
 			// 
 			// menuStrip1
 			// 
@@ -237,15 +246,16 @@ namespace StandMinuman
 			this.Controls.Add(this.buttonDelete);
 			this.Controls.Add(this.buttonUpdate);
 			this.Controls.Add(this.btnInsert);
-			this.Controls.Add(this.textBoxUsername);
+			this.Controls.Add(this.tbnamaCategory);
 			this.Controls.Add(this.textBoxId);
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.label1);
-			this.Controls.Add(this.dataGridViewUser);
+			this.Controls.Add(this.dataGridViewCategory);
 			this.Controls.Add(this.menuStrip1);
 			this.Name = "FormCategory";
 			this.Text = "FormCategory";
-			((System.ComponentModel.ISupportInitialize)(this.dataGridViewUser)).EndInit();
+			this.Load += new System.EventHandler(this.FormCategory_Load);
+			((System.ComponentModel.ISupportInitialize)(this.dataGridViewCategory)).EndInit();
 			this.menuStrip1.ResumeLayout(false);
 			this.menuStrip1.PerformLayout();
 			this.ResumeLayout(false);
@@ -263,11 +273,11 @@ namespace StandMinuman
 		private System.Windows.Forms.Button buttonDelete;
 		private System.Windows.Forms.Button buttonUpdate;
 		private System.Windows.Forms.Button btnInsert;
-		private System.Windows.Forms.TextBox textBoxUsername;
+		private System.Windows.Forms.TextBox tbnamaCategory;
 		private System.Windows.Forms.TextBox textBoxId;
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.Label label1;
-		private System.Windows.Forms.DataGridView dataGridViewUser;
+		private System.Windows.Forms.DataGridView dataGridViewCategory;
 		private System.Windows.Forms.MenuStrip menuStrip1;
 		private System.Windows.Forms.ToolStripMenuItem kembaliKeMenuToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem masterTransaksiToolStripMenuItem;

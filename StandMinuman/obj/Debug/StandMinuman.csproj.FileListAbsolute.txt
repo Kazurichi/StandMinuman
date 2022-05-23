@@ -189,6 +189,6 @@ C:\Users\KEVIN\Desktop\Project\StandMinuman\obj\Debug\StandMinuman.FormTransaksi
 C:\Users\KEVIN\Desktop\Project\StandMinuman\obj\Debug\StandMinuman.Properties.Resources.resources
 C:\Users\KEVIN\Desktop\Project\StandMinuman\obj\Debug\StandMinuman.csproj.GenerateResource.cache
 C:\Users\KEVIN\Desktop\Project\StandMinuman\obj\Debug\StandMinuman.csproj.CoreCompileInputs.cache
-C:\Users\KEVIN\Desktop\Project\StandMinuman\obj\Debug\StandMinuman.csproj.CopyComplete
 C:\Users\KEVIN\Desktop\Project\StandMinuman\obj\Debug\StandMinuman.exe
 C:\Users\KEVIN\Desktop\Project\StandMinuman\obj\Debug\StandMinuman.pdb
+C:\Users\KEVIN\Desktop\Project\StandMinuman\obj\Debug\StandMinuman.FormCategory.resources

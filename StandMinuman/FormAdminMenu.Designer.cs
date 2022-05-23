@@ -35,10 +35,10 @@ namespace StandMinuman
 			this.masterMinumanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.masterToppingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.masterCategoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.laporanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.label1 = new System.Windows.Forms.Label();
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
-			this.masterCategoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.menuStrip1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			this.SuspendLayout();
@@ -89,6 +89,13 @@ namespace StandMinuman
 			this.logoutToolStripMenuItem.Text = "Logout";
 			this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
 			// 
+			// masterCategoryToolStripMenuItem
+			// 
+			this.masterCategoryToolStripMenuItem.Name = "masterCategoryToolStripMenuItem";
+			this.masterCategoryToolStripMenuItem.Size = new System.Drawing.Size(196, 24);
+			this.masterCategoryToolStripMenuItem.Text = "Master Category Minuman";
+			this.masterCategoryToolStripMenuItem.Click += new System.EventHandler(this.masterCategoryToolStripMenuItem_Click);
+			// 
 			// laporanToolStripMenuItem
 			// 
 			this.laporanToolStripMenuItem.Name = "laporanToolStripMenuItem";
@@ -115,13 +122,6 @@ namespace StandMinuman
 			this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
 			this.pictureBox1.TabIndex = 3;
 			this.pictureBox1.TabStop = false;
-			// 
-			// masterCategoryToolStripMenuItem
-			// 
-			this.masterCategoryToolStripMenuItem.Name = "masterCategoryToolStripMenuItem";
-			this.masterCategoryToolStripMenuItem.Size = new System.Drawing.Size(130, 24);
-			this.masterCategoryToolStripMenuItem.Text = "Master Category";
-			this.masterCategoryToolStripMenuItem.Click += new System.EventHandler(this.masterCategoryToolStripMenuItem_Click);
 			// 
 			// FormAdminMenu
 			// 
