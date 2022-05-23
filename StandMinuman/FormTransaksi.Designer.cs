@@ -29,7 +29,10 @@ namespace StandMinuman
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItemHello = new System.Windows.Forms.ToolStripMenuItem();
             this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -73,13 +76,14 @@ namespace StandMinuman
             // 
             // menuStrip1
             // 
+            this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItemHello,
             this.logoutToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(784, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(784, 27);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -398,6 +402,9 @@ namespace StandMinuman
             // Jumlah
             // 
             this.Jumlah.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.Jumlah.DefaultCellStyle = dataGridViewCellStyle9;
+            this.Jumlah.FillWeight = 80F;
             this.Jumlah.HeaderText = "Jumlah";
             this.Jumlah.MinimumWidth = 8;
             this.Jumlah.Name = "Jumlah";
@@ -405,12 +412,16 @@ namespace StandMinuman
             // 
             // SubtotalMinuman
             // 
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.SubtotalMinuman.DefaultCellStyle = dataGridViewCellStyle10;
             this.SubtotalMinuman.HeaderText = "Subtotal Minuman";
             this.SubtotalMinuman.Name = "SubtotalMinuman";
             this.SubtotalMinuman.ReadOnly = true;
             // 
             // SubtotalTopping
             // 
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.SubtotalTopping.DefaultCellStyle = dataGridViewCellStyle11;
             this.SubtotalTopping.HeaderText = "Subtotal Topping";
             this.SubtotalTopping.Name = "SubtotalTopping";
             this.SubtotalTopping.ReadOnly = true;
@@ -418,8 +429,8 @@ namespace StandMinuman
             // Subtotal
             // 
             this.Subtotal.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.Subtotal.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.Subtotal.DefaultCellStyle = dataGridViewCellStyle12;
             this.Subtotal.HeaderText = "Subtotal";
             this.Subtotal.MinimumWidth = 8;
             this.Subtotal.Name = "Subtotal";
@@ -456,8 +467,10 @@ namespace StandMinuman
             this.Controls.Add(this.dataGridViewMinuman);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
             this.Name = "FormTransaksi";
             this.Text = "Transaksi";
             this.Load += new System.EventHandler(this.FormTransaksi_Load);

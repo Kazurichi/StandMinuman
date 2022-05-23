@@ -48,6 +48,7 @@ namespace StandMinuman
             // 
             // menuStrip1
             // 
+            this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.sellerpenjualanTertinggiToolStripMenuItem,
@@ -60,39 +61,39 @@ namespace StandMinuman
             this.tampilToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 1, 0, 1);
-            this.menuStrip1.Size = new System.Drawing.Size(856, 24);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(6, 1, 0, 1);
+            this.menuStrip1.Size = new System.Drawing.Size(1148, 25);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // sellerpenjualanTertinggiToolStripMenuItem
             // 
             this.sellerpenjualanTertinggiToolStripMenuItem.Name = "sellerpenjualanTertinggiToolStripMenuItem";
-            this.sellerpenjualanTertinggiToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
+            this.sellerpenjualanTertinggiToolStripMenuItem.Size = new System.Drawing.Size(180, 23);
             this.sellerpenjualanTertinggiToolStripMenuItem.Text = "Seller (penjualan tertinggi)";
             // 
             // sellerpenjualanTerendahToolStripMenuItem
             // 
             this.sellerpenjualanTerendahToolStripMenuItem.Name = "sellerpenjualanTerendahToolStripMenuItem";
-            this.sellerpenjualanTerendahToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.sellerpenjualanTerendahToolStripMenuItem.Size = new System.Drawing.Size(183, 23);
             this.sellerpenjualanTerendahToolStripMenuItem.Text = "Seller (penjualan terendah)";
             // 
             // minumanToolStripMenuItem
             // 
             this.minumanToolStripMenuItem.Name = "minumanToolStripMenuItem";
-            this.minumanToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
+            this.minumanToolStripMenuItem.Size = new System.Drawing.Size(142, 23);
             this.minumanToolStripMenuItem.Text = "Penjualan Minuman";
             // 
             // stokMinumanToolStripMenuItem
             // 
             this.stokMinumanToolStripMenuItem.Name = "stokMinumanToolStripMenuItem";
-            this.stokMinumanToolStripMenuItem.Size = new System.Drawing.Size(97, 22);
+            this.stokMinumanToolStripMenuItem.Size = new System.Drawing.Size(111, 23);
             this.stokMinumanToolStripMenuItem.Text = "Stok Minuman";
             // 
             // toppingToolStripMenuItem
             // 
             this.toppingToolStripMenuItem.Name = "toppingToolStripMenuItem";
-            this.toppingToolStripMenuItem.Size = new System.Drawing.Size(62, 22);
+            this.toppingToolStripMenuItem.Size = new System.Drawing.Size(70, 23);
             this.toppingToolStripMenuItem.Text = "Topping";
             this.toppingToolStripMenuItem.Click += new System.EventHandler(this.toppingToolStripMenuItem_Click);
             // 
@@ -100,21 +101,21 @@ namespace StandMinuman
             // 
             this.kembaliKeMenuToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.kembaliKeMenuToolStripMenuItem.Name = "kembaliKeMenuToolStripMenuItem";
-            this.kembaliKeMenuToolStripMenuItem.Size = new System.Drawing.Size(111, 22);
+            this.kembaliKeMenuToolStripMenuItem.Size = new System.Drawing.Size(127, 23);
             this.kembaliKeMenuToolStripMenuItem.Text = "Kembali ke Menu";
             this.kembaliKeMenuToolStripMenuItem.Click += new System.EventHandler(this.kembaliKeMenuToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(22, 22);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(24, 23);
             this.toolStripMenuItem1.Text = "|";
             // 
             // tampilToolStripMenuItem
             // 
             this.tampilToolStripMenuItem.Enabled = false;
             this.tampilToolStripMenuItem.Name = "tampilToolStripMenuItem";
-            this.tampilToolStripMenuItem.Size = new System.Drawing.Size(54, 22);
+            this.tampilToolStripMenuItem.Size = new System.Drawing.Size(59, 23);
             this.tampilToolStripMenuItem.Text = "Tampil";
             this.tampilToolStripMenuItem.Click += new System.EventHandler(this.tampilToolStripMenuItem_Click);
             // 
@@ -126,69 +127,68 @@ namespace StandMinuman
             | System.Windows.Forms.AnchorStyles.Right)));
             this.crystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.crystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.crystalReportViewer1.Location = new System.Drawing.Point(0, 59);
-            this.crystalReportViewer1.Margin = new System.Windows.Forms.Padding(3, 3, 3, 0);
+            this.crystalReportViewer1.Location = new System.Drawing.Point(0, 63);
+            this.crystalReportViewer1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 0);
             this.crystalReportViewer1.Name = "crystalReportViewer1";
-            this.crystalReportViewer1.Size = new System.Drawing.Size(856, 396);
+            this.crystalReportViewer1.Size = new System.Drawing.Size(1147, 548);
             this.crystalReportViewer1.TabIndex = 1;
+            this.crystalReportViewer1.ToolPanelWidth = 300;
             // 
             // dateTimePickerAwal
             // 
             this.dateTimePickerAwal.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.dateTimePickerAwal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.dateTimePickerAwal.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.dateTimePickerAwal.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePickerAwal.Location = new System.Drawing.Point(113, 30);
-            this.dateTimePickerAwal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTimePickerAwal.Location = new System.Drawing.Point(121, 32);
             this.dateTimePickerAwal.Name = "dateTimePickerAwal";
-            this.dateTimePickerAwal.Size = new System.Drawing.Size(135, 23);
+            this.dateTimePickerAwal.Size = new System.Drawing.Size(200, 24);
             this.dateTimePickerAwal.TabIndex = 2;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label1.Location = new System.Drawing.Point(8, 31);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.label1.Location = new System.Drawing.Point(12, 33);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(101, 17);
+            this.label1.Size = new System.Drawing.Size(103, 18);
             this.label1.TabIndex = 3;
             this.label1.Text = "Tanggal Awal :";
             // 
             // dateTimePickerAkhir
             // 
             this.dateTimePickerAkhir.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.dateTimePickerAkhir.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.dateTimePickerAkhir.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.dateTimePickerAkhir.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePickerAkhir.Location = new System.Drawing.Point(360, 30);
-            this.dateTimePickerAkhir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTimePickerAkhir.Location = new System.Drawing.Point(451, 31);
             this.dateTimePickerAkhir.Name = "dateTimePickerAkhir";
-            this.dateTimePickerAkhir.Size = new System.Drawing.Size(135, 23);
+            this.dateTimePickerAkhir.Size = new System.Drawing.Size(200, 24);
             this.dateTimePickerAkhir.TabIndex = 4;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label2.Location = new System.Drawing.Point(252, 31);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.label2.Location = new System.Drawing.Point(340, 33);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(104, 17);
+            this.label2.Size = new System.Drawing.Size(105, 18);
             this.label2.TabIndex = 5;
             this.label2.Text = "Tanggal Akhir :";
             // 
             // FormReport
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(856, 456);
+            this.ClientSize = new System.Drawing.Size(1148, 631);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dateTimePickerAkhir);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dateTimePickerAwal);
             this.Controls.Add(this.crystalReportViewer1);
             this.Controls.Add(this.menuStrip1);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FormReport";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormReport";
