@@ -23,17 +23,40 @@ namespace StandMinuman
 			comboBoxAktif.SelectedIndex = 0;
 			try
 			{
-				MySqlCommand cmd = new MySqlCommand("Select id_minuman as 'Id', nama as 'Nama', stok as 'Stok', FORMAT(harga,0,'id_ID') as 'Harga', status as 'Status' from minuman", Koneksi.getConn());
+				MySqlCommand cmd = new MySqlCommand("SELECT m.id_minuman AS 'Id', m.nama AS 'Nama', m.stok AS 'Stok', FORMAT(m.harga,0,'id_ID') AS 'Harga', m.id_category_minuman AS 'Id_Category', c.nama AS 'Category', m.status AS 'Status' FROM minuman m, category_minuman c WHERE m.id_category_minuman = c.id_category_minuman order by 1", Koneksi.getConn());
 				MySqlDataAdapter da = new MySqlDataAdapter(cmd);
 				DataTable dt = new DataTable();
 				da.Fill(dt);
 				dataGridViewMinuman.DataSource = null;
 				dataGridViewMinuman.DataSource = dt;
+				dataGridViewMinuman.Columns[4].Visible = false;
 			}
 			catch (Exception)
 			{
 				MessageBox.Show("Gagal Load Table Minuman!");
 			}
+			loadCategory();
+		}
+
+		public void loadCategory()
+        {
+            try
+            {
+				MySqlCommand cmd = new MySqlCommand("SELECT id_category_minuman AS 'member', nama AS 'display' FROM category_minuman WHERE STATUS = 1", Koneksi.getConn());
+				MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+				DataTable dt = new DataTable();
+				da.Fill(dt);
+				comboBoxCategory.DataSource = null;
+				comboBoxCategory.DataSource = dt;
+				comboBoxCategory.DisplayMember = "display";
+				comboBoxCategory.ValueMember = "member";
+				comboBoxCategory.SelectedIndex = 0;
+			}
+            catch (Exception)
+            {
+				MessageBox.Show("Gagal Load Category!");
+			}
+			
 		}
 
 		private void kembaliKeMenuToolStripMenuItem_Click(object sender, EventArgs e)
@@ -56,21 +79,22 @@ namespace StandMinuman
 			string status;
 			if (comboBoxAktif.SelectedIndex == 0)
 			{
-				status = "where status <> 2";
+				status = "and m.status <> 2";
 			}
 			else if (comboBoxAktif.SelectedIndex == 1)
 			{
-				status = "where status = 1";
+				status = "and m.status = 1";
 			}
 			else
 			{
-				status = "where status = 0";
+				status = "and m.status = 0";
 			}
-			string query = "SELECT id_minuman as 'Id', nama as 'Nama', stok as 'Stok', FORMAT(harga,0,'id_ID') as 'Harga', status as 'Status' from minuman " + status;
+			string query = "SELECT m.id_minuman AS 'Id', m.nama AS 'Nama', m.stok AS 'Stok', FORMAT(m.harga,0,'id_ID') AS 'Harga', m.id_category_minuman AS 'Id_Category', c.nama AS 'Category', m.status AS 'Status' FROM minuman m, category_minuman c WHERE m.id_category_minuman = c.id_category_minuman " + status;
 			if (textBoxSearch.Text != "")
 			{
-				query += " and nama like '%" + textBoxSearch.Text + "%'";
+				query += " and m.nama like '%" + textBoxSearch.Text + "%'";
 			}
+			query += " order by 1";
 			try
 			{
 				MySqlCommand cmd = new MySqlCommand(query, Koneksi.getConn());
@@ -79,6 +103,7 @@ namespace StandMinuman
 				da.Fill(dt);
 				dataGridViewMinuman.DataSource = null;
 				dataGridViewMinuman.DataSource = dt;
+				dataGridViewMinuman.Columns[4].Visible = false;
 			}
 			catch (Exception)
 			{
@@ -128,6 +153,7 @@ namespace StandMinuman
 		void Clear() {
 			nUDStok.Value = 0;
 			nUPHarga.Value = 0;
+			comboBoxCategory.SelectedIndex = 0;
 			tbnama.Text = "";
 			btnInsert.Enabled = true;
 			btnUpdate.Enabled = false;
@@ -147,7 +173,7 @@ namespace StandMinuman
 					{
 						try
 						{
-							MySqlCommand cmd = new MySqlCommand($"INSERT INTO minuman(id_minuman,nama,stok,harga,status) VALUES ('{tbidminuman.Text}','{tbnama.Text}', '{nUDStok.Value}','{nUPHarga.Value}',1)", Koneksi.getConn());
+							MySqlCommand cmd = new MySqlCommand($"INSERT INTO minuman(id_minuman,nama,stok,harga,id_category_minuman,status) VALUES ('{tbidminuman.Text}','{tbnama.Text}', '{nUDStok.Value}','{nUPHarga.Value}','{comboBoxCategory.SelectedValue}',1)", Koneksi.getConn());
 							cmd.ExecuteNonQuery();
 							MessageBox.Show("Insert berhasil!");
 							Clear();
@@ -181,7 +207,8 @@ namespace StandMinuman
 				tbnama.Text= dataGridViewMinuman.Rows[e.RowIndex].Cells[1].Value.ToString();
 				nUDStok.Value= int.Parse(dataGridViewMinuman.Rows[e.RowIndex].Cells[2].Value.ToString());
 				nUPHarga.Value= FormLogin.removeThousandSep(dataGridViewMinuman.Rows[e.RowIndex].Cells[3].Value.ToString());
-				int status= int.Parse(dataGridViewMinuman.Rows[e.RowIndex].Cells[4].Value.ToString());
+				comboBoxCategory.SelectedValue = Convert.ToInt32(dataGridViewMinuman.Rows[e.RowIndex].Cells[4].Value.ToString());
+				int status= int.Parse(dataGridViewMinuman.Rows[e.RowIndex].Cells[6].Value.ToString());
 				if (status == 0)
 				{
 					btnDelete.Text = "Restore";
@@ -203,7 +230,7 @@ namespace StandMinuman
 					{
 						try
 						{
-							MySqlCommand cmd = new MySqlCommand($"Update minuman set nama='{tbnama.Text}',stok='{nUDStok.Value}',harga='{nUPHarga.Value}' where id_minuman='{tbidminuman.Text}';", Koneksi.getConn());
+							MySqlCommand cmd = new MySqlCommand($"Update minuman set nama='{tbnama.Text}',stok='{nUDStok.Value}',harga='{nUPHarga.Value}',id_category_minuman='{comboBoxCategory.SelectedValue}' where id_minuman='{tbidminuman.Text}';", Koneksi.getConn());
 							cmd.ExecuteNonQuery();
 							MessageBox.Show("Update berhasil!");
 							Clear();
@@ -262,7 +289,7 @@ namespace StandMinuman
 
         private void label5_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("Easter Egg");
         }
     }
 }

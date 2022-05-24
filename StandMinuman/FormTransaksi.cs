@@ -39,15 +39,39 @@ namespace StandMinuman
             }
         }
 
-        
+        public void loadCategory()
+        {
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand("SELECT 0 AS 'member', 'All' AS 'display' UNION SELECT id_category_minuman AS 'member', nama AS 'display' FROM category_minuman WHERE STATUS = 1 order by 1", Koneksi.getConn());
+                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                comboBoxCategory.DataSource = null;
+                comboBoxCategory.DataSource = dt;
+                comboBoxCategory.DisplayMember = "display";
+                comboBoxCategory.ValueMember = "member";
+                comboBoxCategory.SelectedIndex = 0;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Gagal Load Category!");
+            }
+
+        }
 
         public void loadMinuman()
         {
-            string query = "SELECT id_minuman AS 'Id', nama AS 'Nama Minuman', stok AS 'Stok', FORMAT(harga,0,'id_ID') AS 'Harga' FROM minuman where status = 1";
+            string query = "SELECT m.id_minuman AS 'Id', m.nama AS 'Nama', m.stok AS 'Stok', FORMAT(m.harga,0,'id_ID') AS 'Harga', c.nama AS 'Category' FROM minuman m, category_minuman c WHERE m.id_category_minuman = c.id_category_minuman AND m.status = 1";
             if (textBoxSearchMinuman.Text != "")
             {
-                query += $" AND nama LIKE '%{textBoxSearchMinuman.Text}%'";
+                query += $" AND m.nama LIKE '%{textBoxSearchMinuman.Text}%'";
             }
+            if (comboBoxCategory.SelectedIndex != 0)
+            {
+                query += $" AND m.id_category_minuman = {Convert.ToInt32(comboBoxCategory.SelectedValue.ToString())}";
+            }
+            query += " order by 1";
             try
             {
                 MySqlCommand cmd = new MySqlCommand(query, Koneksi.getConn());
@@ -59,6 +83,7 @@ namespace StandMinuman
                 dataGridViewMinuman.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
                 dataGridViewMinuman.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
                 dataGridViewMinuman.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                dataGridViewMinuman.Columns[2].FillWeight = 75;
                 dataGridViewMinuman.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
                 dataGridViewMinuman.Columns[3].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
                 dataGridViewMinuman.Columns[0].Width = 30;
@@ -358,6 +383,7 @@ namespace StandMinuman
         private void FormTransaksi_Load(object sender, EventArgs e)
         {
             toolStripMenuItemHello.Text = "Hello, " + FormLogin.user.ItemArray[3].ToString() + "!";
+            loadCategory();
             loadMinuman();
             loadTopping();
         }
@@ -449,10 +475,17 @@ namespace StandMinuman
 
         private void buttonClearSearch_Click(object sender, EventArgs e)
         {
+            comboBoxCategory.SelectedIndex = 0;
             textBoxSearchMinuman.Text = "";
             textBoxSearchTopping.Text = "";
             loadMinuman();
             loadTopping();
+        }
+
+        private void comboBoxCategory_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //MessageBox.Show(comboBoxCategory.SelectedValue.ToString());
+            loadMinuman();
         }
 
         private void textBoxSearchTopping_TextChanged(object sender, EventArgs e)

@@ -192,3 +192,4 @@ C:\Users\KEVIN\Desktop\Project\StandMinuman\obj\Debug\StandMinuman.csproj.CoreCo
 C:\Users\KEVIN\Desktop\Project\StandMinuman\obj\Debug\StandMinuman.exe
 C:\Users\KEVIN\Desktop\Project\StandMinuman\obj\Debug\StandMinuman.pdb
 C:\Users\KEVIN\Desktop\Project\StandMinuman\obj\Debug\StandMinuman.FormCategory.resources
+E:\Kuliah\Semester 4\Pemograman Client Server\Project\StandMinuman\StandMinuman\obj\Debug\StandMinuman.FormCategory.resources

@@ -27,7 +27,7 @@ namespace StandMinuman
 		{
 			try
 			{
-				MySqlCommand cmd = new MySqlCommand("Select * from category_minuman;", Koneksi.getConn());
+				MySqlCommand cmd = new MySqlCommand("SELECT id_category_minuman AS 'Id', nama AS 'Nama', STATUS AS 'Status' FROM category_minuman WHERE id_category_minuman <> 1;", Koneksi.getConn());
 				MySqlDataAdapter da = new MySqlDataAdapter(cmd);
 				DataTable dt = new DataTable();
 				da.Fill(dt);
@@ -58,7 +58,7 @@ namespace StandMinuman
 		void Clear() {
 			try
 			{
-				MySqlCommand cmd = new MySqlCommand("Select * from category_minuman;", Koneksi.getConn());
+				MySqlCommand cmd = new MySqlCommand("SELECT id_category_minuman AS 'Id', nama AS 'Nama', STATUS AS 'Status' FROM category_minuman WHERE id_category_minuman <> 1;", Koneksi.getConn());
 				MySqlDataAdapter da = new MySqlDataAdapter(cmd);
 				DataTable dt = new DataTable();
 				da.Fill(dt);
@@ -167,6 +167,14 @@ namespace StandMinuman
 
 						cmd.ExecuteNonQuery();
 
+						cmd = new MySqlCommand();
+
+						cmd.Connection = Koneksi.getConn();
+
+						cmd.CommandText = "UPDATE minuman set id_category_minuman = 1 WHERE id_category_minuman = " + textBoxId.Text;
+
+						cmd.ExecuteNonQuery();
+
 						MessageBox.Show("Category dihapus!");
 						Clear();
 					}
@@ -220,17 +228,17 @@ namespace StandMinuman
 			string status;
 			if (comboBoxAktif.SelectedIndex == 0)
 			{
-				status = "where status <> 2";
+				status = "and status <> 2";
 			}
 			else if (comboBoxAktif.SelectedIndex == 1)
 			{
-				status = "where status = 1";
+				status = "and status = 1";
 			}
 			else
 			{
-				status = "where status = 0";
+				status = "and status = 0";
 			}
-			string query = "Select * from category_minuman " + status;
+			string query = "SELECT id_category_minuman AS 'Id', nama AS 'Nama', STATUS AS 'Status' FROM category_minuman WHERE id_category_minuman <> 1 " + status;
 			if (textBoxSearch.Text != "")
 			{
 				query += " and nama like '%" + textBoxSearch.Text + "%'";
