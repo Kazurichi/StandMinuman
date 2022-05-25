@@ -71,12 +71,14 @@ namespace StandMinuman
             this.sellerpenjualanTertinggiToolStripMenuItem.Name = "sellerpenjualanTertinggiToolStripMenuItem";
             this.sellerpenjualanTertinggiToolStripMenuItem.Size = new System.Drawing.Size(180, 23);
             this.sellerpenjualanTertinggiToolStripMenuItem.Text = "Seller (penjualan tertinggi)";
+            this.sellerpenjualanTertinggiToolStripMenuItem.Click += new System.EventHandler(this.sellerpenjualanTertinggiToolStripMenuItem_Click);
             // 
             // sellerpenjualanTerendahToolStripMenuItem
             // 
             this.sellerpenjualanTerendahToolStripMenuItem.Name = "sellerpenjualanTerendahToolStripMenuItem";
             this.sellerpenjualanTerendahToolStripMenuItem.Size = new System.Drawing.Size(183, 23);
             this.sellerpenjualanTerendahToolStripMenuItem.Text = "Seller (penjualan terendah)";
+            this.sellerpenjualanTerendahToolStripMenuItem.Click += new System.EventHandler(this.sellerpenjualanTerendahToolStripMenuItem_Click);
             // 
             // minumanToolStripMenuItem
             // 
@@ -188,7 +190,7 @@ namespace StandMinuman
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormReport";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormReport";

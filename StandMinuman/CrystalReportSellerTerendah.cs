@@ -16,14 +16,14 @@ namespace StandMinuman {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class CrystalReportSellerTinggi : ReportClass {
+    public class CrystalReportSellerTerendah : ReportClass {
         
-        public CrystalReportSellerTinggi() {
+        public CrystalReportSellerTerendah() {
         }
         
         public override string ResourceName {
             get {
-                return "CrystalReportSellerTinggi.rpt";
+                return "CrystalReportSellerTerendah.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace StandMinuman {
         
         public override string FullResourceName {
             get {
-                return "StandMinuman.CrystalReportSellerTinggi.rpt";
+                return "StandMinuman.CrystalReportSellerTerendah.rpt";
             }
             set {
                 // Do nothing
@@ -122,9 +122,9 @@ namespace StandMinuman {
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedCrystalReportSellerTinggi : Component, ICachedReport {
+    public class CachedCrystalReportSellerTerendah : Component, ICachedReport {
         
-        public CachedCrystalReportSellerTinggi() {
+        public CachedCrystalReportSellerTerendah() {
         }
         
         [Browsable(false)]
@@ -161,7 +161,7 @@ namespace StandMinuman {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            CrystalReportSellerTinggi rpt = new CrystalReportSellerTinggi();
+            CrystalReportSellerTerendah rpt = new CrystalReportSellerTerendah();
             rpt.Site = this.Site;
             return rpt;
         }

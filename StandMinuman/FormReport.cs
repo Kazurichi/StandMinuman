@@ -30,6 +30,39 @@ namespace StandMinuman
                 CrystalReportBanyakTopping rpt = new CrystalReportBanyakTopping();
                 rpt.SetParameterValue("TanggalAwal", dateTimePickerAwal.Value);
                 rpt.SetParameterValue("TanggalAkhir", dateTimePickerAkhir.Value);
+                crystalReportViewer1.ReportSource = null;
+                crystalReportViewer1.ReportSource = rpt;
+            }
+            else
+            {
+                MessageBox.Show("Tanggal akhir harus lebih besar dari tanggal awal!");
+            }
+        }
+
+        public void reportSellerTertinggi()
+        {
+            if (dateTimePickerAwal.Value < dateTimePickerAkhir.Value)
+            {
+                CrystalReportSellerTinggi rpt = new CrystalReportSellerTinggi();
+                rpt.SetParameterValue("TanggalAwal", dateTimePickerAwal.Value);
+                rpt.SetParameterValue("TanggalAkhir", dateTimePickerAkhir.Value);
+                crystalReportViewer1.ReportSource = null;
+                crystalReportViewer1.ReportSource = rpt;
+            }
+            else
+            {
+                MessageBox.Show("Tanggal akhir harus lebih besar dari tanggal awal!");
+            }
+        }
+
+        public void reportSellerTerendah()
+        {
+            if (dateTimePickerAwal.Value < dateTimePickerAkhir.Value)
+            {
+                CrystalReportSellerTerendah rpt = new CrystalReportSellerTerendah();
+                rpt.SetParameterValue("TanggalAwal", dateTimePickerAwal.Value);
+                rpt.SetParameterValue("TanggalAkhir", dateTimePickerAkhir.Value);
+                crystalReportViewer1.ReportSource = null;
                 crystalReportViewer1.ReportSource = rpt;
             }
             else
@@ -60,13 +93,14 @@ namespace StandMinuman
         {
             if (report != -1)
             {
+                tampilToolStripMenuItem.Text = "Loading...";
                 if (report == 1)
                 {
-                    //report seller tertinggi
+                    reportSellerTertinggi();
                 }
                 else if (report == 2)
                 {
-                    //report seller terendah
+                    reportSellerTerendah();
                 }
                 else if (report == 3)
                 {
@@ -80,11 +114,30 @@ namespace StandMinuman
                 {
                     reportTopping();
                 }
+                tampilToolStripMenuItem.Text = "Tampil";
             }
             else
             {
                 MessageBox.Show("Test");
             }
+        }
+
+        private void sellerpenjualanTertinggiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            report = 1;
+            tampilToolStripMenuItem.Enabled = true;
+            resetBold();
+            sellerpenjualanTertinggiToolStripMenuItem.Font = new Font(sellerpenjualanTertinggiToolStripMenuItem.Font, FontStyle.Bold);
+
+        }
+
+        private void sellerpenjualanTerendahToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            report = 2;
+            tampilToolStripMenuItem.Enabled = true;
+            resetBold();
+            sellerpenjualanTerendahToolStripMenuItem.Font = new Font(sellerpenjualanTerendahToolStripMenuItem.Font, FontStyle.Bold);
+
         }
     }
 }
