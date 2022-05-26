@@ -138,8 +138,9 @@ namespace StandMinuman
 			buttonDelete.Enabled = false;
 			buttonUpdate.Enabled = false;
 			btnInsert.Enabled = true;
-			textBoxId.Text = "";
-			labelPass.Text = "Password :";
+			textBoxId.Text = ""; 
+			labelPass.Visible = true;
+			labelNewPass.Visible = false;
 		}
 
 		public void clearSearch()
@@ -301,7 +302,8 @@ namespace StandMinuman
 				btnInsert.Enabled = false;
 				textBoxId.Text = dataGridViewUser.Rows[e.RowIndex].Cells[0].Value.ToString();
 				textBoxUsername.Text = dataGridViewUser.Rows[e.RowIndex].Cells[1].Value.ToString();
-				labelPass.Text = "New Password : ";
+				labelPass.Visible = false;
+				labelNewPass.Visible = true;
 				//textBoxPassword.Text = dataGridViewUser.Rows[e.RowIndex].Cells[2].Value.ToString();
 				textBoxNama.Text = dataGridViewUser.Rows[e.RowIndex].Cells[3].Value.ToString();
 
