@@ -43,7 +43,11 @@ namespace StandMinuman
             this.label1 = new System.Windows.Forms.Label();
             this.dateTimePickerAkhir = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
+            this.comboBoxMinuman = new System.Windows.Forms.ComboBox();
+            this.numericUpDownStok = new System.Windows.Forms.NumericUpDown();
+            this.label3 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownStok)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -85,12 +89,14 @@ namespace StandMinuman
             this.minumanToolStripMenuItem.Name = "minumanToolStripMenuItem";
             this.minumanToolStripMenuItem.Size = new System.Drawing.Size(142, 23);
             this.minumanToolStripMenuItem.Text = "Penjualan Minuman";
+            this.minumanToolStripMenuItem.Click += new System.EventHandler(this.minumanToolStripMenuItem_Click);
             // 
             // stokMinumanToolStripMenuItem
             // 
             this.stokMinumanToolStripMenuItem.Name = "stokMinumanToolStripMenuItem";
             this.stokMinumanToolStripMenuItem.Size = new System.Drawing.Size(111, 23);
             this.stokMinumanToolStripMenuItem.Text = "Stok Minuman";
+            this.stokMinumanToolStripMenuItem.Click += new System.EventHandler(this.stokMinumanToolStripMenuItem_Click);
             // 
             // toppingToolStripMenuItem
             // 
@@ -176,12 +182,55 @@ namespace StandMinuman
             this.label2.TabIndex = 5;
             this.label2.Text = "Tanggal Akhir :";
             // 
+            // comboBoxMinuman
+            // 
+            this.comboBoxMinuman.Enabled = false;
+            this.comboBoxMinuman.FormattingEnabled = true;
+            this.comboBoxMinuman.Items.AddRange(new object[] {
+            "Tertinggi",
+            "Terendah"});
+            this.comboBoxMinuman.Location = new System.Drawing.Point(666, 30);
+            this.comboBoxMinuman.Name = "comboBoxMinuman";
+            this.comboBoxMinuman.Size = new System.Drawing.Size(133, 26);
+            this.comboBoxMinuman.TabIndex = 6;
+            // 
+            // numericUpDownStok
+            // 
+            this.numericUpDownStok.Enabled = false;
+            this.numericUpDownStok.Location = new System.Drawing.Point(887, 30);
+            this.numericUpDownStok.Maximum = new decimal(new int[] {
+            9999999,
+            0,
+            0,
+            0});
+            this.numericUpDownStok.Name = "numericUpDownStok";
+            this.numericUpDownStok.Size = new System.Drawing.Size(141, 24);
+            this.numericUpDownStok.TabIndex = 7;
+            this.numericUpDownStok.Value = new decimal(new int[] {
+            50,
+            0,
+            0,
+            0});
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.label3.Location = new System.Drawing.Point(817, 33);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(64, 18);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Jumlah :";
+            // 
             // FormReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1148, 631);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.numericUpDownStok);
+            this.Controls.Add(this.comboBoxMinuman);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dateTimePickerAkhir);
             this.Controls.Add(this.label1);
@@ -196,6 +245,7 @@ namespace StandMinuman
             this.Text = "FormReport";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownStok)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -217,5 +267,8 @@ namespace StandMinuman
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem tampilToolStripMenuItem;
+        private System.Windows.Forms.ComboBox comboBoxMinuman;
+        private System.Windows.Forms.NumericUpDown numericUpDownStok;
+        private System.Windows.Forms.Label label3;
     }
 }

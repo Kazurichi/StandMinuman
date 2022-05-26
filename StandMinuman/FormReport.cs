@@ -86,7 +86,9 @@ namespace StandMinuman
             minumanToolStripMenuItem.Font = new Font(minumanToolStripMenuItem.Font, FontStyle.Regular);
             stokMinumanToolStripMenuItem.Font = new Font(stokMinumanToolStripMenuItem.Font, FontStyle.Regular);
             toppingToolStripMenuItem.Font = new Font(toppingToolStripMenuItem.Font, FontStyle.Regular);
-            
+            comboBoxMinuman.Enabled = false;
+            numericUpDownStok.Enabled = false;
+            comboBoxMinuman.SelectedIndex = -1;
         }
 
         private void tampilToolStripMenuItem_Click(object sender, EventArgs e)
@@ -138,6 +140,25 @@ namespace StandMinuman
             resetBold();
             sellerpenjualanTerendahToolStripMenuItem.Font = new Font(sellerpenjualanTerendahToolStripMenuItem.Font, FontStyle.Bold);
 
+        }
+
+        private void minumanToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            report = 3;
+            tampilToolStripMenuItem.Enabled = true;
+            resetBold();
+            comboBoxMinuman.Enabled = true;
+            comboBoxMinuman.SelectedIndex = 0;
+            minumanToolStripMenuItem.Font = new Font(minumanToolStripMenuItem.Font, FontStyle.Bold);
+        }
+
+        private void stokMinumanToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            report = 4;
+            tampilToolStripMenuItem.Enabled = true;
+            resetBold();
+            numericUpDownStok.Enabled = true;
+            stokMinumanToolStripMenuItem.Font = new Font(stokMinumanToolStripMenuItem.Font, FontStyle.Bold);
         }
     }
 }
