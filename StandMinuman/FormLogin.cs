@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Globalization;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -25,8 +26,8 @@ namespace StandMinuman
         {
             if(textBoxUser.Text != "" && textBoxPass.Text != "")
             {
-                string queryTest = "SELECT count(*) FROM users WHERE username = '" + textBoxUser.Text + "'  AND password = '" + textBoxPass.Text + "' AND status = 1";
-                string query = "SELECT * FROM users WHERE username = '" + textBoxUser.Text + "'  AND password = '" + textBoxPass.Text + "' AND status = 1";
+                string queryTest = "SELECT count(*) FROM users WHERE username = '" + textBoxUser.Text + "'  AND password = '" + getHash(textBoxPass.Text) + "' AND status = 1";
+                string query = "SELECT * FROM users WHERE username = '" + textBoxUser.Text + "'  AND password = '" + getHash(textBoxPass.Text) + "' AND status = 1";
                 //try
                 //{
                     MySqlCommand cmd = new MySqlCommand(queryTest, Koneksi.getConn());
@@ -102,6 +103,18 @@ namespace StandMinuman
         {
             int num = Convert.ToInt32(str.Replace(".", ""));
             return num;
+        }
+
+        public static string getHash(string str)
+        {
+            using (MD5 md5Hash = MD5.Create())
+            {
+                byte[] sourceBytes = Encoding.UTF8.GetBytes(str);
+                byte[] hashBytes = md5Hash.ComputeHash(sourceBytes);
+                string hash = BitConverter.ToString(hashBytes).Replace("-", string.Empty);
+                return hash;
+            }
+            
         }
     }
 }

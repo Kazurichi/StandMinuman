@@ -101,7 +101,7 @@ namespace StandMinuman
 						cmd.CommandText = "INSERT INTO users VALUES (@id, @username, @password, @nama, 1, 1)";
 						cmd.Parameters.Add(new MySqlParameter("@id", Convert.ToInt32(textBoxId.Text)));
 						cmd.Parameters.Add(new MySqlParameter("@username", textBoxUsername.Text));
-						cmd.Parameters.Add(new MySqlParameter("@password", textBoxPassword.Text));
+						cmd.Parameters.Add(new MySqlParameter("@password", FormLogin.getHash(textBoxPassword.Text)));
 						cmd.Parameters.Add(new MySqlParameter("@nama", textBoxNama.Text));
 						
 
@@ -139,6 +139,7 @@ namespace StandMinuman
 			buttonUpdate.Enabled = false;
 			btnInsert.Enabled = true;
 			textBoxId.Text = "";
+			labelPass.Text = "Password :";
 		}
 
 		public void clearSearch()
@@ -223,30 +224,56 @@ namespace StandMinuman
         {
 			if (buttonUpdate.Enabled == true)
 			{
-				if (textBoxNama.Text != "" && textBoxUsername.Text != "" && textBoxPassword.Text != "")
+				if (textBoxNama.Text != "" && textBoxUsername.Text != "")
 				{
 					if (textBoxId.Text != "1")
 					{
-						try
-						{
-							MySqlCommand cmd = new MySqlCommand();
+                        if (textBoxPassword.Text != "")
+                        {
+							try
+							{
+								MySqlCommand cmd = new MySqlCommand();
 
-							cmd.Connection = Koneksi.getConn();
+								cmd.Connection = Koneksi.getConn();
 
-							cmd.CommandText = "UPDATE users set username = @username, password = @password, nama = @nama WHERE id_users = " + textBoxId.Text;
-							cmd.Parameters.Add(new MySqlParameter("@username", textBoxUsername.Text));
-							cmd.Parameters.Add(new MySqlParameter("@password", textBoxPassword.Text));
-							cmd.Parameters.Add(new MySqlParameter("@nama", textBoxNama.Text));
-							cmd.ExecuteNonQuery();
+								cmd.CommandText = "UPDATE users set username = @username, password = @password, nama = @nama WHERE id_users = " + textBoxId.Text;
+								cmd.Parameters.Add(new MySqlParameter("@username", textBoxUsername.Text));
+								cmd.Parameters.Add(new MySqlParameter("@password", FormLogin.getHash(textBoxPassword.Text)));
+								cmd.Parameters.Add(new MySqlParameter("@nama", textBoxNama.Text));
+								cmd.ExecuteNonQuery();
 
-							MessageBox.Show("Update berhasil!");
-							Clear();
-							clearSearch();
+								MessageBox.Show("Update berhasil!");
+								Clear();
+								clearSearch();
+							}
+							catch (Exception a)
+							{
+								MessageBox.Show(a.Message);
+
+							}
 						}
-						catch (Exception a)
-						{
-							MessageBox.Show(a.Message);
+                        else
+                        {
+							try
+							{
+								MySqlCommand cmd = new MySqlCommand();
 
+								cmd.Connection = Koneksi.getConn();
+
+								cmd.CommandText = "UPDATE users set username = @username, nama = @nama WHERE id_users = " + textBoxId.Text;
+								cmd.Parameters.Add(new MySqlParameter("@username", textBoxUsername.Text));
+								cmd.Parameters.Add(new MySqlParameter("@nama", textBoxNama.Text));
+								cmd.ExecuteNonQuery();
+
+								MessageBox.Show("Update berhasil!");
+								Clear();
+								clearSearch();
+							}
+							catch (Exception a)
+							{
+								MessageBox.Show(a.Message);
+
+							}
 						}
 					}
 					else
@@ -274,7 +301,8 @@ namespace StandMinuman
 				btnInsert.Enabled = false;
 				textBoxId.Text = dataGridViewUser.Rows[e.RowIndex].Cells[0].Value.ToString();
 				textBoxUsername.Text = dataGridViewUser.Rows[e.RowIndex].Cells[1].Value.ToString();
-				textBoxPassword.Text = dataGridViewUser.Rows[e.RowIndex].Cells[2].Value.ToString();
+				labelPass.Text = "New Password : ";
+				//textBoxPassword.Text = dataGridViewUser.Rows[e.RowIndex].Cells[2].Value.ToString();
 				textBoxNama.Text = dataGridViewUser.Rows[e.RowIndex].Cells[3].Value.ToString();
 
 				int status = Convert.ToInt32(dataGridViewUser.Rows[e.RowIndex].Cells[4].Value.ToString());
