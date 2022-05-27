@@ -71,6 +71,33 @@ namespace StandMinuman
             }
         }
 
+        public void reportMinuman()
+        {
+            if (dateTimePickerAwal.Value < dateTimePickerAkhir.Value)
+            {
+                if (comboBoxMinuman.SelectedIndex == 0)
+                {
+                    CrystalReportMinumanTertinggi rpt = new CrystalReportMinumanTertinggi();
+                    rpt.SetParameterValue("TanggalAwal", dateTimePickerAwal.Value);
+                    rpt.SetParameterValue("TanggalAkhir", dateTimePickerAkhir.Value);
+                    crystalReportViewer1.ReportSource = null;
+                    crystalReportViewer1.ReportSource = rpt;
+                }
+                else
+                {
+                    CrystalReportMinumanTerendah rpt = new CrystalReportMinumanTerendah();
+                    rpt.SetParameterValue("TanggalAwal", dateTimePickerAwal.Value);
+                    rpt.SetParameterValue("TanggalAkhir", dateTimePickerAkhir.Value);
+                    crystalReportViewer1.ReportSource = null;
+                    crystalReportViewer1.ReportSource = rpt;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Tanggal akhir harus lebih besar dari tanggal awal!");
+            }
+        }
+
         private void toppingToolStripMenuItem_Click(object sender, EventArgs e)
         {
             report = 5;
@@ -106,7 +133,7 @@ namespace StandMinuman
                 }
                 else if (report == 3)
                 {
-                    //report minuman
+                    reportMinuman();
                 }
                 else if (report == 4)
                 {
@@ -123,6 +150,8 @@ namespace StandMinuman
                 MessageBox.Show("Test");
             }
         }
+
+
 
         private void sellerpenjualanTertinggiToolStripMenuItem_Click(object sender, EventArgs e)
         {

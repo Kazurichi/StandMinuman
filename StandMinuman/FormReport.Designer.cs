@@ -187,7 +187,7 @@ namespace StandMinuman
             this.comboBoxMinuman.Enabled = false;
             this.comboBoxMinuman.FormattingEnabled = true;
             this.comboBoxMinuman.Items.AddRange(new object[] {
-            "Tertinggi",
+            "Terbanyak",
             "Terendah"});
             this.comboBoxMinuman.Location = new System.Drawing.Point(666, 30);
             this.comboBoxMinuman.Name = "comboBoxMinuman";
