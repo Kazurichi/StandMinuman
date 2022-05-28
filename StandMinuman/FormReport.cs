@@ -71,6 +71,30 @@ namespace StandMinuman
             }
         }
 
+        public void reportStokMinuman()
+        {
+            if (dateTimePickerAwal.Value < dateTimePickerAkhir.Value)
+            {
+                if (numericUpDownStok.Value > 0)
+                {
+                    CrystalReportStokMinuman rpt = new CrystalReportStokMinuman();
+                    rpt.SetParameterValue("TanggalAwal", dateTimePickerAwal.Value);
+                    rpt.SetParameterValue("TanggalAkhir", dateTimePickerAkhir.Value);
+                    rpt.SetParameterValue("bawah", Convert.ToInt32(numericUpDownStok.Value));
+                    crystalReportViewer1.ReportSource = null;
+                    crystalReportViewer1.ReportSource = rpt;
+                }
+                else
+                {
+                    MessageBox.Show("Stok minuman harus lebih dari 0!");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Tanggal akhir harus lebih besar dari tanggal awal!");
+            }
+        }
+
         public void reportMinuman()
         {
             if (dateTimePickerAwal.Value < dateTimePickerAkhir.Value)
@@ -137,7 +161,7 @@ namespace StandMinuman
                 }
                 else if (report == 4)
                 {
-                    //report stok minuman
+                    reportStokMinuman();
                 }
                 else
                 {
