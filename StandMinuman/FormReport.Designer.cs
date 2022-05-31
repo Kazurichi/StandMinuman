@@ -29,6 +29,7 @@ namespace StandMinuman
 		/// </summary>
 		private void InitializeComponent()
 		{
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormReport));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.sellerpenjualanTertinggiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sellerpenjualanTerendahToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -136,7 +137,7 @@ namespace StandMinuman
             | System.Windows.Forms.AnchorStyles.Right)));
             this.crystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.crystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.crystalReportViewer1.Location = new System.Drawing.Point(0, 63);
+            this.crystalReportViewer1.Location = new System.Drawing.Point(1, 63);
             this.crystalReportViewer1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 0);
             this.crystalReportViewer1.Name = "crystalReportViewer1";
             this.crystalReportViewer1.Size = new System.Drawing.Size(1147, 548);
@@ -241,11 +242,12 @@ namespace StandMinuman
             this.Controls.Add(this.crystalReportViewer1);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormReport";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormReport";
+            this.Text = "Report";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownStok)).EndInit();

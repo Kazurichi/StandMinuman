@@ -29,10 +29,11 @@ namespace StandMinuman
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormTransaksi));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItemHello = new System.Windows.Forms.ToolStripMenuItem();
             this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -84,7 +85,7 @@ namespace StandMinuman
             this.logoutToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1000, 27);
+            this.menuStrip1.Size = new System.Drawing.Size(992, 27);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -200,8 +201,8 @@ namespace StandMinuman
             // Jumlah
             // 
             this.Jumlah.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.Jumlah.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.Jumlah.DefaultCellStyle = dataGridViewCellStyle1;
             this.Jumlah.FillWeight = 80F;
             this.Jumlah.HeaderText = "Jumlah";
             this.Jumlah.MinimumWidth = 8;
@@ -210,16 +211,16 @@ namespace StandMinuman
             // 
             // SubtotalMinuman
             // 
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.SubtotalMinuman.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.SubtotalMinuman.DefaultCellStyle = dataGridViewCellStyle2;
             this.SubtotalMinuman.HeaderText = "Subtotal Minuman";
             this.SubtotalMinuman.Name = "SubtotalMinuman";
             this.SubtotalMinuman.ReadOnly = true;
             // 
             // SubtotalTopping
             // 
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.SubtotalTopping.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.SubtotalTopping.DefaultCellStyle = dataGridViewCellStyle3;
             this.SubtotalTopping.HeaderText = "Subtotal Topping";
             this.SubtotalTopping.Name = "SubtotalTopping";
             this.SubtotalTopping.ReadOnly = true;
@@ -227,8 +228,8 @@ namespace StandMinuman
             // Subtotal
             // 
             this.Subtotal.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.Subtotal.DefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.Subtotal.DefaultCellStyle = dataGridViewCellStyle4;
             this.Subtotal.HeaderText = "Subtotal";
             this.Subtotal.MinimumWidth = 8;
             this.Subtotal.Name = "Subtotal";
@@ -237,7 +238,7 @@ namespace StandMinuman
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 29);
+            this.label1.Location = new System.Drawing.Point(12, 31);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(113, 18);
             this.label1.TabIndex = 4;
@@ -246,6 +247,7 @@ namespace StandMinuman
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Location = new System.Drawing.Point(566, 30);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(105, 18);
@@ -263,6 +265,7 @@ namespace StandMinuman
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Location = new System.Drawing.Point(321, 30);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(63, 18);
@@ -289,24 +292,24 @@ namespace StandMinuman
             // labelNamaMinuman
             // 
             this.labelNamaMinuman.AutoSize = true;
-            this.labelNamaMinuman.Location = new System.Drawing.Point(15, 257);
+            this.labelNamaMinuman.Location = new System.Drawing.Point(15, 256);
             this.labelNamaMinuman.Name = "labelNamaMinuman";
-            this.labelNamaMinuman.Size = new System.Drawing.Size(126, 18);
+            this.labelNamaMinuman.Size = new System.Drawing.Size(130, 18);
             this.labelNamaMinuman.TabIndex = 10;
-            this.labelNamaMinuman.Text = "Nama Minuman: -";
+            this.labelNamaMinuman.Text = "Nama Minuman : -";
             // 
             // labelNamaTopping
             // 
             this.labelNamaTopping.AutoSize = true;
-            this.labelNamaTopping.Location = new System.Drawing.Point(23, 285);
+            this.labelNamaTopping.Location = new System.Drawing.Point(15, 284);
             this.labelNamaTopping.Name = "labelNamaTopping";
-            this.labelNamaTopping.Size = new System.Drawing.Size(118, 18);
+            this.labelNamaTopping.Size = new System.Drawing.Size(130, 18);
             this.labelNamaTopping.TabIndex = 11;
-            this.labelNamaTopping.Text = "Nama Topping: -";
+            this.labelNamaTopping.Text = "Nama Topping   : -";
             // 
             // numericUpDownJumlah
             // 
-            this.numericUpDownJumlah.Location = new System.Drawing.Point(138, 311);
+            this.numericUpDownJumlah.Location = new System.Drawing.Point(141, 311);
             this.numericUpDownJumlah.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -318,7 +321,7 @@ namespace StandMinuman
             0,
             0});
             this.numericUpDownJumlah.Name = "numericUpDownJumlah";
-            this.numericUpDownJumlah.Size = new System.Drawing.Size(138, 24);
+            this.numericUpDownJumlah.Size = new System.Drawing.Size(161, 24);
             this.numericUpDownJumlah.TabIndex = 12;
             this.numericUpDownJumlah.Value = new decimal(new int[] {
             1,
@@ -329,15 +332,16 @@ namespace StandMinuman
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(72, 313);
+            this.label5.Location = new System.Drawing.Point(15, 313);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(60, 18);
+            this.label5.Size = new System.Drawing.Size(120, 18);
             this.label5.TabIndex = 13;
-            this.label5.Text = "Jumlah:";
+            this.label5.Text = "Jumlah               :";
             // 
             // buttonTambah
             // 
             this.buttonTambah.AutoSize = true;
+            this.buttonTambah.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonTambah.Location = new System.Drawing.Point(872, 380);
             this.buttonTambah.Name = "buttonTambah";
             this.buttonTambah.Size = new System.Drawing.Size(116, 36);
@@ -350,6 +354,7 @@ namespace StandMinuman
             // 
             this.buttonUpdate.AutoSize = true;
             this.buttonUpdate.Enabled = false;
+            this.buttonUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonUpdate.Location = new System.Drawing.Point(872, 422);
             this.buttonUpdate.Name = "buttonUpdate";
             this.buttonUpdate.Size = new System.Drawing.Size(116, 36);
@@ -362,6 +367,7 @@ namespace StandMinuman
             // 
             this.buttonHapus.AutoSize = true;
             this.buttonHapus.Enabled = false;
+            this.buttonHapus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonHapus.Location = new System.Drawing.Point(872, 464);
             this.buttonHapus.Name = "buttonHapus";
             this.buttonHapus.Size = new System.Drawing.Size(116, 36);
@@ -374,6 +380,7 @@ namespace StandMinuman
             // 
             this.buttonHapusSemua.AutoSize = true;
             this.buttonHapusSemua.Enabled = false;
+            this.buttonHapusSemua.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonHapusSemua.Location = new System.Drawing.Point(872, 507);
             this.buttonHapusSemua.Name = "buttonHapusSemua";
             this.buttonHapusSemua.Size = new System.Drawing.Size(116, 36);
@@ -386,37 +393,40 @@ namespace StandMinuman
             // 
             this.labelNota.AutoSize = true;
             this.labelNota.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.labelNota.Location = new System.Drawing.Point(14, 358);
+            this.labelNota.Location = new System.Drawing.Point(14, 357);
             this.labelNota.Name = "labelNota";
-            this.labelNota.Size = new System.Drawing.Size(107, 20);
+            this.labelNota.Size = new System.Drawing.Size(131, 20);
             this.labelNota.TabIndex = 19;
-            this.labelNota.Text = "Nomer Nota: -";
+            this.labelNota.Text = "Nomor Nota      : -";
             // 
             // labelTotal
             // 
             this.labelTotal.AutoSize = true;
+            this.labelTotal.BackColor = System.Drawing.Color.Transparent;
             this.labelTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.labelTotal.Location = new System.Drawing.Point(640, 357);
             this.labelTotal.Name = "labelTotal";
-            this.labelTotal.Size = new System.Drawing.Size(90, 20);
+            this.labelTotal.Size = new System.Drawing.Size(94, 20);
             this.labelTotal.TabIndex = 20;
-            this.labelTotal.Text = "Total: Rp. 0";
+            this.labelTotal.Text = "Total : Rp. 0";
             this.labelTotal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // buttonBeli
             // 
             this.buttonBeli.AutoSize = true;
+            this.buttonBeli.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonBeli.Location = new System.Drawing.Point(872, 603);
             this.buttonBeli.Name = "buttonBeli";
             this.buttonBeli.Size = new System.Drawing.Size(116, 36);
             this.buttonBeli.TabIndex = 21;
-            this.buttonBeli.Text = "Beli";
+            this.buttonBeli.Text = "BELI";
             this.buttonBeli.UseVisualStyleBackColor = true;
             this.buttonBeli.Click += new System.EventHandler(this.buttonBeli_Click);
             // 
             // buttonClearSelection
             // 
             this.buttonClearSelection.AutoSize = true;
+            this.buttonClearSelection.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonClearSelection.Location = new System.Drawing.Point(872, 549);
             this.buttonClearSelection.Name = "buttonClearSelection";
             this.buttonClearSelection.Size = new System.Drawing.Size(116, 36);
@@ -444,10 +454,10 @@ namespace StandMinuman
             "Semua",
             "Aktif",
             "Tidak Aktif"});
-            this.comboBoxCategory.Location = new System.Drawing.Point(166, 27);
+            this.comboBoxCategory.Location = new System.Drawing.Point(141, 26);
             this.comboBoxCategory.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxCategory.Name = "comboBoxCategory";
-            this.comboBoxCategory.Size = new System.Drawing.Size(148, 26);
+            this.comboBoxCategory.Size = new System.Drawing.Size(161, 26);
             this.comboBoxCategory.TabIndex = 55;
             this.comboBoxCategory.SelectedIndexChanged += new System.EventHandler(this.comboBoxCategory_SelectedIndexChanged);
             // 
@@ -457,7 +467,10 @@ namespace StandMinuman
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1000, 651);
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.BackgroundImage = global::StandMinuman.Properties.Resources.icon;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ClientSize = new System.Drawing.Size(992, 647);
             this.Controls.Add(this.comboBoxCategory);
             this.Controls.Add(this.buttonClearSearch);
             this.Controls.Add(this.buttonClearSelection);
@@ -482,8 +495,10 @@ namespace StandMinuman
             this.Controls.Add(this.dataGridViewTopping);
             this.Controls.Add(this.dataGridViewMinuman);
             this.Controls.Add(this.menuStrip1);
+            this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
