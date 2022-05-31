@@ -29,6 +29,7 @@ namespace StandMinuman
 		/// </summary>
 		private void InitializeComponent()
 		{
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMasterSeller));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.kembaliKeMenuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.masterTransaksiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -86,13 +87,13 @@ namespace StandMinuman
             this.dataGridViewUser.AllowUserToDeleteRows = false;
             this.dataGridViewUser.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewUser.Location = new System.Drawing.Point(18, 53);
+            this.dataGridViewUser.Location = new System.Drawing.Point(13, 31);
             this.dataGridViewUser.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridViewUser.Name = "dataGridViewUser";
             this.dataGridViewUser.ReadOnly = true;
             this.dataGridViewUser.RowHeadersVisible = false;
             this.dataGridViewUser.RowHeadersWidth = 62;
-            this.dataGridViewUser.Size = new System.Drawing.Size(1164, 403);
+            this.dataGridViewUser.Size = new System.Drawing.Size(1174, 369);
             this.dataGridViewUser.TabIndex = 2;
             this.dataGridViewUser.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewUser_CellDoubleClick);
             // 
@@ -100,54 +101,54 @@ namespace StandMinuman
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.label1.Location = new System.Drawing.Point(58, 514);
+            this.label1.Location = new System.Drawing.Point(10, 457);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 18);
+            this.label1.Size = new System.Drawing.Size(122, 18);
             this.label1.TabIndex = 3;
-            this.label1.Text = "ID User  :";
+            this.label1.Text = "ID User               :";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.label2.Location = new System.Drawing.Point(39, 546);
+            this.label2.Location = new System.Drawing.Point(10, 495);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(89, 18);
+            this.label2.Size = new System.Drawing.Size(121, 18);
             this.label2.TabIndex = 4;
-            this.label2.Text = "Username  :";
+            this.label2.Text = "Username          :";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // labelPass
             // 
             this.labelPass.AutoSize = true;
             this.labelPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.labelPass.Location = new System.Drawing.Point(41, 581);
+            this.labelPass.Location = new System.Drawing.Point(10, 533);
             this.labelPass.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelPass.Name = "labelPass";
-            this.labelPass.Size = new System.Drawing.Size(87, 18);
+            this.labelPass.Size = new System.Drawing.Size(119, 18);
             this.labelPass.TabIndex = 5;
-            this.labelPass.Text = "Password  :";
+            this.labelPass.Text = "Password          :";
             this.labelPass.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.label4.Location = new System.Drawing.Point(68, 613);
+            this.label4.Location = new System.Drawing.Point(10, 568);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(60, 18);
+            this.label4.Size = new System.Drawing.Size(120, 18);
             this.label4.TabIndex = 6;
-            this.label4.Text = "Nama  :";
+            this.label4.Text = "Nama                 :";
             this.label4.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // textBoxId
             // 
             this.textBoxId.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.textBoxId.Location = new System.Drawing.Point(136, 514);
+            this.textBoxId.Location = new System.Drawing.Point(139, 454);
             this.textBoxId.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxId.Name = "textBoxId";
             this.textBoxId.ReadOnly = true;
@@ -157,7 +158,7 @@ namespace StandMinuman
             // textBoxUsername
             // 
             this.textBoxUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.textBoxUsername.Location = new System.Drawing.Point(136, 546);
+            this.textBoxUsername.Location = new System.Drawing.Point(139, 492);
             this.textBoxUsername.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxUsername.Name = "textBoxUsername";
             this.textBoxUsername.Size = new System.Drawing.Size(266, 24);
@@ -167,7 +168,7 @@ namespace StandMinuman
             // textBoxPassword
             // 
             this.textBoxPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.textBoxPassword.Location = new System.Drawing.Point(136, 578);
+            this.textBoxPassword.Location = new System.Drawing.Point(139, 530);
             this.textBoxPassword.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxPassword.Name = "textBoxPassword";
             this.textBoxPassword.Size = new System.Drawing.Size(266, 24);
@@ -177,17 +178,17 @@ namespace StandMinuman
             // textBoxNama
             // 
             this.textBoxNama.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.textBoxNama.Location = new System.Drawing.Point(136, 610);
+            this.textBoxNama.Location = new System.Drawing.Point(139, 565);
             this.textBoxNama.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxNama.Name = "textBoxNama";
-            this.textBoxNama.Size = new System.Drawing.Size(268, 24);
+            this.textBoxNama.Size = new System.Drawing.Size(266, 24);
             this.textBoxNama.TabIndex = 12;
             this.textBoxNama.TextChanged += new System.EventHandler(this.textBoxNama_TextChanged);
             // 
             // btnInsert
             // 
-            this.btnInsert.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.btnInsert.Location = new System.Drawing.Point(1066, 464);
+            this.btnInsert.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInsert.Location = new System.Drawing.Point(1071, 412);
             this.btnInsert.Margin = new System.Windows.Forms.Padding(4);
             this.btnInsert.Name = "btnInsert";
             this.btnInsert.Size = new System.Drawing.Size(116, 36);
@@ -199,8 +200,8 @@ namespace StandMinuman
             // buttonUpdate
             // 
             this.buttonUpdate.Enabled = false;
-            this.buttonUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.buttonUpdate.Location = new System.Drawing.Point(1066, 508);
+            this.buttonUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonUpdate.Location = new System.Drawing.Point(1071, 461);
             this.buttonUpdate.Margin = new System.Windows.Forms.Padding(4);
             this.buttonUpdate.Name = "buttonUpdate";
             this.buttonUpdate.Size = new System.Drawing.Size(116, 36);
@@ -212,8 +213,8 @@ namespace StandMinuman
             // buttonDelete
             // 
             this.buttonDelete.Enabled = false;
-            this.buttonDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.buttonDelete.Location = new System.Drawing.Point(1066, 552);
+            this.buttonDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonDelete.Location = new System.Drawing.Point(1071, 512);
             this.buttonDelete.Margin = new System.Windows.Forms.Padding(4);
             this.buttonDelete.Name = "buttonDelete";
             this.buttonDelete.Size = new System.Drawing.Size(116, 36);
@@ -224,8 +225,8 @@ namespace StandMinuman
             // 
             // buttonClear
             // 
-            this.buttonClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.buttonClear.Location = new System.Drawing.Point(1066, 596);
+            this.buttonClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonClear.Location = new System.Drawing.Point(1071, 562);
             this.buttonClear.Margin = new System.Windows.Forms.Padding(4);
             this.buttonClear.Name = "buttonClear";
             this.buttonClear.Size = new System.Drawing.Size(116, 36);
@@ -237,7 +238,7 @@ namespace StandMinuman
             // buttonClearSearch
             // 
             this.buttonClearSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.buttonClearSearch.Location = new System.Drawing.Point(557, 464);
+            this.buttonClearSearch.Location = new System.Drawing.Point(603, 412);
             this.buttonClearSearch.Margin = new System.Windows.Forms.Padding(4);
             this.buttonClearSearch.Name = "buttonClearSearch";
             this.buttonClearSearch.Size = new System.Drawing.Size(116, 36);
@@ -254,7 +255,7 @@ namespace StandMinuman
             "Semua",
             "Aktif",
             "Tidak Aktif"});
-            this.comboBoxAktif.Location = new System.Drawing.Point(369, 470);
+            this.comboBoxAktif.Location = new System.Drawing.Point(415, 418);
             this.comboBoxAktif.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxAktif.Name = "comboBoxAktif";
             this.comboBoxAktif.Size = new System.Drawing.Size(180, 26);
@@ -264,7 +265,7 @@ namespace StandMinuman
             // textBoxSearch
             // 
             this.textBoxSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.textBoxSearch.Location = new System.Drawing.Point(95, 470);
+            this.textBoxSearch.Location = new System.Drawing.Point(139, 418);
             this.textBoxSearch.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxSearch.Name = "textBoxSearch";
             this.textBoxSearch.Size = new System.Drawing.Size(266, 24);
@@ -275,19 +276,19 @@ namespace StandMinuman
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.label6.Location = new System.Drawing.Point(20, 473);
+            this.label6.Location = new System.Drawing.Point(10, 421);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(67, 18);
+            this.label6.Size = new System.Drawing.Size(123, 18);
             this.label6.TabIndex = 49;
-            this.label6.Text = "Search  :";
+            this.label6.Text = "Search                :";
             this.label6.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // labelNewPass
             // 
             this.labelNewPass.AutoSize = true;
             this.labelNewPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.labelNewPass.Location = new System.Drawing.Point(7, 581);
+            this.labelNewPass.Location = new System.Drawing.Point(10, 533);
             this.labelNewPass.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelNewPass.Name = "labelNewPass";
             this.labelNewPass.Size = new System.Drawing.Size(121, 18);
@@ -300,7 +301,7 @@ namespace StandMinuman
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1200, 645);
+            this.ClientSize = new System.Drawing.Size(1200, 608);
             this.Controls.Add(this.labelNewPass);
             this.Controls.Add(this.buttonClearSearch);
             this.Controls.Add(this.comboBoxAktif);
@@ -322,11 +323,12 @@ namespace StandMinuman
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "FormMasterSeller";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormMasterSeller";
+            this.Text = "Master Seller";
             this.Load += new System.EventHandler(this.FormMasterSeller_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
