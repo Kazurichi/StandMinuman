@@ -28,6 +28,7 @@ namespace StandMinuman
             if (dateTimePickerAwal.Value < dateTimePickerAkhir.Value)
             {
                 CrystalReportBanyakTopping rpt = new CrystalReportBanyakTopping();
+                rpt.SetDatabaseLogon(Koneksi.username, Koneksi.password, Koneksi.server, Koneksi.dbname);
                 rpt.SetParameterValue("TanggalAwal", dateTimePickerAwal.Value);
                 rpt.SetParameterValue("TanggalAkhir", dateTimePickerAkhir.Value);
                 crystalReportViewer1.ReportSource = null;
@@ -44,6 +45,7 @@ namespace StandMinuman
             if (dateTimePickerAwal.Value < dateTimePickerAkhir.Value)
             {
                 CrystalReportSellerTinggi rpt = new CrystalReportSellerTinggi();
+                rpt.SetDatabaseLogon(Koneksi.username, Koneksi.password, Koneksi.server, Koneksi.dbname);
                 rpt.SetParameterValue("TanggalAwal", dateTimePickerAwal.Value);
                 rpt.SetParameterValue("TanggalAkhir", dateTimePickerAkhir.Value);
                 crystalReportViewer1.ReportSource = null;
@@ -60,6 +62,7 @@ namespace StandMinuman
             if (dateTimePickerAwal.Value < dateTimePickerAkhir.Value)
             {
                 CrystalReportSellerTerendah rpt = new CrystalReportSellerTerendah();
+                rpt.SetDatabaseLogon(Koneksi.username, Koneksi.password, Koneksi.server, Koneksi.dbname);
                 rpt.SetParameterValue("TanggalAwal", dateTimePickerAwal.Value);
                 rpt.SetParameterValue("TanggalAkhir", dateTimePickerAkhir.Value);
                 crystalReportViewer1.ReportSource = null;
@@ -78,6 +81,7 @@ namespace StandMinuman
                 if (numericUpDownStok.Value > 0)
                 {
                     CrystalReportStokMinuman rpt = new CrystalReportStokMinuman();
+                    rpt.SetDatabaseLogon(Koneksi.username, Koneksi.password, Koneksi.server, Koneksi.dbname);
                     rpt.SetParameterValue("TanggalAwal", dateTimePickerAwal.Value);
                     rpt.SetParameterValue("TanggalAkhir", dateTimePickerAkhir.Value);
                     rpt.SetParameterValue("bawah", Convert.ToInt32(numericUpDownStok.Value));
@@ -102,6 +106,7 @@ namespace StandMinuman
                 if (comboBoxMinuman.SelectedIndex == 0)
                 {
                     CrystalReportMinumanTertinggi rpt = new CrystalReportMinumanTertinggi();
+                    rpt.SetDatabaseLogon(Koneksi.username, Koneksi.password, Koneksi.server, Koneksi.dbname);
                     rpt.SetParameterValue("TanggalAwal", dateTimePickerAwal.Value);
                     rpt.SetParameterValue("TanggalAkhir", dateTimePickerAkhir.Value);
                     crystalReportViewer1.ReportSource = null;
@@ -110,6 +115,7 @@ namespace StandMinuman
                 else
                 {
                     CrystalReportMinumanTerendah rpt = new CrystalReportMinumanTerendah();
+                    rpt.SetDatabaseLogon(Koneksi.username, Koneksi.password, Koneksi.server, Koneksi.dbname);
                     rpt.SetParameterValue("TanggalAwal", dateTimePickerAwal.Value);
                     rpt.SetParameterValue("TanggalAkhir", dateTimePickerAkhir.Value);
                     crystalReportViewer1.ReportSource = null;
@@ -122,13 +128,7 @@ namespace StandMinuman
             }
         }
 
-        private void toppingToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            report = 5;
-            tampilToolStripMenuItem.Enabled = true;
-            resetBold();
-            toppingToolStripMenuItem.Font = new Font(toppingToolStripMenuItem.Font, FontStyle.Bold);
-        }
+        
 
         public void resetBold()
         {
@@ -181,6 +181,8 @@ namespace StandMinuman
         {
             report = 1;
             tampilToolStripMenuItem.Enabled = true;
+            dateTimePickerAkhir.Enabled = true;
+            dateTimePickerAwal.Enabled = true;
             resetBold();
             sellerpenjualanTertinggiToolStripMenuItem.Font = new Font(sellerpenjualanTertinggiToolStripMenuItem.Font, FontStyle.Bold);
 
@@ -190,6 +192,8 @@ namespace StandMinuman
         {
             report = 2;
             tampilToolStripMenuItem.Enabled = true;
+            dateTimePickerAkhir.Enabled = true;
+            dateTimePickerAwal.Enabled = true;
             resetBold();
             sellerpenjualanTerendahToolStripMenuItem.Font = new Font(sellerpenjualanTerendahToolStripMenuItem.Font, FontStyle.Bold);
 
@@ -199,6 +203,8 @@ namespace StandMinuman
         {
             report = 3;
             tampilToolStripMenuItem.Enabled = true;
+            dateTimePickerAkhir.Enabled = true;
+            dateTimePickerAwal.Enabled = true;
             resetBold();
             comboBoxMinuman.Enabled = true;
             comboBoxMinuman.SelectedIndex = 0;
@@ -209,9 +215,21 @@ namespace StandMinuman
         {
             report = 4;
             tampilToolStripMenuItem.Enabled = true;
+            dateTimePickerAkhir.Enabled = true;
+            dateTimePickerAwal.Enabled = true;
             resetBold();
             numericUpDownStok.Enabled = true;
             stokMinumanToolStripMenuItem.Font = new Font(stokMinumanToolStripMenuItem.Font, FontStyle.Bold);
+        }
+
+        private void toppingToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            report = 5;
+            tampilToolStripMenuItem.Enabled = true;
+            dateTimePickerAkhir.Enabled = true;
+            dateTimePickerAwal.Enabled = true;
+            resetBold();
+            toppingToolStripMenuItem.Font = new Font(toppingToolStripMenuItem.Font, FontStyle.Bold);
         }
     }
 }
