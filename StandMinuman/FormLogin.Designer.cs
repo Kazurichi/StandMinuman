@@ -78,7 +78,7 @@ namespace StandMinuman
             this.AcceptButton = this.buttonLogin;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::StandMinuman.Properties.Resources.icon;
+            //this.BackgroundImage = global::StandMinuman.Properties.Resources.icon;
             this.Controls.Add(this.buttonLogin);
             this.Controls.Add(this.textBoxPass);
             this.Controls.Add(this.textBoxUser);

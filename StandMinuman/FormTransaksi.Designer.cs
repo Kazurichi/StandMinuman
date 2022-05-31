@@ -468,7 +468,7 @@ namespace StandMinuman
             this.AutoScroll = true;
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.BackgroundImage = global::StandMinuman.Properties.Resources.icon;
+            //this.BackgroundImage = global::StandMinuman.Properties.Resources.icon;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(992, 647);
             this.Controls.Add(this.comboBoxCategory);
