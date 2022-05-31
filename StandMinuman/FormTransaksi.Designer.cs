@@ -79,28 +79,27 @@ namespace StandMinuman
             // menuStrip1
             // 
             this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItemHello,
             this.logoutToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(992, 36);
+            this.menuStrip1.Size = new System.Drawing.Size(991, 27);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // toolStripMenuItemHello
             // 
             this.toolStripMenuItemHello.Name = "toolStripMenuItemHello";
-            this.toolStripMenuItemHello.Size = new System.Drawing.Size(86, 32);
+            this.toolStripMenuItemHello.Size = new System.Drawing.Size(62, 23);
             this.toolStripMenuItemHello.Text = "Halo, -";
             // 
             // logoutToolStripMenuItem
             // 
             this.logoutToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
-            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(91, 32);
+            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(65, 23);
             this.logoutToolStripMenuItem.Text = "Logout";
             this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
             // 
@@ -245,7 +244,7 @@ namespace StandMinuman
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(12, 31);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(167, 26);
+            this.label1.Size = new System.Drawing.Size(113, 18);
             this.label1.TabIndex = 4;
             this.label1.Text = "Daftar Minuman";
             // 
@@ -255,7 +254,7 @@ namespace StandMinuman
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Location = new System.Drawing.Point(566, 30);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(154, 26);
+            this.label2.Size = new System.Drawing.Size(105, 18);
             this.label2.TabIndex = 5;
             this.label2.Text = "Daftar Topping";
             // 
@@ -263,7 +262,7 @@ namespace StandMinuman
             // 
             this.textBoxSearchMinuman.Location = new System.Drawing.Point(390, 28);
             this.textBoxSearchMinuman.Name = "textBoxSearchMinuman";
-            this.textBoxSearchMinuman.Size = new System.Drawing.Size(173, 32);
+            this.textBoxSearchMinuman.Size = new System.Drawing.Size(173, 24);
             this.textBoxSearchMinuman.TabIndex = 6;
             this.textBoxSearchMinuman.TextChanged += new System.EventHandler(this.textBoxSearchMinuman_TextChanged);
             // 
@@ -273,7 +272,7 @@ namespace StandMinuman
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Location = new System.Drawing.Point(321, 30);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(93, 26);
+            this.label3.Size = new System.Drawing.Size(63, 18);
             this.label3.TabIndex = 7;
             this.label3.Text = "Search :";
             // 
@@ -282,7 +281,7 @@ namespace StandMinuman
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(746, 31);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(93, 26);
+            this.label4.Size = new System.Drawing.Size(63, 18);
             this.label4.TabIndex = 9;
             this.label4.Text = "Search :";
             // 
@@ -290,7 +289,7 @@ namespace StandMinuman
             // 
             this.textBoxSearchTopping.Location = new System.Drawing.Point(815, 30);
             this.textBoxSearchTopping.Name = "textBoxSearchTopping";
-            this.textBoxSearchTopping.Size = new System.Drawing.Size(173, 32);
+            this.textBoxSearchTopping.Size = new System.Drawing.Size(173, 24);
             this.textBoxSearchTopping.TabIndex = 8;
             this.textBoxSearchTopping.TextChanged += new System.EventHandler(this.textBoxSearchTopping_TextChanged);
             // 
@@ -299,7 +298,7 @@ namespace StandMinuman
             this.labelNamaMinuman.AutoSize = true;
             this.labelNamaMinuman.Location = new System.Drawing.Point(15, 256);
             this.labelNamaMinuman.Name = "labelNamaMinuman";
-            this.labelNamaMinuman.Size = new System.Drawing.Size(192, 26);
+            this.labelNamaMinuman.Size = new System.Drawing.Size(130, 18);
             this.labelNamaMinuman.TabIndex = 10;
             this.labelNamaMinuman.Text = "Nama Minuman : -";
             // 
@@ -308,7 +307,7 @@ namespace StandMinuman
             this.labelNamaTopping.AutoSize = true;
             this.labelNamaTopping.Location = new System.Drawing.Point(15, 284);
             this.labelNamaTopping.Name = "labelNamaTopping";
-            this.labelNamaTopping.Size = new System.Drawing.Size(191, 26);
+            this.labelNamaTopping.Size = new System.Drawing.Size(130, 18);
             this.labelNamaTopping.TabIndex = 11;
             this.labelNamaTopping.Text = "Nama Topping   : -";
             // 
@@ -326,7 +325,7 @@ namespace StandMinuman
             0,
             0});
             this.numericUpDownJumlah.Name = "numericUpDownJumlah";
-            this.numericUpDownJumlah.Size = new System.Drawing.Size(161, 32);
+            this.numericUpDownJumlah.Size = new System.Drawing.Size(161, 24);
             this.numericUpDownJumlah.TabIndex = 12;
             this.numericUpDownJumlah.Value = new decimal(new int[] {
             1,
@@ -339,7 +338,7 @@ namespace StandMinuman
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(15, 313);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(179, 26);
+            this.label5.Size = new System.Drawing.Size(120, 18);
             this.label5.TabIndex = 13;
             this.label5.Text = "Jumlah               :";
             // 
@@ -388,7 +387,7 @@ namespace StandMinuman
             this.buttonHapusSemua.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonHapusSemua.Location = new System.Drawing.Point(872, 507);
             this.buttonHapusSemua.Name = "buttonHapusSemua";
-            this.buttonHapusSemua.Size = new System.Drawing.Size(137, 39);
+            this.buttonHapusSemua.Size = new System.Drawing.Size(116, 39);
             this.buttonHapusSemua.TabIndex = 18;
             this.buttonHapusSemua.Text = "Delete All";
             this.buttonHapusSemua.UseVisualStyleBackColor = true;
@@ -400,7 +399,7 @@ namespace StandMinuman
             this.labelNota.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.labelNota.Location = new System.Drawing.Point(14, 357);
             this.labelNota.Name = "labelNota";
-            this.labelNota.Size = new System.Drawing.Size(200, 29);
+            this.labelNota.Size = new System.Drawing.Size(131, 20);
             this.labelNota.TabIndex = 19;
             this.labelNota.Text = "Nomor Nota      : -";
             // 
@@ -411,7 +410,7 @@ namespace StandMinuman
             this.labelTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.labelTotal.Location = new System.Drawing.Point(640, 357);
             this.labelTotal.Name = "labelTotal";
-            this.labelTotal.Size = new System.Drawing.Size(142, 29);
+            this.labelTotal.Size = new System.Drawing.Size(94, 20);
             this.labelTotal.TabIndex = 20;
             this.labelTotal.Text = "Total : Rp. 0";
             this.labelTotal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -420,7 +419,7 @@ namespace StandMinuman
             // 
             this.buttonBeli.AutoSize = true;
             this.buttonBeli.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonBeli.Location = new System.Drawing.Point(872, 603);
+            this.buttonBeli.Location = new System.Drawing.Point(872, 596);
             this.buttonBeli.Name = "buttonBeli";
             this.buttonBeli.Size = new System.Drawing.Size(116, 43);
             this.buttonBeli.TabIndex = 21;
@@ -462,20 +461,20 @@ namespace StandMinuman
             this.comboBoxCategory.Location = new System.Drawing.Point(141, 26);
             this.comboBoxCategory.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxCategory.Name = "comboBoxCategory";
-            this.comboBoxCategory.Size = new System.Drawing.Size(161, 34);
+            this.comboBoxCategory.Size = new System.Drawing.Size(161, 26);
             this.comboBoxCategory.TabIndex = 55;
             this.comboBoxCategory.SelectedIndexChanged += new System.EventHandler(this.comboBoxCategory_SelectedIndexChanged);
             // 
             // FormTransaksi
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 26F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(992, 647);
+            this.ClientSize = new System.Drawing.Size(991, 649);
             this.Controls.Add(this.comboBoxCategory);
             this.Controls.Add(this.buttonClearSearch);
             this.Controls.Add(this.buttonClearSelection);
