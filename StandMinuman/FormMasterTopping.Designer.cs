@@ -124,14 +124,14 @@ namespace StandMinuman
             // 
             this.menuStrip1.BackColor = System.Drawing.SystemColors.Control;
             this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.kembaliKeMenuToolStripMenuItem,
             this.masterTransaksiToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(9, 3, 0, 3);
-            this.menuStrip1.Size = new System.Drawing.Size(1200, 29);
+            this.menuStrip1.Size = new System.Drawing.Size(1200, 38);
             this.menuStrip1.TabIndex = 25;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -139,14 +139,14 @@ namespace StandMinuman
             // 
             this.kembaliKeMenuToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.kembaliKeMenuToolStripMenuItem.Name = "kembaliKeMenuToolStripMenuItem";
-            this.kembaliKeMenuToolStripMenuItem.Size = new System.Drawing.Size(127, 23);
+            this.kembaliKeMenuToolStripMenuItem.Size = new System.Drawing.Size(179, 32);
             this.kembaliKeMenuToolStripMenuItem.Text = "Kembali ke Menu";
             this.kembaliKeMenuToolStripMenuItem.Click += new System.EventHandler(this.kembaliKeMenuToolStripMenuItem_Click);
             // 
             // masterTransaksiToolStripMenuItem
             // 
             this.masterTransaksiToolStripMenuItem.Name = "masterTransaksiToolStripMenuItem";
-            this.masterTransaksiToolStripMenuItem.Size = new System.Drawing.Size(12, 23);
+            this.masterTransaksiToolStripMenuItem.Size = new System.Drawing.Size(16, 32);
             // 
             // textBoxNama
             // 
@@ -154,7 +154,7 @@ namespace StandMinuman
             this.textBoxNama.Location = new System.Drawing.Point(110, 498);
             this.textBoxNama.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxNama.Name = "textBoxNama";
-            this.textBoxNama.Size = new System.Drawing.Size(266, 24);
+            this.textBoxNama.Size = new System.Drawing.Size(266, 32);
             this.textBoxNama.TabIndex = 40;
             this.textBoxNama.TextChanged += new System.EventHandler(this.textBoxNama_TextChanged);
             // 
@@ -165,7 +165,7 @@ namespace StandMinuman
             this.textBoxId.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxId.Name = "textBoxId";
             this.textBoxId.ReadOnly = true;
-            this.textBoxId.Size = new System.Drawing.Size(110, 24);
+            this.textBoxId.Size = new System.Drawing.Size(110, 32);
             this.textBoxId.TabIndex = 39;
             // 
             // label4
@@ -175,7 +175,7 @@ namespace StandMinuman
             this.label4.Location = new System.Drawing.Point(10, 535);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(92, 18);
+            this.label4.Size = new System.Drawing.Size(137, 26);
             this.label4.TabIndex = 38;
             this.label4.Text = "Harga          :";
             this.label4.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -187,7 +187,7 @@ namespace StandMinuman
             this.label2.Location = new System.Drawing.Point(10, 501);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(92, 18);
+            this.label2.Size = new System.Drawing.Size(137, 26);
             this.label2.TabIndex = 36;
             this.label2.Text = "Nama          :";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -199,7 +199,7 @@ namespace StandMinuman
             this.label1.Location = new System.Drawing.Point(10, 464);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(91, 18);
+            this.label1.Size = new System.Drawing.Size(135, 26);
             this.label1.TabIndex = 35;
             this.label1.Text = "ID Topping  :";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -211,7 +211,7 @@ namespace StandMinuman
             this.label5.Location = new System.Drawing.Point(107, 535);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(31, 18);
+            this.label5.Size = new System.Drawing.Size(46, 26);
             this.label5.TabIndex = 43;
             this.label5.Text = "Rp.";
             this.label5.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -222,7 +222,7 @@ namespace StandMinuman
             this.textBoxSearch.Location = new System.Drawing.Point(110, 426);
             this.textBoxSearch.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxSearch.Name = "textBoxSearch";
-            this.textBoxSearch.Size = new System.Drawing.Size(266, 24);
+            this.textBoxSearch.Size = new System.Drawing.Size(266, 32);
             this.textBoxSearch.TabIndex = 45;
             this.textBoxSearch.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -233,7 +233,7 @@ namespace StandMinuman
             this.label3.Location = new System.Drawing.Point(10, 429);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(91, 18);
+            this.label3.Size = new System.Drawing.Size(135, 26);
             this.label3.TabIndex = 44;
             this.label3.Text = "Search        :";
             this.label3.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -249,7 +249,7 @@ namespace StandMinuman
             0,
             0});
             this.numericUpDownHarga.Name = "numericUpDownHarga";
-            this.numericUpDownHarga.Size = new System.Drawing.Size(230, 24);
+            this.numericUpDownHarga.Size = new System.Drawing.Size(230, 32);
             this.numericUpDownHarga.TabIndex = 46;
             this.numericUpDownHarga.ValueChanged += new System.EventHandler(this.numericUpDownHarga_ValueChanged);
             // 
@@ -264,7 +264,7 @@ namespace StandMinuman
             this.comboBoxAktif.Location = new System.Drawing.Point(383, 426);
             this.comboBoxAktif.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxAktif.Name = "comboBoxAktif";
-            this.comboBoxAktif.Size = new System.Drawing.Size(180, 26);
+            this.comboBoxAktif.Size = new System.Drawing.Size(180, 34);
             this.comboBoxAktif.TabIndex = 47;
             this.comboBoxAktif.SelectedIndexChanged += new System.EventHandler(this.comboBoxAktif_SelectedIndexChanged);
             // 
@@ -282,10 +282,11 @@ namespace StandMinuman
             // 
             // FormMasterTopping
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 26F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(1200, 614);
             this.Controls.Add(this.buttonClearSearch);
             this.Controls.Add(this.comboBoxAktif);

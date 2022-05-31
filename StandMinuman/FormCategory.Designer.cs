@@ -73,7 +73,7 @@ namespace StandMinuman
             this.comboBoxAktif.Location = new System.Drawing.Point(389, 419);
             this.comboBoxAktif.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxAktif.Name = "comboBoxAktif";
-            this.comboBoxAktif.Size = new System.Drawing.Size(180, 26);
+            this.comboBoxAktif.Size = new System.Drawing.Size(180, 34);
             this.comboBoxAktif.TabIndex = 65;
             this.comboBoxAktif.SelectedIndexChanged += new System.EventHandler(this.comboBoxAktif_SelectedIndexChanged);
             // 
@@ -83,7 +83,7 @@ namespace StandMinuman
             this.textBoxSearch.Location = new System.Drawing.Point(115, 419);
             this.textBoxSearch.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxSearch.Name = "textBoxSearch";
-            this.textBoxSearch.Size = new System.Drawing.Size(266, 24);
+            this.textBoxSearch.Size = new System.Drawing.Size(266, 32);
             this.textBoxSearch.TabIndex = 64;
             this.textBoxSearch.TextChanged += new System.EventHandler(this.textBoxSearch_TextChanged);
             // 
@@ -94,7 +94,7 @@ namespace StandMinuman
             this.label6.Location = new System.Drawing.Point(12, 422);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(95, 18);
+            this.label6.Size = new System.Drawing.Size(141, 26);
             this.label6.TabIndex = 63;
             this.label6.Text = "Search         :";
             this.label6.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -155,7 +155,7 @@ namespace StandMinuman
             this.tbnamaCategory.Location = new System.Drawing.Point(115, 489);
             this.tbnamaCategory.Margin = new System.Windows.Forms.Padding(4);
             this.tbnamaCategory.Name = "tbnamaCategory";
-            this.tbnamaCategory.Size = new System.Drawing.Size(266, 24);
+            this.tbnamaCategory.Size = new System.Drawing.Size(266, 32);
             this.tbnamaCategory.TabIndex = 58;
             this.tbnamaCategory.TextChanged += new System.EventHandler(this.textBoxUsername_TextChanged);
             // 
@@ -166,7 +166,7 @@ namespace StandMinuman
             this.textBoxId.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxId.Name = "textBoxId";
             this.textBoxId.ReadOnly = true;
-            this.textBoxId.Size = new System.Drawing.Size(110, 24);
+            this.textBoxId.Size = new System.Drawing.Size(110, 32);
             this.textBoxId.TabIndex = 57;
             // 
             // label2
@@ -176,7 +176,7 @@ namespace StandMinuman
             this.label2.Location = new System.Drawing.Point(12, 492);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(92, 18);
+            this.label2.Size = new System.Drawing.Size(137, 26);
             this.label2.TabIndex = 56;
             this.label2.Text = "Nama          :";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -188,7 +188,7 @@ namespace StandMinuman
             this.label1.Location = new System.Drawing.Point(12, 457);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(94, 18);
+            this.label1.Size = new System.Drawing.Size(140, 26);
             this.label1.TabIndex = 55;
             this.label1.Text = "ID Category :";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -204,20 +204,24 @@ namespace StandMinuman
             this.dataGridViewCategory.Name = "dataGridViewCategory";
             this.dataGridViewCategory.ReadOnly = true;
             this.dataGridViewCategory.RowHeadersVisible = false;
+            this.dataGridViewCategory.RowHeadersWidth = 62;
             this.dataGridViewCategory.Size = new System.Drawing.Size(1174, 367);
             this.dataGridViewCategory.TabIndex = 54;
             this.dataGridViewCategory.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewCategory_CellDoubleClick);
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.kembaliKeMenuToolStripMenuItem,
             this.masterTransaksiToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(14, 4, 0, 4);
-            this.menuStrip1.Size = new System.Drawing.Size(1200, 31);
+            this.menuStrip1.Size = new System.Drawing.Size(1200, 40);
             this.menuStrip1.TabIndex = 53;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -225,20 +229,20 @@ namespace StandMinuman
             // 
             this.kembaliKeMenuToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.kembaliKeMenuToolStripMenuItem.Name = "kembaliKeMenuToolStripMenuItem";
-            this.kembaliKeMenuToolStripMenuItem.Size = new System.Drawing.Size(127, 23);
+            this.kembaliKeMenuToolStripMenuItem.Size = new System.Drawing.Size(179, 32);
             this.kembaliKeMenuToolStripMenuItem.Text = "Kembali ke Menu";
             this.kembaliKeMenuToolStripMenuItem.Click += new System.EventHandler(this.kembaliKeMenuToolStripMenuItem_Click);
             // 
             // masterTransaksiToolStripMenuItem
             // 
             this.masterTransaksiToolStripMenuItem.Name = "masterTransaksiToolStripMenuItem";
-            this.masterTransaksiToolStripMenuItem.Size = new System.Drawing.Size(12, 23);
+            this.masterTransaksiToolStripMenuItem.Size = new System.Drawing.Size(16, 32);
             // 
             // FormCategory
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 26F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            //this.BackgroundImage = global::StandMinuman.Properties.Resources.icon;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(1200, 598);
             this.Controls.Add(this.buttonClearSearch);
