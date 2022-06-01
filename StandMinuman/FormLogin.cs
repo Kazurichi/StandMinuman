@@ -90,8 +90,8 @@ namespace StandMinuman
 
 		private void FormLogin_Load(object sender, EventArgs e)
 		{
-            textBoxPass.Text = "admin";
-            textBoxUser.Text = "admin";
+            //textBoxPass.Text = "admin";
+            //textBoxUser.Text = "admin";
 		}
 
         public static string thousandSep(int num)

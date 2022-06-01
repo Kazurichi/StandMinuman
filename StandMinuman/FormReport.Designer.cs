@@ -54,7 +54,6 @@ namespace StandMinuman
             // menuStrip1
             // 
             this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.sellerpenjualanTertinggiToolStripMenuItem,
@@ -68,42 +67,42 @@ namespace StandMinuman
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(6, 1, 0, 1);
-            this.menuStrip1.Size = new System.Drawing.Size(1148, 34);
+            this.menuStrip1.Size = new System.Drawing.Size(1148, 25);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // sellerpenjualanTertinggiToolStripMenuItem
             // 
             this.sellerpenjualanTertinggiToolStripMenuItem.Name = "sellerpenjualanTertinggiToolStripMenuItem";
-            this.sellerpenjualanTertinggiToolStripMenuItem.Size = new System.Drawing.Size(259, 32);
+            this.sellerpenjualanTertinggiToolStripMenuItem.Size = new System.Drawing.Size(180, 23);
             this.sellerpenjualanTertinggiToolStripMenuItem.Text = "Seller (penjualan tertinggi)";
             this.sellerpenjualanTertinggiToolStripMenuItem.Click += new System.EventHandler(this.sellerpenjualanTertinggiToolStripMenuItem_Click);
             // 
             // sellerpenjualanTerendahToolStripMenuItem
             // 
             this.sellerpenjualanTerendahToolStripMenuItem.Name = "sellerpenjualanTerendahToolStripMenuItem";
-            this.sellerpenjualanTerendahToolStripMenuItem.Size = new System.Drawing.Size(261, 32);
+            this.sellerpenjualanTerendahToolStripMenuItem.Size = new System.Drawing.Size(183, 23);
             this.sellerpenjualanTerendahToolStripMenuItem.Text = "Seller (penjualan terendah)";
             this.sellerpenjualanTerendahToolStripMenuItem.Click += new System.EventHandler(this.sellerpenjualanTerendahToolStripMenuItem_Click);
             // 
             // minumanToolStripMenuItem
             // 
             this.minumanToolStripMenuItem.Name = "minumanToolStripMenuItem";
-            this.minumanToolStripMenuItem.Size = new System.Drawing.Size(199, 32);
+            this.minumanToolStripMenuItem.Size = new System.Drawing.Size(142, 23);
             this.minumanToolStripMenuItem.Text = "Penjualan Minuman";
             this.minumanToolStripMenuItem.Click += new System.EventHandler(this.minumanToolStripMenuItem_Click);
             // 
             // stokMinumanToolStripMenuItem
             // 
             this.stokMinumanToolStripMenuItem.Name = "stokMinumanToolStripMenuItem";
-            this.stokMinumanToolStripMenuItem.Size = new System.Drawing.Size(155, 32);
+            this.stokMinumanToolStripMenuItem.Size = new System.Drawing.Size(111, 23);
             this.stokMinumanToolStripMenuItem.Text = "Stok Minuman";
             this.stokMinumanToolStripMenuItem.Click += new System.EventHandler(this.stokMinumanToolStripMenuItem_Click);
             // 
             // toppingToolStripMenuItem
             // 
             this.toppingToolStripMenuItem.Name = "toppingToolStripMenuItem";
-            this.toppingToolStripMenuItem.Size = new System.Drawing.Size(100, 32);
+            this.toppingToolStripMenuItem.Size = new System.Drawing.Size(70, 23);
             this.toppingToolStripMenuItem.Text = "Topping";
             this.toppingToolStripMenuItem.Click += new System.EventHandler(this.toppingToolStripMenuItem_Click);
             // 
@@ -111,21 +110,21 @@ namespace StandMinuman
             // 
             this.kembaliKeMenuToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.kembaliKeMenuToolStripMenuItem.Name = "kembaliKeMenuToolStripMenuItem";
-            this.kembaliKeMenuToolStripMenuItem.Size = new System.Drawing.Size(179, 32);
+            this.kembaliKeMenuToolStripMenuItem.Size = new System.Drawing.Size(127, 23);
             this.kembaliKeMenuToolStripMenuItem.Text = "Kembali ke Menu";
             this.kembaliKeMenuToolStripMenuItem.Click += new System.EventHandler(this.kembaliKeMenuToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(33, 32);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(24, 23);
             this.toolStripMenuItem1.Text = "|";
             // 
             // tampilToolStripMenuItem
             // 
             this.tampilToolStripMenuItem.Enabled = false;
             this.tampilToolStripMenuItem.Name = "tampilToolStripMenuItem";
-            this.tampilToolStripMenuItem.Size = new System.Drawing.Size(85, 32);
+            this.tampilToolStripMenuItem.Size = new System.Drawing.Size(59, 23);
             this.tampilToolStripMenuItem.Text = "Tampil";
             this.tampilToolStripMenuItem.Click += new System.EventHandler(this.tampilToolStripMenuItem_Click);
             // 
@@ -147,12 +146,13 @@ namespace StandMinuman
             // dateTimePickerAwal
             // 
             this.dateTimePickerAwal.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.dateTimePickerAwal.CustomFormat = "dd-MMM-yyyy";
             this.dateTimePickerAwal.Enabled = false;
             this.dateTimePickerAwal.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.dateTimePickerAwal.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePickerAwal.Location = new System.Drawing.Point(121, 32);
             this.dateTimePickerAwal.Name = "dateTimePickerAwal";
-            this.dateTimePickerAwal.Size = new System.Drawing.Size(200, 32);
+            this.dateTimePickerAwal.Size = new System.Drawing.Size(200, 24);
             this.dateTimePickerAwal.TabIndex = 2;
             // 
             // label1
@@ -161,19 +161,20 @@ namespace StandMinuman
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.label1.Location = new System.Drawing.Point(12, 33);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(155, 26);
+            this.label1.Size = new System.Drawing.Size(103, 18);
             this.label1.TabIndex = 3;
             this.label1.Text = "Tanggal Awal :";
             // 
             // dateTimePickerAkhir
             // 
             this.dateTimePickerAkhir.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.dateTimePickerAkhir.CustomFormat = "dd-MMM-yyyy";
             this.dateTimePickerAkhir.Enabled = false;
             this.dateTimePickerAkhir.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.dateTimePickerAkhir.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePickerAkhir.Location = new System.Drawing.Point(451, 31);
             this.dateTimePickerAkhir.Name = "dateTimePickerAkhir";
-            this.dateTimePickerAkhir.Size = new System.Drawing.Size(200, 32);
+            this.dateTimePickerAkhir.Size = new System.Drawing.Size(200, 24);
             this.dateTimePickerAkhir.TabIndex = 4;
             // 
             // label2
@@ -182,7 +183,7 @@ namespace StandMinuman
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.label2.Location = new System.Drawing.Point(340, 33);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(157, 26);
+            this.label2.Size = new System.Drawing.Size(105, 18);
             this.label2.TabIndex = 5;
             this.label2.Text = "Tanggal Akhir :";
             // 
@@ -195,7 +196,7 @@ namespace StandMinuman
             "Terendah"});
             this.comboBoxMinuman.Location = new System.Drawing.Point(666, 30);
             this.comboBoxMinuman.Name = "comboBoxMinuman";
-            this.comboBoxMinuman.Size = new System.Drawing.Size(133, 34);
+            this.comboBoxMinuman.Size = new System.Drawing.Size(133, 26);
             this.comboBoxMinuman.TabIndex = 6;
             // 
             // numericUpDownStok
@@ -208,7 +209,7 @@ namespace StandMinuman
             0,
             0});
             this.numericUpDownStok.Name = "numericUpDownStok";
-            this.numericUpDownStok.Size = new System.Drawing.Size(141, 32);
+            this.numericUpDownStok.Size = new System.Drawing.Size(141, 24);
             this.numericUpDownStok.TabIndex = 7;
             this.numericUpDownStok.Value = new decimal(new int[] {
             50,
@@ -222,13 +223,13 @@ namespace StandMinuman
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.label3.Location = new System.Drawing.Point(817, 33);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(95, 26);
+            this.label3.Size = new System.Drawing.Size(64, 18);
             this.label3.TabIndex = 8;
             this.label3.Text = "Jumlah :";
             // 
             // FormReport
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 26F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1148, 631);

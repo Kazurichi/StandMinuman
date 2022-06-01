@@ -296,6 +296,7 @@ namespace StandMinuman
             // labelNamaMinuman
             // 
             this.labelNamaMinuman.AutoSize = true;
+            this.labelNamaMinuman.BackColor = System.Drawing.Color.Transparent;
             this.labelNamaMinuman.Location = new System.Drawing.Point(15, 256);
             this.labelNamaMinuman.Name = "labelNamaMinuman";
             this.labelNamaMinuman.Size = new System.Drawing.Size(130, 18);
@@ -305,6 +306,7 @@ namespace StandMinuman
             // labelNamaTopping
             // 
             this.labelNamaTopping.AutoSize = true;
+            this.labelNamaTopping.BackColor = System.Drawing.Color.Transparent;
             this.labelNamaTopping.Location = new System.Drawing.Point(15, 284);
             this.labelNamaTopping.Name = "labelNamaTopping";
             this.labelNamaTopping.Size = new System.Drawing.Size(130, 18);
@@ -336,6 +338,7 @@ namespace StandMinuman
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Location = new System.Drawing.Point(15, 313);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(120, 18);
@@ -396,6 +399,7 @@ namespace StandMinuman
             // labelNota
             // 
             this.labelNota.AutoSize = true;
+            this.labelNota.BackColor = System.Drawing.Color.Transparent;
             this.labelNota.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.labelNota.Location = new System.Drawing.Point(14, 357);
             this.labelNota.Name = "labelNota";
@@ -405,12 +409,11 @@ namespace StandMinuman
             // 
             // labelTotal
             // 
-            this.labelTotal.AutoSize = true;
             this.labelTotal.BackColor = System.Drawing.Color.Transparent;
             this.labelTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.labelTotal.Location = new System.Drawing.Point(640, 357);
+            this.labelTotal.Location = new System.Drawing.Point(390, 357);
             this.labelTotal.Name = "labelTotal";
-            this.labelTotal.Size = new System.Drawing.Size(94, 20);
+            this.labelTotal.Size = new System.Drawing.Size(476, 20);
             this.labelTotal.TabIndex = 20;
             this.labelTotal.Text = "Total : Rp. 0";
             this.labelTotal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -473,7 +476,7 @@ namespace StandMinuman
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(991, 649);
             this.Controls.Add(this.comboBoxCategory);
             this.Controls.Add(this.buttonClearSearch);
