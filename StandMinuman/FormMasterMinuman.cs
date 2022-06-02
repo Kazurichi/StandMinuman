@@ -291,5 +291,10 @@ namespace StandMinuman
         {
             MessageBox.Show("Easter Egg");
         }
+
+        private void comboBoxCategory_SelectedIndexChanged(object sender, EventArgs e)
+        {
+			AutogenIDMinuman();
+		}
     }
 }

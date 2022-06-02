@@ -128,7 +128,6 @@ namespace StandMinuman
             // menuStrip1
             // 
             this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.kembaliKeMenuToolStripMenuItem,
@@ -136,7 +135,7 @@ namespace StandMinuman
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(6, 1, 0, 1);
-            this.menuStrip1.Size = new System.Drawing.Size(1200, 34);
+            this.menuStrip1.Size = new System.Drawing.Size(1200, 25);
             this.menuStrip1.TabIndex = 19;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -144,14 +143,14 @@ namespace StandMinuman
             // 
             this.kembaliKeMenuToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.kembaliKeMenuToolStripMenuItem.Name = "kembaliKeMenuToolStripMenuItem";
-            this.kembaliKeMenuToolStripMenuItem.Size = new System.Drawing.Size(179, 32);
+            this.kembaliKeMenuToolStripMenuItem.Size = new System.Drawing.Size(127, 23);
             this.kembaliKeMenuToolStripMenuItem.Text = "Kembali ke Menu";
             this.kembaliKeMenuToolStripMenuItem.Click += new System.EventHandler(this.kembaliKeMenuToolStripMenuItem_Click);
             // 
             // masterTransaksiToolStripMenuItem
             // 
             this.masterTransaksiToolStripMenuItem.Name = "masterTransaksiToolStripMenuItem";
-            this.masterTransaksiToolStripMenuItem.Size = new System.Drawing.Size(16, 32);
+            this.masterTransaksiToolStripMenuItem.Size = new System.Drawing.Size(12, 23);
             // 
             // tbnama
             // 
@@ -159,7 +158,7 @@ namespace StandMinuman
             this.tbnama.Location = new System.Drawing.Point(117, 485);
             this.tbnama.Margin = new System.Windows.Forms.Padding(4);
             this.tbnama.Name = "tbnama";
-            this.tbnama.Size = new System.Drawing.Size(266, 32);
+            this.tbnama.Size = new System.Drawing.Size(266, 24);
             this.tbnama.TabIndex = 30;
             this.tbnama.TextChanged += new System.EventHandler(this.tbnama_TextChanged);
             // 
@@ -170,7 +169,7 @@ namespace StandMinuman
             this.tbidminuman.Margin = new System.Windows.Forms.Padding(4);
             this.tbidminuman.Name = "tbidminuman";
             this.tbidminuman.ReadOnly = true;
-            this.tbidminuman.Size = new System.Drawing.Size(110, 32);
+            this.tbidminuman.Size = new System.Drawing.Size(110, 24);
             this.tbidminuman.TabIndex = 29;
             // 
             // label4
@@ -182,7 +181,7 @@ namespace StandMinuman
             this.label4.Location = new System.Drawing.Point(10, 554);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(149, 26);
+            this.label4.Size = new System.Drawing.Size(100, 18);
             this.label4.TabIndex = 28;
             this.label4.Text = "Harga            :";
             this.label4.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -196,7 +195,7 @@ namespace StandMinuman
             this.label3.Location = new System.Drawing.Point(10, 522);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(146, 26);
+            this.label3.Size = new System.Drawing.Size(99, 18);
             this.label3.TabIndex = 27;
             this.label3.Text = "Stok              :";
             this.label3.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -210,7 +209,7 @@ namespace StandMinuman
             this.label2.Location = new System.Drawing.Point(10, 488);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(149, 26);
+            this.label2.Size = new System.Drawing.Size(100, 18);
             this.label2.TabIndex = 26;
             this.label2.Text = "Nama            :";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -224,7 +223,7 @@ namespace StandMinuman
             this.label1.Location = new System.Drawing.Point(10, 456);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(148, 26);
+            this.label1.Size = new System.Drawing.Size(99, 18);
             this.label1.TabIndex = 25;
             this.label1.Text = "ID Minuman  :";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -240,7 +239,7 @@ namespace StandMinuman
             0,
             0});
             this.nUDStok.Name = "nUDStok";
-            this.nUDStok.Size = new System.Drawing.Size(266, 32);
+            this.nUDStok.Size = new System.Drawing.Size(266, 24);
             this.nUDStok.TabIndex = 33;
             this.nUDStok.ValueChanged += new System.EventHandler(this.nUDStok_ValueChanged);
             // 
@@ -251,7 +250,7 @@ namespace StandMinuman
             this.label5.Location = new System.Drawing.Point(114, 554);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(46, 26);
+            this.label5.Size = new System.Drawing.Size(31, 18);
             this.label5.TabIndex = 34;
             this.label5.Text = "Rp.";
             this.label5.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -280,7 +279,7 @@ namespace StandMinuman
             this.comboBoxAktif.Location = new System.Drawing.Point(391, 419);
             this.comboBoxAktif.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxAktif.Name = "comboBoxAktif";
-            this.comboBoxAktif.Size = new System.Drawing.Size(180, 34);
+            this.comboBoxAktif.Size = new System.Drawing.Size(180, 26);
             this.comboBoxAktif.TabIndex = 51;
             this.comboBoxAktif.SelectedIndexChanged += new System.EventHandler(this.comboBoxAktif_SelectedIndexChanged);
             // 
@@ -290,7 +289,7 @@ namespace StandMinuman
             this.textBoxSearch.Location = new System.Drawing.Point(117, 419);
             this.textBoxSearch.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxSearch.Name = "textBoxSearch";
-            this.textBoxSearch.Size = new System.Drawing.Size(266, 32);
+            this.textBoxSearch.Size = new System.Drawing.Size(266, 24);
             this.textBoxSearch.TabIndex = 50;
             this.textBoxSearch.TextChanged += new System.EventHandler(this.textBoxSearch_TextChanged);
             // 
@@ -303,7 +302,7 @@ namespace StandMinuman
             this.label6.Location = new System.Drawing.Point(10, 422);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(147, 26);
+            this.label6.Size = new System.Drawing.Size(99, 18);
             this.label6.TabIndex = 49;
             this.label6.Text = "Search          :";
             this.label6.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -319,7 +318,7 @@ namespace StandMinuman
             0,
             0});
             this.nUPHarga.Name = "nUPHarga";
-            this.nUPHarga.Size = new System.Drawing.Size(232, 32);
+            this.nUPHarga.Size = new System.Drawing.Size(232, 24);
             this.nUPHarga.TabIndex = 53;
             this.nUPHarga.ValueChanged += new System.EventHandler(this.nUPHarga_ValueChanged);
             // 
@@ -334,8 +333,9 @@ namespace StandMinuman
             this.comboBoxCategory.Location = new System.Drawing.Point(117, 582);
             this.comboBoxCategory.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxCategory.Name = "comboBoxCategory";
-            this.comboBoxCategory.Size = new System.Drawing.Size(266, 34);
+            this.comboBoxCategory.Size = new System.Drawing.Size(266, 26);
             this.comboBoxCategory.TabIndex = 54;
+            this.comboBoxCategory.SelectedIndexChanged += new System.EventHandler(this.comboBoxCategory_SelectedIndexChanged);
             // 
             // label7
             // 
@@ -346,14 +346,14 @@ namespace StandMinuman
             this.label7.Location = new System.Drawing.Point(10, 585);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(148, 26);
+            this.label7.Size = new System.Drawing.Size(100, 18);
             this.label7.TabIndex = 55;
             this.label7.Text = "Category       :";
             this.label7.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // FormMasterMinuman
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 26F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
