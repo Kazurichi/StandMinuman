@@ -30,7 +30,7 @@ namespace StandMinuman
             {
                 MySqlCommand cmd = new MySqlCommand(query, Koneksi.getConn());
                 nota = cmd.ExecuteScalar().ToString();
-                labelNota.Text = "Nomer Nota: " + nota;
+                labelNota.Text = "Nomer Nota      : " + nota;
                 
             }
             catch (Exception e)
@@ -133,7 +133,7 @@ namespace StandMinuman
                 if (e.RowIndex > -1)
                 {
                     idxMinuman = e.RowIndex;
-                    labelNamaMinuman.Text = "Nama Minuman: " + dataGridViewMinuman.Rows[idxMinuman].Cells[1].Value.ToString();
+                    labelNamaMinuman.Text = "Nama Minuman : " + dataGridViewMinuman.Rows[idxMinuman].Cells[1].Value.ToString();
                 }
             }
             else
@@ -149,7 +149,7 @@ namespace StandMinuman
                 if (e.RowIndex > -1)
                 {
                     idxTopping = e.RowIndex;
-                    labelNamaTopping.Text = "Nama Topping: " + dataGridViewTopping.Rows[idxTopping].Cells[1].Value.ToString();
+                    labelNamaTopping.Text = "Nama Topping   : " + dataGridViewTopping.Rows[idxTopping].Cells[1].Value.ToString();
                 }
             }
             else
@@ -247,8 +247,8 @@ namespace StandMinuman
             idxMinuman = -1;
             idxTopping = -1;
             idxKeranjang = -1;
-            labelNamaMinuman.Text = "Nama Minuman: -";
-            labelNamaTopping.Text = "Nama Topping: -";
+            labelNamaMinuman.Text = "Nama Minuman : -";
+            labelNamaTopping.Text = "Nama Topping   : -";
             numericUpDownJumlah.Value = 1;
             textBoxSearchTopping.Text = "";
             loadTopping();
@@ -260,7 +260,7 @@ namespace StandMinuman
             if (dataGridViewKeranjang.Rows.Count == 0)
             {
                 buttonHapusSemua.Enabled = false;
-                labelNota.Text = "No Nota: -";
+                labelNota.Text = "No Nota      : -";
             }
         }
 
@@ -279,8 +279,8 @@ namespace StandMinuman
             if (e.RowIndex > -1)
             {
                 idxKeranjang = e.RowIndex;
-                labelNamaMinuman.Text = "Nama Minuman: " + dataGridViewKeranjang.Rows[idxKeranjang].Cells[2].Value.ToString();
-                labelNamaTopping.Text = "Nama Topping: " + dataGridViewKeranjang.Rows[idxKeranjang].Cells[4].Value.ToString();
+                labelNamaMinuman.Text = "Nama Minuman : " + dataGridViewKeranjang.Rows[idxKeranjang].Cells[2].Value.ToString();
+                labelNamaTopping.Text = "Nama Topping   : " + dataGridViewKeranjang.Rows[idxKeranjang].Cells[4].Value.ToString();
                 numericUpDownJumlah.Value = Convert.ToInt32(dataGridViewKeranjang.Rows[idxKeranjang].Cells[5].Value.ToString());
                 buttonUpdate.Enabled = true;
                 buttonHapus.Enabled = true;
@@ -478,14 +478,23 @@ namespace StandMinuman
             comboBoxCategory.SelectedIndex = 0;
             textBoxSearchMinuman.Text = "";
             textBoxSearchTopping.Text = "";
-            loadMinuman();
-            loadTopping();
+            if (idxMinuman <= -1)
+            {
+                loadMinuman();
+            }
+            if (idxTopping <= -1)
+            {
+                loadTopping();
+            }
         }
 
         private void comboBoxCategory_SelectedIndexChanged(object sender, EventArgs e)
         {
             //MessageBox.Show(comboBoxCategory.SelectedValue.ToString());
-            loadMinuman();
+            if (idxMinuman <= -1)
+            {
+                loadMinuman();
+            }
         }
 
         private void textBoxSearchTopping_TextChanged(object sender, EventArgs e)
