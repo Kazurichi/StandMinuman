@@ -53,5 +53,13 @@ namespace StandMinuman
 			frm.ShowDialog();
 			this.Show();
 		}
+
+		private void masterCategoryToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			FormCategory frm = new FormCategory();
+			this.Hide();
+			frm.ShowDialog();
+			this.Show();
+		}
 	}
 }

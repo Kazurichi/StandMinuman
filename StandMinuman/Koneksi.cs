@@ -10,10 +10,10 @@ namespace StandMinuman
     internal class Koneksi
     {
         static MySqlConnection conn = new MySqlConnection();
-        static string dbname = "stand_minuman";
-        static string username = "root";
-        static string password = "";
-        static string server = "localhost";
+        public static string dbname = "stand_minuman";
+        public static string username = "root";
+        public static string password = "";
+        public static string server = "localhost";
 
         public static void openConn()
         {
